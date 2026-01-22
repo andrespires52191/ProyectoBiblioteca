@@ -157,6 +157,9 @@
     <Content Include="imagenes\boton_insertar.png" />
     <Content Include="imagenes\boton_visualizar_borrar.png" />
     <Content Include="imagenes\feria-libro.png" />
+    <None Include="imagenes\feria-miniatura-1.jpg" />
+    <None Include="imagenes\feria-miniatura-2.jpg" />
+    <None Include="imagenes\feria-miniatura-3.jpg" />
     <Content Include="imagenes\fondo-libros.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
