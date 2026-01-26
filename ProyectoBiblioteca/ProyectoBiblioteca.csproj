@@ -78,6 +78,24 @@
     <Compile Include="controlador\Controlador.cs" />
     <Compile Include="modelo\Libro.cs" />
     <Compile Include="modelo\SQLiteHelper.cs" />
+    <Compile Include="vista\GestionLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\GestionLibros.Designer.cs">
+      <DependentUpon>GestionLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\GestionPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\GestionPrestamos.Designer.cs">
+      <DependentUpon>GestionPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\GestionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\GestionUsuarios.Designer.cs">
+      <DependentUpon>GestionUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +128,9 @@
     <Compile Include="vista\VisualizarUsuarios.Designer.cs">
       <DependentUpon>VisualizarUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="vista\GestionUsuarios.resx">
+      <DependentUpon>GestionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
