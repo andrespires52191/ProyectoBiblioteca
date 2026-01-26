@@ -30,5 +30,15 @@ namespace ProyectoBiblioteca.vista
             }
             return formulario;
         }
+
+        private void tlpSuperior_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tlpInferior_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
