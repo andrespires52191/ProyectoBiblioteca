@@ -96,6 +96,24 @@
     <Compile Include="vista\InsertarUsuarios.Designer.cs">
       <DependentUpon>InsertarUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\InsertarLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\InsertarLibros.Designer.cs">
+      <DependentUpon>InsertarLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\InsertarPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\InsertarPrestamos.Designer.cs">
+      <DependentUpon>InsertarPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\InsertarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\InsertarUsuarios.Designer.cs">
+      <DependentUpon>InsertarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +148,18 @@
     </Compile>
     <None Include="Resources\icono_libro.png" />
     <None Include="Resources\icono_usuario.png" />
+    <EmbeddedResource Include="vista\GestionLibros.resx">
+      <DependentUpon>GestionLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\GestionUsuarios.resx">
+      <DependentUpon>GestionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\InsertarLibros.resx">
+      <DependentUpon>InsertarLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\InsertarUsuarios.resx">
+      <DependentUpon>InsertarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\InsertarLibros.resx">
       <DependentUpon>InsertarLibros.cs</DependentUpon>
     </EmbeddedResource>
