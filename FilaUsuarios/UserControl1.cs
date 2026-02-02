@@ -18,39 +18,27 @@ namespace FilaUsuarios
         }
 
         private int id;
-
         public int Id { get => id; set => id = value; }
 
-        public string Nombre
+        public string NombreCompleto
         {
-            get => lNombre.Text;
-            set => lNombre.Text = value;
+            get => lNombreCompleto.Text;
+            set => lNombreCompleto.Text = value;
         }
 
-        public string Apellido1
+        public string Telefono
         {
-            get => lApellido1.Text;
-            set => lApellido1.Text = value;
-        }
-
-        public string Apellido2
-        {
-            get => lApellido2.Text;
-            set => lApellido2.Text = value;
+            get => lTelefono.Text;
+            set => lTelefono.Text = value;
         }
 
         public event EventHandler<ClickarBotonIdEventArgs> verUsuario;
         public event EventHandler<ClickarBotonIdEventArgs> borrarUsuario;
 
-
         public class ClickarBotonIdEventArgs : EventArgs
         {
             public int Id { get; }
-
-            public ClickarBotonIdEventArgs(int id)
-            {
-                Id = id;
-            }
+            public ClickarBotonIdEventArgs(int id) => Id = id;
         }
 
         private void bVer_Click(object sender, EventArgs e)
