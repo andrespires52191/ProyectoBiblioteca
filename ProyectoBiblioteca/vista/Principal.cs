@@ -110,5 +110,13 @@ namespace ProyectoBiblioteca
             boton.ForeColor = colorContrasteBlanco;
             boton.BackColor = colorSecundarioVerde;
         }
+
+        internal void MostrarGestionLibros()
+        {
+            var gestionLibros = new GestionLibros();
+            gestionLibros.miControlador = miControlador;
+            InsertarFormulario(gestionLibros);
+            //gestionLibros.Cargar(miControlador.CargarLibros());
+        }
     }
 }

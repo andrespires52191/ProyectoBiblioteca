@@ -30,14 +30,14 @@
         {
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tlpBotones = new System.Windows.Forms.TableLayoutPanel();
-            this.bVer = new System.Windows.Forms.PictureBox();
-            this.bBorrar = new System.Windows.Forms.PictureBox();
+            this.pbVer = new System.Windows.Forms.PictureBox();
+            this.pbBorrar = new System.Windows.Forms.PictureBox();
             this.lNombreCompleto = new System.Windows.Forms.Label();
             this.lTelefono = new System.Windows.Forms.Label();
             this.tlpPrincipal.SuspendLayout();
             this.tlpBotones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bVer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bBorrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBorrar)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpPrincipal
@@ -65,8 +65,8 @@
             this.tlpBotones.ColumnCount = 2;
             this.tlpBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpBotones.Controls.Add(this.bVer, 0, 0);
-            this.tlpBotones.Controls.Add(this.bBorrar, 1, 0);
+            this.tlpBotones.Controls.Add(this.pbVer, 0, 0);
+            this.tlpBotones.Controls.Add(this.pbBorrar, 1, 0);
             this.tlpBotones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpBotones.Location = new System.Drawing.Point(500, 0);
             this.tlpBotones.Margin = new System.Windows.Forms.Padding(0);
@@ -76,27 +76,31 @@
             this.tlpBotones.Size = new System.Drawing.Size(100, 40);
             this.tlpBotones.TabIndex = 5;
             // 
-            // bVer
+            // pbVer
             // 
-            this.bVer.BackgroundImage = global::FilaUsuarios.Properties.Resources.boton_ver;
-            this.bVer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bVer.Location = new System.Drawing.Point(3, 3);
-            this.bVer.Name = "bVer";
-            this.bVer.Size = new System.Drawing.Size(44, 34);
-            this.bVer.TabIndex = 0;
-            this.bVer.TabStop = false;
-            this.bVer.Click += new System.EventHandler(this.bVer_Click);
+            this.pbVer.BackgroundImage = global::FilaUsuarios.Properties.Resources.boton_ver;
+            this.pbVer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbVer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbVer.Location = new System.Drawing.Point(0, 0);
+            this.pbVer.Margin = new System.Windows.Forms.Padding(0);
+            this.pbVer.Name = "pbVer";
+            this.pbVer.Size = new System.Drawing.Size(50, 40);
+            this.pbVer.TabIndex = 0;
+            this.pbVer.TabStop = false;
+            this.pbVer.Click += new System.EventHandler(this.pbVer_Click);
             // 
-            // bBorrar
+            // pbBorrar
             // 
-            this.bBorrar.BackgroundImage = global::FilaUsuarios.Properties.Resources.boton_borrar;
-            this.bBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bBorrar.Location = new System.Drawing.Point(53, 3);
-            this.bBorrar.Name = "bBorrar";
-            this.bBorrar.Size = new System.Drawing.Size(44, 34);
-            this.bBorrar.TabIndex = 1;
-            this.bBorrar.TabStop = false;
-            this.bBorrar.Click += new System.EventHandler(this.bBorrar_Click);
+            this.pbBorrar.BackgroundImage = global::FilaUsuarios.Properties.Resources.boton_borrar;
+            this.pbBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbBorrar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbBorrar.Location = new System.Drawing.Point(50, 0);
+            this.pbBorrar.Margin = new System.Windows.Forms.Padding(0);
+            this.pbBorrar.Name = "pbBorrar";
+            this.pbBorrar.Size = new System.Drawing.Size(50, 40);
+            this.pbBorrar.TabIndex = 1;
+            this.pbBorrar.TabStop = false;
+            this.pbBorrar.Click += new System.EventHandler(this.pbBorrar_Click);
             // 
             // lNombreCompleto
             // 
@@ -132,8 +136,8 @@
             this.tlpPrincipal.ResumeLayout(false);
             this.tlpPrincipal.PerformLayout();
             this.tlpBotones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bVer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bBorrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBorrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,7 +149,7 @@
         private System.Windows.Forms.Label lNombreCompleto;
         private System.Windows.Forms.Label lTelefono;
         private System.Windows.Forms.TableLayoutPanel tlpBotones;
-        private System.Windows.Forms.PictureBox bVer;
-        private System.Windows.Forms.PictureBox bBorrar;
+        private System.Windows.Forms.PictureBox pbVer;
+        private System.Windows.Forms.PictureBox pbBorrar;
     }
 }

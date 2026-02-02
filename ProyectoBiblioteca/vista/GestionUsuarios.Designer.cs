@@ -31,11 +31,11 @@
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tlpDatosExterior = new System.Windows.Forms.TableLayoutPanel();
             this.tlpDatosTitulos = new System.Windows.Forms.TableLayoutPanel();
+            this.lAcciones = new System.Windows.Forms.Label();
             this.lTituloNombre = new System.Windows.Forms.Label();
             this.lTelefono = new System.Windows.Forms.Label();
             this.tlpDatosInterior = new System.Windows.Forms.TableLayoutPanel();
             this.lCabecera = new System.Windows.Forms.Label();
-            this.lAcciones = new System.Windows.Forms.Label();
             this.tlpPrincipal.SuspendLayout();
             this.tlpDatosExterior.SuspendLayout();
             this.tlpDatosTitulos.SuspendLayout();
@@ -92,6 +92,17 @@
             this.tlpDatosTitulos.Size = new System.Drawing.Size(748, 40);
             this.tlpDatosTitulos.TabIndex = 1;
             // 
+            // lAcciones
+            // 
+            this.lAcciones.AutoSize = true;
+            this.lAcciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lAcciones.Location = new System.Drawing.Point(651, 0);
+            this.lAcciones.Name = "lAcciones";
+            this.lAcciones.Size = new System.Drawing.Size(94, 40);
+            this.lAcciones.TabIndex = 2;
+            this.lAcciones.Text = "Acciones";
+            this.lAcciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lTituloNombre
             // 
             this.lTituloNombre.AutoSize = true;
@@ -101,7 +112,7 @@
             this.lTituloNombre.Size = new System.Drawing.Size(492, 40);
             this.lTituloNombre.TabIndex = 0;
             this.lTituloNombre.Text = "Nombre";
-            this.lTituloNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lTituloNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lTelefono
             // 
@@ -112,7 +123,7 @@
             this.lTelefono.Size = new System.Drawing.Size(144, 40);
             this.lTelefono.TabIndex = 1;
             this.lTelefono.Text = "Teléfono";
-            this.lTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tlpDatosInterior
             // 
@@ -137,17 +148,6 @@
             this.lCabecera.Size = new System.Drawing.Size(754, 31);
             this.lCabecera.TabIndex = 4;
             this.lCabecera.Text = "Gestión de Usuarios";
-            // 
-            // lAcciones
-            // 
-            this.lAcciones.AutoSize = true;
-            this.lAcciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lAcciones.Location = new System.Drawing.Point(651, 0);
-            this.lAcciones.Name = "lAcciones";
-            this.lAcciones.Size = new System.Drawing.Size(94, 40);
-            this.lAcciones.TabIndex = 2;
-            this.lAcciones.Text = "Acciones";
-            this.lAcciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GestionUsuarios
             // 
