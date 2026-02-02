@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoBiblioteca.controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,21 @@ namespace ProyectoBiblioteca.vista
 {
     public partial class InsertarLibros : Form
     {
+        public Controlador miControlador { get; set; }
         public InsertarLibros()
         {
             InitializeComponent();
+        }
+
+        public static InsertarLibros formulario;
+
+        public static InsertarLibros GetInstance()
+        {
+            if (formulario == null)
+            {
+                formulario = new InsertarLibros();
+            }
+            return formulario;
         }
     }
 }
