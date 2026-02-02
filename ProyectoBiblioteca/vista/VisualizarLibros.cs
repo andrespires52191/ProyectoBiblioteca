@@ -35,10 +35,5 @@ namespace ProyectoBiblioteca.vista
         {
             //Principal.GetInstance().MostrarGestionUsuarios();
         }
-        
-        private void pbVerBorrar_Click(object sender, EventArgs e)
-        {
-            Principal.GetInstance().MostrarGestionLibros();
-        }
     }
 }

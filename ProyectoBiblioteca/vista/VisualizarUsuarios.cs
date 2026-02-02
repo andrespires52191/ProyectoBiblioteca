@@ -30,10 +30,5 @@ namespace ProyectoBiblioteca
             }
             return formulario;
         }
-
-        private void pbVerBorrar_Click(object sender, EventArgs e)
-        {
-            Principal.GetInstance().MostrarGestionUsuarios();
-        }
     }
 }
