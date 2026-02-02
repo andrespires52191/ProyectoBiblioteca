@@ -128,6 +128,8 @@
     <Compile Include="vista\VisualizarUsuarios.Designer.cs">
       <DependentUpon>VisualizarUsuarios.cs</DependentUpon>
     </Compile>
+    <None Include="Resources\icono_libro.png" />
+    <None Include="Resources\icono_usuario.png" />
     <EmbeddedResource Include="vista\InsertarLibros.resx">
       <DependentUpon>InsertarLibros.cs</DependentUpon>
     </EmbeddedResource>

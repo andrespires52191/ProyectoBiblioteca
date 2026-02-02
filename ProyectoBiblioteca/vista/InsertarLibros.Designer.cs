@@ -30,6 +30,7 @@
         {
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.lAnadir = new System.Windows.Forms.Label();
+            this.pbLibro = new System.Windows.Forms.PictureBox();
             this.tlpDatos = new System.Windows.Forms.TableLayoutPanel();
             this.lDisponible = new System.Windows.Forms.Label();
             this.rbSi = new System.Windows.Forms.RadioButton();
@@ -45,12 +46,11 @@
             this.nudId = new System.Windows.Forms.NumericUpDown();
             this.nudAnio = new System.Windows.Forms.NumericUpDown();
             this.bAnadir = new System.Windows.Forms.Button();
-            this.pbLibro = new System.Windows.Forms.PictureBox();
             this.tlpPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLibro)).BeginInit();
             this.tlpDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAnio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLibro)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpPrincipal
@@ -98,6 +98,17 @@
             this.lAnadir.Size = new System.Drawing.Size(537, 33);
             this.lAnadir.TabIndex = 0;
             this.lAnadir.Text = "Añadir Libros";
+            // 
+            // pbLibro
+            // 
+            this.pbLibro.BackgroundImage = global::ProyectoBiblioteca.Properties.Resources.icono_libro;
+            this.pbLibro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbLibro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbLibro.Location = new System.Drawing.Point(365, 102);
+            this.pbLibro.Name = "pbLibro";
+            this.pbLibro.Size = new System.Drawing.Size(175, 133);
+            this.pbLibro.TabIndex = 1;
+            this.pbLibro.TabStop = false;
             // 
             // tlpDatos
             // 
@@ -293,17 +304,6 @@
             this.bAnadir.Text = "Añadir";
             this.bAnadir.UseVisualStyleBackColor = false;
             // 
-            // pbLibro
-            // 
-            this.pbLibro.BackgroundImage = global::ProyectoBiblioteca.Properties.Resources.icono_libro;
-            this.pbLibro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbLibro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbLibro.Location = new System.Drawing.Point(365, 102);
-            this.pbLibro.Name = "pbLibro";
-            this.pbLibro.Size = new System.Drawing.Size(175, 133);
-            this.pbLibro.TabIndex = 1;
-            this.pbLibro.TabStop = false;
-            // 
             // InsertarLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -315,11 +315,11 @@
             this.Text = "InsertarLibros";
             this.tlpPrincipal.ResumeLayout(false);
             this.tlpPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLibro)).EndInit();
             this.tlpDatos.ResumeLayout(false);
             this.tlpDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAnio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLibro)).EndInit();
             this.ResumeLayout(false);
 
         }

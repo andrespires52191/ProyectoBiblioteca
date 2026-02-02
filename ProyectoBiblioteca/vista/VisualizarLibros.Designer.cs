@@ -65,7 +65,7 @@
             this.pbVerBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbVerBorrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbVerBorrar.Location = new System.Drawing.Point(337, 152);
-            this.pbVerBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbVerBorrar.Margin = new System.Windows.Forms.Padding(4);
             this.pbVerBorrar.Name = "pbVerBorrar";
             this.pbVerBorrar.Size = new System.Drawing.Size(392, 84);
             this.pbVerBorrar.TabIndex = 22;
@@ -77,11 +77,12 @@
             this.pbInsertar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbInsertar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbInsertar.Location = new System.Drawing.Point(337, 318);
-            this.pbInsertar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbInsertar.Margin = new System.Windows.Forms.Padding(4);
             this.pbInsertar.Name = "pbInsertar";
             this.pbInsertar.Size = new System.Drawing.Size(392, 84);
             this.pbInsertar.TabIndex = 21;
             this.pbInsertar.TabStop = false;
+            this.pbInsertar.Click += new System.EventHandler(this.pbInsertar_Click);
             // 
             // VisualizarLibros
             // 
@@ -90,7 +91,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.tlpPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "VisualizarLibros";
             this.Text = "VisualizarLibros";
             this.tlpPrincipal.ResumeLayout(false);
