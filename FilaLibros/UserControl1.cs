@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FilaUsuarios
+namespace FilaLibros
 {
     public partial class UserControl1 : UserControl
     {
@@ -18,22 +18,18 @@ namespace FilaUsuarios
         }
 
         private int id;
+
         public int Id { get => id; set => id = value; }
-
-        public string NombreCompleto
+        public string Titulo { get => lTitulo.Text; set => lTitulo.Text = value; }
+        public string Escritor { get => lEscritor.Text; set => lEscritor.Text = value; }
+        public string Anyo { get => lAnyo.Text; set => lAnyo.Text = value; }
+        public bool Disponible
         {
-            get => lNombreCompleto.Text;
-            set => lNombreCompleto.Text = value;
+            get => lDisponible.Text == "Sí";
+            set => lDisponible.Text = (value) ? "No" : "Sí";
         }
-
-        public string Telefono
-        {
-            get => lTelefono.Text;
-            set => lTelefono.Text = value;
-        }
-
-        public event EventHandler<ClickarBotonIdEventArgs> verUsuario;
-        public event EventHandler<ClickarBotonIdEventArgs> borrarUsuario;
+        public event EventHandler<ClickarBotonIdEventArgs> verLibro;
+        public event EventHandler<ClickarBotonIdEventArgs> borrarLibro;
 
         public class ClickarBotonIdEventArgs : EventArgs
         {
@@ -43,12 +39,12 @@ namespace FilaUsuarios
 
         private void pbVer_Click(object sender, EventArgs e)
         {
-            verUsuario?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
+            verLibro?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
         }
 
         private void pbBorrar_Click(object sender, EventArgs e)
         {
-            borrarUsuario?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
+            borrarLibro?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
         }
     }
 }

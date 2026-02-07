@@ -19,10 +19,27 @@ namespace ProyectoBiblioteca
         public Color colorSecundarioVerde = Color.FromArgb(0, 153, 119);
         public Color colorContrasteBlanco = Color.FromArgb(255, 255, 255);
 
+        static private Principal principal;
+        static public Principal GetInstance() => principal;
+
         public Principal()
         {
             InitializeComponent();
+            principal = this;
             MostrarInicio();
+        }
+
+        public void InsertarFormulario(Form formulario)
+        {
+            // Comprobar si hay un formulario MDI activo
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Hide();
+            }
+
+            formulario.MdiParent = this;
+            formulario.Dock = DockStyle.Fill;
+            formulario.Show();
         }
 
         private void MostrarInicio()
@@ -36,17 +53,12 @@ namespace ProyectoBiblioteca
             InsertarFormulario(form);
         }
 
-        private void InsertarFormulario(Form formulario)
+        internal void MostrarGestionUsuarios()
         {
-            // Comprobar si hay un formulario MDI activo
-            if (this.ActiveMdiChild != null)
-            {
-                this.ActiveMdiChild.Hide();
-            }
-
-            formulario.MdiParent = this;
-            formulario.Dock = DockStyle.Fill;
-            formulario.Show();
+            var gestionUsuarios = GestionUsuarios.GetInstance();
+            gestionUsuarios.miControlador = miControlador;
+            InsertarFormulario(gestionUsuarios);
+            gestionUsuarios.Cargar(miControlador.CargarUsuarios());
         }
 
         private void bUsuarios_Click(object sender, EventArgs e)
@@ -97,6 +109,14 @@ namespace ProyectoBiblioteca
         {
             boton.ForeColor = colorContrasteBlanco;
             boton.BackColor = colorSecundarioVerde;
+        }
+
+        internal void MostrarGestionLibros()
+        {
+            var gestionLibros = new GestionLibros();
+            gestionLibros.miControlador = miControlador;
+            InsertarFormulario(gestionLibros);
+            //gestionLibros.Cargar(miControlador.CargarLibros());
         }
     }
 }

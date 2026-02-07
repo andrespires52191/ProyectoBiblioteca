@@ -70,6 +70,7 @@
             this.pbVerBorrar.Size = new System.Drawing.Size(294, 69);
             this.pbVerBorrar.TabIndex = 22;
             this.pbVerBorrar.TabStop = false;
+            this.pbVerBorrar.Click += new System.EventHandler(this.pbVerBorrar_Click);
             // 
             // pbInsertar
             // 

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoBiblioteca", "Proye
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilaUsuarios", "FilaUsuarios\FilaUsuarios.csproj", "{FCAAFC92-86D0-4C9A-9D62-9DCA5086A98B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilaLibros", "FilaLibros\FilaLibros.csproj", "{6572D0B3-20EB-46B3-AECE-17D6743EB5C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilaPrestamos", "FilaPrestamos\FilaPrestamos.csproj", "{A1711BD2-2ABE-4C02-B5AE-0FE528603D94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{FCAAFC92-86D0-4C9A-9D62-9DCA5086A98B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCAAFC92-86D0-4C9A-9D62-9DCA5086A98B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCAAFC92-86D0-4C9A-9D62-9DCA5086A98B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6572D0B3-20EB-46B3-AECE-17D6743EB5C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6572D0B3-20EB-46B3-AECE-17D6743EB5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6572D0B3-20EB-46B3-AECE-17D6743EB5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6572D0B3-20EB-46B3-AECE-17D6743EB5C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1711BD2-2ABE-4C02-B5AE-0FE528603D94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1711BD2-2ABE-4C02-B5AE-0FE528603D94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1711BD2-2ABE-4C02-B5AE-0FE528603D94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1711BD2-2ABE-4C02-B5AE-0FE528603D94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
