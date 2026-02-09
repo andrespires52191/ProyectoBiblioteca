@@ -204,6 +204,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FilaLibros\FilaLibros.csproj">
+      <Project>{6572d0b3-20eb-46b3-aece-17d6743eb5c1}</Project>
+      <Name>FilaLibros</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FilaPrestamos\FilaPrestamos.csproj">
+      <Project>{a1711bd2-2abe-4c02-b5ae-0fe528603d94}</Project>
+      <Name>FilaPrestamos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FilaUsuarios\FilaUsuarios.csproj">
       <Project>{FCAAFC92-86D0-4C9A-9D62-9DCA5086A98B}</Project>
       <Name>FilaUsuarios</Name>

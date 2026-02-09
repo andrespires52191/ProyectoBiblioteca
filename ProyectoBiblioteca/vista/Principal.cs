@@ -53,6 +53,22 @@ namespace ProyectoBiblioteca
             InsertarFormulario(form);
         }
 
+        internal void MostrarGestionLibros()
+        {
+            var gestionLibros = GestionLibros.GetInstance();
+            gestionLibros.miControlador = miControlador;
+            InsertarFormulario(gestionLibros);
+            gestionLibros.Cargar(miControlador.CargarLibros());
+        }
+
+        internal void MostrarGestionPrestamos()
+        {
+            var gestionPrestamos = GestionPrestamos.GetInstance();
+            gestionPrestamos.miControlador = miControlador;
+            InsertarFormulario(gestionPrestamos);
+            gestionPrestamos.Cargar(miControlador.CargarPrestamos());
+        }
+
         internal void MostrarGestionUsuarios()
         {
             var gestionUsuarios = GestionUsuarios.GetInstance();
@@ -109,14 +125,6 @@ namespace ProyectoBiblioteca
         {
             boton.ForeColor = colorContrasteBlanco;
             boton.BackColor = colorSecundarioVerde;
-        }
-
-        internal void MostrarGestionLibros()
-        {
-            var gestionLibros = new GestionLibros();
-            gestionLibros.miControlador = miControlador;
-            InsertarFormulario(gestionLibros);
-            //gestionLibros.Cargar(miControlador.CargarLibros());
         }
     }
 }

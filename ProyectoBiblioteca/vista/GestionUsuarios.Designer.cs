@@ -65,12 +65,13 @@
             this.tlpDatosExterior.Controls.Add(this.tlpDatosTitulos, 0, 0);
             this.tlpDatosExterior.Controls.Add(this.tlpDatosInterior, 0, 1);
             this.tlpDatosExterior.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDatosExterior.Location = new System.Drawing.Point(3, 34);
+            this.tlpDatosExterior.Location = new System.Drawing.Point(0, 31);
+            this.tlpDatosExterior.Margin = new System.Windows.Forms.Padding(0);
             this.tlpDatosExterior.Name = "tlpDatosExterior";
             this.tlpDatosExterior.RowCount = 2;
             this.tlpDatosExterior.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpDatosExterior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpDatosExterior.Size = new System.Drawing.Size(754, 373);
+            this.tlpDatosExterior.Size = new System.Drawing.Size(760, 379);
             this.tlpDatosExterior.TabIndex = 7;
             // 
             // tlpDatosTitulos
@@ -85,20 +86,22 @@
             this.tlpDatosTitulos.Controls.Add(this.lTituloNombre, 0, 0);
             this.tlpDatosTitulos.Controls.Add(this.lTelefono, 1, 0);
             this.tlpDatosTitulos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDatosTitulos.Location = new System.Drawing.Point(3, 3);
+            this.tlpDatosTitulos.Location = new System.Drawing.Point(0, 0);
+            this.tlpDatosTitulos.Margin = new System.Windows.Forms.Padding(0);
             this.tlpDatosTitulos.Name = "tlpDatosTitulos";
             this.tlpDatosTitulos.RowCount = 1;
             this.tlpDatosTitulos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlpDatosTitulos.Size = new System.Drawing.Size(748, 40);
+            this.tlpDatosTitulos.Size = new System.Drawing.Size(760, 40);
             this.tlpDatosTitulos.TabIndex = 1;
             // 
             // lAcciones
             // 
             this.lAcciones.AutoSize = true;
             this.lAcciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lAcciones.Location = new System.Drawing.Point(651, 0);
+            this.lAcciones.Location = new System.Drawing.Point(660, 0);
+            this.lAcciones.Margin = new System.Windows.Forms.Padding(0);
             this.lAcciones.Name = "lAcciones";
-            this.lAcciones.Size = new System.Drawing.Size(94, 40);
+            this.lAcciones.Size = new System.Drawing.Size(100, 40);
             this.lAcciones.TabIndex = 2;
             this.lAcciones.Text = "Acciones";
             this.lAcciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,9 +110,10 @@
             // 
             this.lTituloNombre.AutoSize = true;
             this.lTituloNombre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lTituloNombre.Location = new System.Drawing.Point(3, 0);
+            this.lTituloNombre.Location = new System.Drawing.Point(0, 0);
+            this.lTituloNombre.Margin = new System.Windows.Forms.Padding(0);
             this.lTituloNombre.Name = "lTituloNombre";
-            this.lTituloNombre.Size = new System.Drawing.Size(492, 40);
+            this.lTituloNombre.Size = new System.Drawing.Size(510, 40);
             this.lTituloNombre.TabIndex = 0;
             this.lTituloNombre.Text = "Nombre";
             this.lTituloNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -118,9 +122,10 @@
             // 
             this.lTelefono.AutoSize = true;
             this.lTelefono.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lTelefono.Location = new System.Drawing.Point(501, 0);
+            this.lTelefono.Location = new System.Drawing.Point(510, 0);
+            this.lTelefono.Margin = new System.Windows.Forms.Padding(0);
             this.lTelefono.Name = "lTelefono";
-            this.lTelefono.Size = new System.Drawing.Size(144, 40);
+            this.lTelefono.Size = new System.Drawing.Size(150, 40);
             this.lTelefono.TabIndex = 1;
             this.lTelefono.Text = "Teléfono";
             this.lTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -131,11 +136,12 @@
             this.tlpDatosInterior.ColumnCount = 1;
             this.tlpDatosInterior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpDatosInterior.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDatosInterior.Location = new System.Drawing.Point(3, 49);
+            this.tlpDatosInterior.Location = new System.Drawing.Point(0, 40);
+            this.tlpDatosInterior.Margin = new System.Windows.Forms.Padding(0);
             this.tlpDatosInterior.Name = "tlpDatosInterior";
             this.tlpDatosInterior.RowCount = 1;
             this.tlpDatosInterior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpDatosInterior.Size = new System.Drawing.Size(748, 321);
+            this.tlpDatosInterior.Size = new System.Drawing.Size(760, 339);
             this.tlpDatosInterior.TabIndex = 2;
             // 
             // lCabecera
@@ -143,9 +149,10 @@
             this.lCabecera.AutoSize = true;
             this.lCabecera.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lCabecera.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lCabecera.Location = new System.Drawing.Point(3, 0);
+            this.lCabecera.Location = new System.Drawing.Point(0, 0);
+            this.lCabecera.Margin = new System.Windows.Forms.Padding(0);
             this.lCabecera.Name = "lCabecera";
-            this.lCabecera.Size = new System.Drawing.Size(754, 31);
+            this.lCabecera.Size = new System.Drawing.Size(760, 31);
             this.lCabecera.TabIndex = 4;
             this.lCabecera.Text = "Gestión de Usuarios";
             // 
@@ -158,7 +165,7 @@
             this.Controls.Add(this.tlpPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GestionUsuarios";
-            this.Padding = new System.Windows.Forms.Padding(20);
+            this.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
             this.Text = "GestionUsuarios";
             this.tlpPrincipal.ResumeLayout(false);
             this.tlpPrincipal.PerformLayout();
