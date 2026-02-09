@@ -152,6 +152,9 @@
     <EmbeddedResource Include="vista\GestionLibros.resx">
       <DependentUpon>GestionLibros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vista\GestionPrestamos.resx">
+      <DependentUpon>GestionPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\GestionUsuarios.resx">
       <DependentUpon>GestionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
