@@ -180,20 +180,22 @@
             // 
             // dtpFechaInicio
             // 
+            this.tlpDatos.SetColumnSpan(this.dtpFechaInicio, 2);
             this.dtpFechaInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.dtpFechaInicio.Location = new System.Drawing.Point(185, 70);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(171, 28);
+            this.dtpFechaInicio.Size = new System.Drawing.Size(350, 28);
             this.dtpFechaInicio.TabIndex = 6;
             // 
             // dtpFechaFin
             // 
+            this.tlpDatos.SetColumnSpan(this.dtpFechaFin, 2);
             this.dtpFechaFin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpFechaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.dtpFechaFin.Location = new System.Drawing.Point(185, 101);
             this.dtpFechaFin.Name = "dtpFechaFin";
-            this.dtpFechaFin.Size = new System.Drawing.Size(171, 28);
+            this.dtpFechaFin.Size = new System.Drawing.Size(350, 28);
             this.dtpFechaFin.TabIndex = 7;
             // 
             // bAnadir
