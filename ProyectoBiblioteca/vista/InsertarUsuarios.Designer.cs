@@ -61,7 +61,7 @@
             this.tlpPrincipal.Controls.Add(this.bAnadir, 2, 7);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 9;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.744496F));
@@ -121,7 +121,7 @@
             this.tlpDatos.Location = new System.Drawing.Point(181, 298);
             this.tlpDatos.Margin = new System.Windows.Forms.Padding(0);
             this.tlpDatos.Name = "tlpDatos";
-            this.tlpDatos.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tlpDatos.Padding = new System.Windows.Forms.Padding(5);
             this.tlpDatos.RowCount = 4;
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -235,7 +235,7 @@
             this.ClientSize = new System.Drawing.Size(907, 576);
             this.Controls.Add(this.tlpPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InsertarUsuarios";
             this.Text = "InsertarUsuarios";
             this.tlpPrincipal.ResumeLayout(false);

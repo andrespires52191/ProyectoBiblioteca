@@ -32,12 +32,12 @@ namespace ProyectoBiblioteca.vista
         }
         private void pbVerBorrar_Click(object sender, EventArgs e)
         {
-            Principal.GetInstance().MostrarGestionLibros();
+            Principal.GetInstance().MostrarGestionPrestamos();
         }
 
         private void pbInsertar_Click(object sender, EventArgs e)
         {
-            Principal.GetInstance().MostrarInsertarLibros();
+            Principal.GetInstance().MostrarInsertarPrestamos();
         }
     }
 }

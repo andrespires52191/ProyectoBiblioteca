@@ -70,13 +70,13 @@
             this.tlpPrincipal.RowCount = 9;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.870116F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.73777F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.870114F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.870113F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.20794F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.870114F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.870113F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.96595F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.870115F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.73777F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.870114F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.73777F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.870113F));
             this.tlpPrincipal.Size = new System.Drawing.Size(907, 576);
             this.tlpPrincipal.TabIndex = 0;
             // 
@@ -128,7 +128,7 @@
             this.tlpDatos.Location = new System.Drawing.Point(181, 261);
             this.tlpDatos.Margin = new System.Windows.Forms.Padding(0);
             this.tlpDatos.Name = "tlpDatos";
-            this.tlpDatos.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tlpDatos.Padding = new System.Windows.Forms.Padding(3);
             this.tlpDatos.RowCount = 7;
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -158,7 +158,7 @@
             this.rbSi.AutoSize = true;
             this.rbSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.rbSi.Location = new System.Drawing.Point(183, 161);
-            this.rbSi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbSi.Margin = new System.Windows.Forms.Padding(2);
             this.rbSi.Name = "rbSi";
             this.rbSi.Size = new System.Drawing.Size(47, 26);
             this.rbSi.TabIndex = 20;
@@ -171,7 +171,7 @@
             this.rbNo.AutoSize = true;
             this.rbNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.rbNo.Location = new System.Drawing.Point(362, 161);
-            this.rbNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbNo.Margin = new System.Windows.Forms.Padding(2);
             this.rbNo.Name = "rbNo";
             this.rbNo.Size = new System.Drawing.Size(54, 26);
             this.rbNo.TabIndex = 21;
@@ -233,7 +233,7 @@
             this.tbTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTitulo.Location = new System.Drawing.Point(183, 5);
-            this.tbTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.tbTitulo.Name = "tbTitulo";
             this.tbTitulo.Size = new System.Drawing.Size(355, 28);
             this.tbTitulo.TabIndex = 7;
@@ -244,7 +244,7 @@
             this.tbEscritor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbEscritor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEscritor.Location = new System.Drawing.Point(183, 31);
-            this.tbEscritor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEscritor.Margin = new System.Windows.Forms.Padding(2);
             this.tbEscritor.Name = "tbEscritor";
             this.tbEscritor.Size = new System.Drawing.Size(355, 28);
             this.tbEscritor.TabIndex = 8;
@@ -255,7 +255,7 @@
             this.tbSinopsis.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbSinopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSinopsis.Location = new System.Drawing.Point(183, 83);
-            this.tbSinopsis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbSinopsis.Margin = new System.Windows.Forms.Padding(2);
             this.tbSinopsis.Multiline = true;
             this.tbSinopsis.Name = "tbSinopsis";
             this.tlpDatos.SetRowSpan(this.tbSinopsis, 3);
@@ -268,7 +268,7 @@
             this.nudAnio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.nudAnio.Location = new System.Drawing.Point(183, 57);
-            this.nudAnio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudAnio.Margin = new System.Windows.Forms.Padding(2);
             this.nudAnio.Name = "nudAnio";
             this.nudAnio.Size = new System.Drawing.Size(355, 28);
             this.nudAnio.TabIndex = 13;
