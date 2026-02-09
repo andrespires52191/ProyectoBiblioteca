@@ -30,7 +30,6 @@
         {
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.lAnadir = new System.Windows.Forms.Label();
-            this.pbLibro = new System.Windows.Forms.PictureBox();
             this.bAnadir = new System.Windows.Forms.Button();
             this.nudAnio = new System.Windows.Forms.NumericUpDown();
             this.tbSinopsis = new System.Windows.Forms.TextBox();
@@ -44,10 +43,11 @@
             this.rbSi = new System.Windows.Forms.RadioButton();
             this.lDisponible = new System.Windows.Forms.Label();
             this.tlpDatos = new System.Windows.Forms.TableLayoutPanel();
+            this.pbLibro = new System.Windows.Forms.PictureBox();
             this.tlpPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLibro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAnio)).BeginInit();
             this.tlpDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLibro)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpPrincipal
@@ -70,7 +70,7 @@
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.517627F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.517625F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.517625F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.8947F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.89471F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.517625F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.48192F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.517626F));
@@ -92,18 +92,6 @@
             this.lAnadir.TabIndex = 0;
             this.lAnadir.Text = "Añadir Libro";
             // 
-            // pbLibro
-            // 
-            this.pbLibro.BackgroundImage = global::ProyectoBiblioteca.Properties.Resources.icono_libro;
-            this.pbLibro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbLibro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbLibro.Location = new System.Drawing.Point(362, 93);
-            this.pbLibro.Margin = new System.Windows.Forms.Padding(0);
-            this.pbLibro.Name = "pbLibro";
-            this.pbLibro.Size = new System.Drawing.Size(181, 131);
-            this.pbLibro.TabIndex = 1;
-            this.pbLibro.TabStop = false;
-            // 
             // bAnadir
             // 
             this.bAnadir.BackColor = System.Drawing.Color.Azure;
@@ -116,6 +104,7 @@
             this.bAnadir.TabIndex = 3;
             this.bAnadir.Text = "Añadir";
             this.bAnadir.UseVisualStyleBackColor = false;
+            this.bAnadir.Click += new System.EventHandler(this.bAnadir_Click);
             // 
             // nudAnio
             // 
@@ -274,6 +263,18 @@
             this.tlpDatos.Size = new System.Drawing.Size(543, 221);
             this.tlpDatos.TabIndex = 2;
             // 
+            // pbLibro
+            // 
+            this.pbLibro.BackgroundImage = global::ProyectoBiblioteca.Properties.Resources.icono_libro;
+            this.pbLibro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbLibro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbLibro.Location = new System.Drawing.Point(362, 93);
+            this.pbLibro.Margin = new System.Windows.Forms.Padding(0);
+            this.pbLibro.Name = "pbLibro";
+            this.pbLibro.Size = new System.Drawing.Size(181, 131);
+            this.pbLibro.TabIndex = 1;
+            this.pbLibro.TabStop = false;
+            // 
             // InsertarLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -285,10 +286,10 @@
             this.Text = "InsertarLibros";
             this.tlpPrincipal.ResumeLayout(false);
             this.tlpPrincipal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLibro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAnio)).EndInit();
             this.tlpDatos.ResumeLayout(false);
             this.tlpDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLibro)).EndInit();
             this.ResumeLayout(false);
 
         }

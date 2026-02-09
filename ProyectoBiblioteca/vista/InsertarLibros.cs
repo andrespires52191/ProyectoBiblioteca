@@ -92,5 +92,10 @@ namespace ProyectoBiblioteca.vista
             public int Id { get; }
             public ClickarBotonIdEventArgs(int id) => Id = id;
         }
+
+        private void bAnadir_Click(object sender, EventArgs e)
+        {
+            anadirLibro?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
+        }
     }
 }
