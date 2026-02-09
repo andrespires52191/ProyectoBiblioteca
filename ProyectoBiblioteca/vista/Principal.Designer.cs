@@ -50,7 +50,7 @@
             this.pbLogo.Location = new System.Drawing.Point(0, 0);
             this.pbLogo.Margin = new System.Windows.Forms.Padding(0);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(274, 346);
+            this.pbLogo.Size = new System.Drawing.Size(183, 221);
             this.pbLogo.TabIndex = 3;
             this.pbLogo.TabStop = false;
             this.pbLogo.Click += new System.EventHandler(this.pbLogo_Click);
@@ -69,15 +69,15 @@
             this.tlpLateral.Margin = new System.Windows.Forms.Padding(0);
             this.tlpLateral.Name = "tlpLateral";
             this.tlpLateral.RowCount = 6;
-            this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 346F));
-            this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 96F));
-            this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 96F));
-            this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 96F));
-            this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 96F));
+            this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 221F));
+            this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
             this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tlpLateral.Size = new System.Drawing.Size(274, 1048);
+            this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tlpLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tlpLateral.Size = new System.Drawing.Size(183, 671);
             this.tlpLateral.TabIndex = 4;
             // 
             // bUsuarios
@@ -86,10 +86,10 @@
             this.bUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(99)))));
-            this.bUsuarios.Location = new System.Drawing.Point(10, 452);
-            this.bUsuarios.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.bUsuarios.Location = new System.Drawing.Point(7, 288);
+            this.bUsuarios.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bUsuarios.Name = "bUsuarios";
-            this.bUsuarios.Size = new System.Drawing.Size(254, 76);
+            this.bUsuarios.Size = new System.Drawing.Size(169, 49);
             this.bUsuarios.TabIndex = 4;
             this.bUsuarios.Text = "Usuarios";
             this.bUsuarios.UseVisualStyleBackColor = false;
@@ -101,10 +101,10 @@
             this.bLibros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bLibros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLibros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(99)))));
-            this.bLibros.Location = new System.Drawing.Point(10, 548);
-            this.bLibros.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.bLibros.Location = new System.Drawing.Point(7, 349);
+            this.bLibros.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bLibros.Name = "bLibros";
-            this.bLibros.Size = new System.Drawing.Size(254, 76);
+            this.bLibros.Size = new System.Drawing.Size(169, 49);
             this.bLibros.TabIndex = 5;
             this.bLibros.Text = "Libros";
             this.bLibros.UseVisualStyleBackColor = false;
@@ -116,10 +116,10 @@
             this.bPrestamos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bPrestamos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPrestamos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(99)))));
-            this.bPrestamos.Location = new System.Drawing.Point(10, 644);
-            this.bPrestamos.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.bPrestamos.Location = new System.Drawing.Point(7, 410);
+            this.bPrestamos.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bPrestamos.Name = "bPrestamos";
-            this.bPrestamos.Size = new System.Drawing.Size(254, 76);
+            this.bPrestamos.Size = new System.Drawing.Size(169, 49);
             this.bPrestamos.TabIndex = 6;
             this.bPrestamos.Text = "Préstamos";
             this.bPrestamos.UseVisualStyleBackColor = false;
@@ -131,12 +131,12 @@
             this.tlpTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpTitulo.Controls.Add(this.lTitulo, 0, 0);
             this.tlpTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpTitulo.Location = new System.Drawing.Point(274, 0);
-            this.tlpTitulo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tlpTitulo.Location = new System.Drawing.Point(183, 0);
+            this.tlpTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tlpTitulo.Name = "tlpTitulo";
             this.tlpTitulo.RowCount = 1;
             this.tlpTitulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpTitulo.Size = new System.Drawing.Size(1338, 119);
+            this.tlpTitulo.Size = new System.Drawing.Size(892, 76);
             this.tlpTitulo.TabIndex = 6;
             // 
             // lTitulo
@@ -144,27 +144,27 @@
             this.lTitulo.AutoSize = true;
             this.lTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(99)))));
             this.lTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lTitulo.Font = new System.Drawing.Font("Noto Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lTitulo.ForeColor = System.Drawing.Color.White;
             this.lTitulo.Location = new System.Drawing.Point(0, 0);
             this.lTitulo.Margin = new System.Windows.Forms.Padding(0);
             this.lTitulo.Name = "lTitulo";
-            this.lTitulo.Size = new System.Drawing.Size(1338, 119);
+            this.lTitulo.Size = new System.Drawing.Size(892, 76);
             this.lTitulo.TabIndex = 0;
             this.lTitulo.Text = "Biblioteca";
             this.lTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1612, 1048);
+            this.ClientSize = new System.Drawing.Size(1075, 671);
             this.Controls.Add(this.tlpTitulo);
             this.Controls.Add(this.tlpLateral);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Principal";
-            this.Text = "Form1";
+            this.Text = "Proyecto Biblioteca";
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.tlpLateral.ResumeLayout(false);
             this.tlpTitulo.ResumeLayout(false);
