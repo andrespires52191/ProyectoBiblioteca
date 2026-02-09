@@ -31,7 +31,6 @@
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.lAnadir = new System.Windows.Forms.Label();
             this.tlpDatos = new System.Windows.Forms.TableLayoutPanel();
-            this.bAnadir = new System.Windows.Forms.Button();
             this.lLibro = new System.Windows.Forms.Label();
             this.lUsuario = new System.Windows.Forms.Label();
             this.lFechaInicio = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.cbUsuario = new System.Windows.Forms.ComboBox();
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.bAnadir = new System.Windows.Forms.Button();
             this.tlpPrincipal.SuspendLayout();
             this.tlpDatos.SuspendLayout();
             this.SuspendLayout();
@@ -111,19 +111,6 @@
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpDatos.Size = new System.Drawing.Size(543, 139);
             this.tlpDatos.TabIndex = 2;
-            // 
-            // bAnadir
-            // 
-            this.bAnadir.BackColor = System.Drawing.Color.Azure;
-            this.bAnadir.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bAnadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.bAnadir.Location = new System.Drawing.Point(362, 295);
-            this.bAnadir.Margin = new System.Windows.Forms.Padding(0);
-            this.bAnadir.Name = "bAnadir";
-            this.bAnadir.Size = new System.Drawing.Size(181, 39);
-            this.bAnadir.TabIndex = 3;
-            this.bAnadir.Text = "Añadir";
-            this.bAnadir.UseVisualStyleBackColor = false;
             // 
             // lLibro
             // 
@@ -208,6 +195,20 @@
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(171, 28);
             this.dtpFechaFin.TabIndex = 7;
+            // 
+            // bAnadir
+            // 
+            this.bAnadir.BackColor = System.Drawing.Color.Azure;
+            this.bAnadir.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bAnadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.bAnadir.Location = new System.Drawing.Point(362, 295);
+            this.bAnadir.Margin = new System.Windows.Forms.Padding(0);
+            this.bAnadir.Name = "bAnadir";
+            this.bAnadir.Size = new System.Drawing.Size(181, 39);
+            this.bAnadir.TabIndex = 3;
+            this.bAnadir.Text = "Añadir";
+            this.bAnadir.UseVisualStyleBackColor = false;
+            this.bAnadir.Click += new System.EventHandler(this.bAnadir_Click);
             // 
             // InsertarPrestamos
             // 

@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
-            this.lAnadir = new System.Windows.Forms.Label();
             this.pbUsuario = new System.Windows.Forms.PictureBox();
+            this.lAnadir = new System.Windows.Forms.Label();
             this.tlpDatos = new System.Windows.Forms.TableLayoutPanel();
-            this.bAnadir = new System.Windows.Forms.Button();
             this.lNombre = new System.Windows.Forms.Label();
             this.lPrimerApellido = new System.Windows.Forms.Label();
             this.lSegundoApellido = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.tbPrimerApellido = new System.Windows.Forms.TextBox();
             this.tbSegundoApellido = new System.Windows.Forms.TextBox();
             this.tbTelefono = new System.Windows.Forms.TextBox();
+            this.bAnadir = new System.Windows.Forms.Button();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
             this.tlpDatos.SuspendLayout();
@@ -60,7 +60,7 @@
             this.tlpPrincipal.Controls.Add(this.tlpDatos, 1, 5);
             this.tlpPrincipal.Controls.Add(this.bAnadir, 2, 7);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpPrincipal.Location = new System.Drawing.Point(1, 0);
+            this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 9;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.332721F));
@@ -75,6 +75,18 @@
             this.tlpPrincipal.Size = new System.Drawing.Size(907, 576);
             this.tlpPrincipal.TabIndex = 0;
             // 
+            // pbUsuario
+            // 
+            this.pbUsuario.BackgroundImage = global::ProyectoBiblioteca.Properties.Resources.icono_usuario;
+            this.pbUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbUsuario.Location = new System.Drawing.Point(362, 126);
+            this.pbUsuario.Margin = new System.Windows.Forms.Padding(0);
+            this.pbUsuario.Name = "pbUsuario";
+            this.pbUsuario.Size = new System.Drawing.Size(181, 134);
+            this.pbUsuario.TabIndex = 0;
+            this.pbUsuario.TabStop = false;
+            // 
             // lAnadir
             // 
             this.lAnadir.AutoSize = true;
@@ -87,18 +99,6 @@
             this.lAnadir.Size = new System.Drawing.Size(543, 42);
             this.lAnadir.TabIndex = 1;
             this.lAnadir.Text = "Añadir Usuario";
-            // 
-            // pbUsuario
-            // 
-            this.pbUsuario.BackgroundImage = global::ProyectoBiblioteca.Properties.Resources.icono_usuario;
-            this.pbUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbUsuario.Location = new System.Drawing.Point(362, 126);
-            this.pbUsuario.Margin = new System.Windows.Forms.Padding(0);
-            this.pbUsuario.Name = "pbUsuario";
-            this.pbUsuario.Size = new System.Drawing.Size(181, 134);
-            this.pbUsuario.TabIndex = 0;
-            this.pbUsuario.TabStop = false;
             // 
             // tlpDatos
             // 
@@ -128,19 +128,6 @@
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpDatos.Size = new System.Drawing.Size(543, 145);
             this.tlpDatos.TabIndex = 2;
-            // 
-            // bAnadir
-            // 
-            this.bAnadir.BackColor = System.Drawing.Color.Azure;
-            this.bAnadir.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bAnadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.bAnadir.Location = new System.Drawing.Point(362, 489);
-            this.bAnadir.Margin = new System.Windows.Forms.Padding(0);
-            this.bAnadir.Name = "bAnadir";
-            this.bAnadir.Size = new System.Drawing.Size(181, 42);
-            this.bAnadir.TabIndex = 3;
-            this.bAnadir.Text = "Añadir";
-            this.bAnadir.UseVisualStyleBackColor = false;
             // 
             // lNombre
             // 
@@ -225,6 +212,20 @@
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(350, 28);
             this.tbTelefono.TabIndex = 7;
+            // 
+            // bAnadir
+            // 
+            this.bAnadir.BackColor = System.Drawing.Color.Azure;
+            this.bAnadir.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bAnadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.bAnadir.Location = new System.Drawing.Point(362, 489);
+            this.bAnadir.Margin = new System.Windows.Forms.Padding(0);
+            this.bAnadir.Name = "bAnadir";
+            this.bAnadir.Size = new System.Drawing.Size(181, 42);
+            this.bAnadir.TabIndex = 3;
+            this.bAnadir.Text = "Añadir";
+            this.bAnadir.UseVisualStyleBackColor = false;
+            this.bAnadir.Click += new System.EventHandler(this.bAnadir_Click);
             // 
             // InsertarUsuarios
             // 
