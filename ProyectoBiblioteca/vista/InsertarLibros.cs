@@ -21,7 +21,6 @@ namespace ProyectoBiblioteca.vista
         }
 
         public static InsertarLibros formulario;
-
         public static InsertarLibros GetInstance()
         {
             if (formulario == null)

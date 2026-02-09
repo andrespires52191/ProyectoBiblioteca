@@ -32,10 +32,6 @@
             this.lAnadir = new System.Windows.Forms.Label();
             this.pbLibro = new System.Windows.Forms.PictureBox();
             this.tlpDatos = new System.Windows.Forms.TableLayoutPanel();
-            this.nudAnio = new System.Windows.Forms.NumericUpDown();
-            this.tbSinopsis = new System.Windows.Forms.TextBox();
-            this.tbEscritor = new System.Windows.Forms.TextBox();
-            this.tbTitulo = new System.Windows.Forms.TextBox();
             this.lDisponible = new System.Windows.Forms.Label();
             this.rbSi = new System.Windows.Forms.RadioButton();
             this.rbNo = new System.Windows.Forms.RadioButton();
@@ -43,6 +39,10 @@
             this.lEscritor = new System.Windows.Forms.Label();
             this.lAnio = new System.Windows.Forms.Label();
             this.lSinopsis = new System.Windows.Forms.Label();
+            this.tbTitulo = new System.Windows.Forms.TextBox();
+            this.tbEscritor = new System.Windows.Forms.TextBox();
+            this.tbSinopsis = new System.Windows.Forms.TextBox();
+            this.nudAnio = new System.Windows.Forms.NumericUpDown();
             this.bAnadir = new System.Windows.Forms.Button();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLibro)).BeginInit();
@@ -128,7 +128,7 @@
             this.tlpDatos.Location = new System.Drawing.Point(272, 402);
             this.tlpDatos.Margin = new System.Windows.Forms.Padding(0);
             this.tlpDatos.Name = "tlpDatos";
-            this.tlpDatos.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.tlpDatos.Padding = new System.Windows.Forms.Padding(8);
             this.tlpDatos.RowCount = 7;
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -140,52 +140,6 @@
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tlpDatos.Size = new System.Drawing.Size(816, 346);
             this.tlpDatos.TabIndex = 2;
-            // 
-            // nudAnio
-            // 
-            this.tlpDatos.SetColumnSpan(this.nudAnio, 2);
-            this.nudAnio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nudAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.nudAnio.Location = new System.Drawing.Point(280, 108);
-            this.nudAnio.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.nudAnio.Name = "nudAnio";
-            this.nudAnio.Size = new System.Drawing.Size(522, 40);
-            this.nudAnio.TabIndex = 13;
-            // 
-            // tbSinopsis
-            // 
-            this.tlpDatos.SetColumnSpan(this.tbSinopsis, 2);
-            this.tbSinopsis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbSinopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSinopsis.Location = new System.Drawing.Point(280, 155);
-            this.tbSinopsis.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tbSinopsis.Multiline = true;
-            this.tbSinopsis.Name = "tbSinopsis";
-            this.tlpDatos.SetRowSpan(this.tbSinopsis, 3);
-            this.tbSinopsis.Size = new System.Drawing.Size(522, 129);
-            this.tbSinopsis.TabIndex = 10;
-            // 
-            // tbEscritor
-            // 
-            this.tlpDatos.SetColumnSpan(this.tbEscritor, 2);
-            this.tbEscritor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbEscritor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEscritor.Location = new System.Drawing.Point(280, 61);
-            this.tbEscritor.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tbEscritor.Name = "tbEscritor";
-            this.tbEscritor.Size = new System.Drawing.Size(522, 40);
-            this.tbEscritor.TabIndex = 8;
-            // 
-            // tbTitulo
-            // 
-            this.tlpDatos.SetColumnSpan(this.tbTitulo, 2);
-            this.tbTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTitulo.Location = new System.Drawing.Point(280, 14);
-            this.tbTitulo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tbTitulo.Name = "tbTitulo";
-            this.tbTitulo.Size = new System.Drawing.Size(522, 40);
-            this.tbTitulo.TabIndex = 7;
             // 
             // lDisponible
             // 
@@ -204,7 +158,7 @@
             this.rbSi.AutoSize = true;
             this.rbSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.rbSi.Location = new System.Drawing.Point(280, 296);
-            this.rbSi.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.rbSi.Margin = new System.Windows.Forms.Padding(6);
             this.rbSi.Name = "rbSi";
             this.rbSi.Size = new System.Drawing.Size(72, 36);
             this.rbSi.TabIndex = 20;
@@ -217,7 +171,7 @@
             this.rbNo.AutoSize = true;
             this.rbNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.rbNo.Location = new System.Drawing.Point(546, 296);
-            this.rbNo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.rbNo.Margin = new System.Windows.Forms.Padding(6);
             this.rbNo.Name = "rbNo";
             this.rbNo.Size = new System.Drawing.Size(83, 36);
             this.rbNo.TabIndex = 21;
@@ -272,6 +226,52 @@
             this.lSinopsis.Size = new System.Drawing.Size(254, 47);
             this.lSinopsis.TabIndex = 4;
             this.lSinopsis.Text = "Sinopsis";
+            // 
+            // tbTitulo
+            // 
+            this.tlpDatos.SetColumnSpan(this.tbTitulo, 2);
+            this.tbTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTitulo.Location = new System.Drawing.Point(280, 14);
+            this.tbTitulo.Margin = new System.Windows.Forms.Padding(6);
+            this.tbTitulo.Name = "tbTitulo";
+            this.tbTitulo.Size = new System.Drawing.Size(522, 40);
+            this.tbTitulo.TabIndex = 7;
+            // 
+            // tbEscritor
+            // 
+            this.tlpDatos.SetColumnSpan(this.tbEscritor, 2);
+            this.tbEscritor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbEscritor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEscritor.Location = new System.Drawing.Point(280, 61);
+            this.tbEscritor.Margin = new System.Windows.Forms.Padding(6);
+            this.tbEscritor.Name = "tbEscritor";
+            this.tbEscritor.Size = new System.Drawing.Size(522, 40);
+            this.tbEscritor.TabIndex = 8;
+            // 
+            // tbSinopsis
+            // 
+            this.tlpDatos.SetColumnSpan(this.tbSinopsis, 2);
+            this.tbSinopsis.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbSinopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSinopsis.Location = new System.Drawing.Point(280, 155);
+            this.tbSinopsis.Margin = new System.Windows.Forms.Padding(6);
+            this.tbSinopsis.Multiline = true;
+            this.tbSinopsis.Name = "tbSinopsis";
+            this.tlpDatos.SetRowSpan(this.tbSinopsis, 3);
+            this.tbSinopsis.Size = new System.Drawing.Size(522, 129);
+            this.tbSinopsis.TabIndex = 10;
+            // 
+            // nudAnio
+            // 
+            this.tlpDatos.SetColumnSpan(this.nudAnio, 2);
+            this.nudAnio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.nudAnio.Location = new System.Drawing.Point(280, 108);
+            this.nudAnio.Margin = new System.Windows.Forms.Padding(6);
+            this.nudAnio.Name = "nudAnio";
+            this.nudAnio.Size = new System.Drawing.Size(522, 40);
+            this.nudAnio.TabIndex = 13;
             // 
             // bAnadir
             // 

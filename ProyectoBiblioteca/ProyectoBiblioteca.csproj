@@ -158,6 +158,9 @@
     <EmbeddedResource Include="vista\InsertarLibros.resx">
       <DependentUpon>InsertarLibros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vista\InsertarPrestamos.resx">
+      <DependentUpon>InsertarPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\InsertarUsuarios.resx">
       <DependentUpon>InsertarUsuarios.cs</DependentUpon>
     </EmbeddedResource>

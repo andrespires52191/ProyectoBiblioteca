@@ -35,5 +35,10 @@ namespace ProyectoBiblioteca
         {
             Principal.GetInstance().MostrarGestionUsuarios();
         }
+
+        private void pbInsertar_Click(object sender, EventArgs e)
+        {
+            Principal.GetInstance().MostrarInsertarUsuarios();
+        }
     }
 }

@@ -84,6 +84,20 @@ namespace ProyectoBiblioteca
             InsertarFormulario(gestionLibros);
         }
 
+        internal void MostrarInsertarPrestamos()
+        {
+            var gestionPrestamos = InsertarPrestamos.GetInstance();
+            gestionPrestamos.miControlador = miControlador;
+            InsertarFormulario(gestionPrestamos);
+        }
+
+        internal void MostrarInsertarUsuarios()
+        {
+            var gestionUsuarios = InsertarUsuarios.GetInstance();
+            gestionUsuarios.miControlador = miControlador;
+            InsertarFormulario(gestionUsuarios);
+        }
+
         private void bUsuarios_Click(object sender, EventArgs e)
         {
             pintarBotonClaro(bUsuarios);
