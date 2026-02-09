@@ -77,6 +77,13 @@ namespace ProyectoBiblioteca
             gestionUsuarios.Cargar(miControlador.CargarUsuarios());
         }
 
+        internal void MostrarInsertarLibros()
+        {
+            var gestionLibros = InsertarLibros.GetInstance();
+            gestionLibros.miControlador = miControlador;
+            InsertarFormulario(gestionLibros);
+        }
+
         private void bUsuarios_Click(object sender, EventArgs e)
         {
             pintarBotonClaro(bUsuarios);

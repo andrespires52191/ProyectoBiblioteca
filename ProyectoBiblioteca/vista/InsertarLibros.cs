@@ -13,6 +13,8 @@ namespace ProyectoBiblioteca.vista
 {
     public partial class InsertarLibros : Form
     {
+        public Controlador miControlador { get; set; }
+
         public InsertarLibros()
         {
             InitializeComponent();
