@@ -31,26 +31,23 @@
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.lAnadir = new System.Windows.Forms.Label();
             this.pbLibro = new System.Windows.Forms.PictureBox();
-            this.tlpDatos = new System.Windows.Forms.TableLayoutPanel();
-            this.lDisponible = new System.Windows.Forms.Label();
-            this.rbSi = new System.Windows.Forms.RadioButton();
-            this.rbNo = new System.Windows.Forms.RadioButton();
-            this.lId = new System.Windows.Forms.Label();
-            this.lTitulo = new System.Windows.Forms.Label();
-            this.lEscritor = new System.Windows.Forms.Label();
-            this.lAnio = new System.Windows.Forms.Label();
-            this.lSinopsis = new System.Windows.Forms.Label();
-            this.tbTitulo = new System.Windows.Forms.TextBox();
-            this.tbEscritor = new System.Windows.Forms.TextBox();
-            this.tbSinopsis = new System.Windows.Forms.TextBox();
-            this.nudId = new System.Windows.Forms.NumericUpDown();
-            this.nudAnio = new System.Windows.Forms.NumericUpDown();
             this.bAnadir = new System.Windows.Forms.Button();
+            this.nudAnio = new System.Windows.Forms.NumericUpDown();
+            this.tbSinopsis = new System.Windows.Forms.TextBox();
+            this.tbEscritor = new System.Windows.Forms.TextBox();
+            this.tbTitulo = new System.Windows.Forms.TextBox();
+            this.lSinopsis = new System.Windows.Forms.Label();
+            this.lAnio = new System.Windows.Forms.Label();
+            this.lEscritor = new System.Windows.Forms.Label();
+            this.lTitulo = new System.Windows.Forms.Label();
+            this.rbNo = new System.Windows.Forms.RadioButton();
+            this.rbSi = new System.Windows.Forms.RadioButton();
+            this.lDisponible = new System.Windows.Forms.Label();
+            this.tlpDatos = new System.Windows.Forms.TableLayoutPanel();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLibro)).BeginInit();
-            this.tlpDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAnio)).BeginInit();
+            this.tlpDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpPrincipal
@@ -65,25 +62,20 @@
             this.tlpPrincipal.Controls.Add(this.lAnadir, 1, 1);
             this.tlpPrincipal.Controls.Add(this.pbLibro, 2, 3);
             this.tlpPrincipal.Controls.Add(this.tlpDatos, 1, 5);
-            this.tlpPrincipal.Controls.Add(this.bAnadir, 2, 12);
+            this.tlpPrincipal.Controls.Add(this.bAnadir, 2, 7);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Name = "tlpPrincipal";
-            this.tlpPrincipal.RowCount = 14;
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.831115F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.831115F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.831115F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.19549F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.831115F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.831115F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.831115F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.831115F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.831115F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.831115F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.831115F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.831115F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.831115F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.831115F));
+            this.tlpPrincipal.RowCount = 9;
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.517627F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.517625F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.517625F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.8947F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.517625F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.48192F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.517626F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.517625F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.517625F));
             this.tlpPrincipal.Size = new System.Drawing.Size(907, 576);
             this.tlpPrincipal.TabIndex = 0;
             // 
@@ -93,216 +85,194 @@
             this.tlpPrincipal.SetColumnSpan(this.lAnadir, 3);
             this.lAnadir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lAnadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lAnadir.Location = new System.Drawing.Point(184, 33);
+            this.lAnadir.Location = new System.Drawing.Point(181, 31);
+            this.lAnadir.Margin = new System.Windows.Forms.Padding(0);
             this.lAnadir.Name = "lAnadir";
-            this.lAnadir.Size = new System.Drawing.Size(537, 33);
+            this.lAnadir.Size = new System.Drawing.Size(543, 31);
             this.lAnadir.TabIndex = 0;
-            this.lAnadir.Text = "Añadir Libros";
+            this.lAnadir.Text = "Añadir Libro";
             // 
             // pbLibro
             // 
             this.pbLibro.BackgroundImage = global::ProyectoBiblioteca.Properties.Resources.icono_libro;
             this.pbLibro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbLibro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbLibro.Location = new System.Drawing.Point(365, 102);
+            this.pbLibro.Location = new System.Drawing.Point(362, 93);
+            this.pbLibro.Margin = new System.Windows.Forms.Padding(0);
             this.pbLibro.Name = "pbLibro";
-            this.pbLibro.Size = new System.Drawing.Size(175, 133);
+            this.pbLibro.Size = new System.Drawing.Size(181, 131);
             this.pbLibro.TabIndex = 1;
             this.pbLibro.TabStop = false;
-            // 
-            // tlpDatos
-            // 
-            this.tlpDatos.BackColor = System.Drawing.Color.Azure;
-            this.tlpDatos.ColumnCount = 3;
-            this.tlpPrincipal.SetColumnSpan(this.tlpDatos, 3);
-            this.tlpDatos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpDatos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tlpDatos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tlpDatos.Controls.Add(this.lDisponible, 0, 7);
-            this.tlpDatos.Controls.Add(this.rbSi, 1, 7);
-            this.tlpDatos.Controls.Add(this.rbNo, 2, 7);
-            this.tlpDatos.Controls.Add(this.lId, 0, 0);
-            this.tlpDatos.Controls.Add(this.lTitulo, 0, 1);
-            this.tlpDatos.Controls.Add(this.lEscritor, 0, 2);
-            this.tlpDatos.Controls.Add(this.lAnio, 0, 3);
-            this.tlpDatos.Controls.Add(this.lSinopsis, 0, 4);
-            this.tlpDatos.Controls.Add(this.tbTitulo, 1, 1);
-            this.tlpDatos.Controls.Add(this.tbEscritor, 1, 2);
-            this.tlpDatos.Controls.Add(this.tbSinopsis, 1, 4);
-            this.tlpDatos.Controls.Add(this.nudId, 1, 0);
-            this.tlpDatos.Controls.Add(this.nudAnio, 1, 3);
-            this.tlpDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDatos.Location = new System.Drawing.Point(184, 274);
-            this.tlpDatos.Name = "tlpDatos";
-            this.tlpDatos.Padding = new System.Windows.Forms.Padding(5);
-            this.tlpDatos.RowCount = 8;
-            this.tlpPrincipal.SetRowSpan(this.tlpDatos, 6);
-            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpDatos.Size = new System.Drawing.Size(537, 192);
-            this.tlpDatos.TabIndex = 2;
-            // 
-            // lDisponible
-            // 
-            this.lDisponible.AutoSize = true;
-            this.lDisponible.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lDisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDisponible.Location = new System.Drawing.Point(8, 159);
-            this.lDisponible.Name = "lDisponible";
-            this.lDisponible.Size = new System.Drawing.Size(169, 28);
-            this.lDisponible.TabIndex = 22;
-            this.lDisponible.Text = "Diponible";
-            // 
-            // rbSi
-            // 
-            this.rbSi.AutoSize = true;
-            this.rbSi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rbSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.rbSi.Location = new System.Drawing.Point(183, 162);
-            this.rbSi.Name = "rbSi";
-            this.rbSi.Size = new System.Drawing.Size(169, 22);
-            this.rbSi.TabIndex = 20;
-            this.rbSi.TabStop = true;
-            this.rbSi.Text = "Sí";
-            this.rbSi.UseVisualStyleBackColor = true;
-            // 
-            // rbNo
-            // 
-            this.rbNo.AutoSize = true;
-            this.rbNo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rbNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.rbNo.Location = new System.Drawing.Point(358, 162);
-            this.rbNo.Name = "rbNo";
-            this.rbNo.Size = new System.Drawing.Size(171, 22);
-            this.rbNo.TabIndex = 21;
-            this.rbNo.TabStop = true;
-            this.rbNo.Text = "No";
-            this.rbNo.UseVisualStyleBackColor = true;
-            // 
-            // lId
-            // 
-            this.lId.AutoSize = true;
-            this.lId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lId.Location = new System.Drawing.Point(8, 5);
-            this.lId.Name = "lId";
-            this.lId.Size = new System.Drawing.Size(169, 22);
-            this.lId.TabIndex = 0;
-            this.lId.Text = "ID";
-            // 
-            // lTitulo
-            // 
-            this.lTitulo.AutoSize = true;
-            this.lTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitulo.Location = new System.Drawing.Point(8, 27);
-            this.lTitulo.Name = "lTitulo";
-            this.lTitulo.Size = new System.Drawing.Size(169, 22);
-            this.lTitulo.TabIndex = 1;
-            this.lTitulo.Text = "Título";
-            // 
-            // lEscritor
-            // 
-            this.lEscritor.AutoSize = true;
-            this.lEscritor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lEscritor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lEscritor.Location = new System.Drawing.Point(8, 49);
-            this.lEscritor.Name = "lEscritor";
-            this.lEscritor.Size = new System.Drawing.Size(169, 22);
-            this.lEscritor.TabIndex = 2;
-            this.lEscritor.Text = "Escritor";
-            // 
-            // lAnio
-            // 
-            this.lAnio.AutoSize = true;
-            this.lAnio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lAnio.Location = new System.Drawing.Point(8, 71);
-            this.lAnio.Name = "lAnio";
-            this.lAnio.Size = new System.Drawing.Size(169, 22);
-            this.lAnio.TabIndex = 3;
-            this.lAnio.Text = "Año edición";
-            // 
-            // lSinopsis
-            // 
-            this.lSinopsis.AutoSize = true;
-            this.lSinopsis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lSinopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lSinopsis.Location = new System.Drawing.Point(8, 93);
-            this.lSinopsis.Name = "lSinopsis";
-            this.lSinopsis.Size = new System.Drawing.Size(169, 22);
-            this.lSinopsis.TabIndex = 4;
-            this.lSinopsis.Text = "Sinopsis";
-            // 
-            // tbTitulo
-            // 
-            this.tlpDatos.SetColumnSpan(this.tbTitulo, 2);
-            this.tbTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTitulo.Location = new System.Drawing.Point(183, 30);
-            this.tbTitulo.Name = "tbTitulo";
-            this.tbTitulo.Size = new System.Drawing.Size(346, 28);
-            this.tbTitulo.TabIndex = 7;
-            // 
-            // tbEscritor
-            // 
-            this.tlpDatos.SetColumnSpan(this.tbEscritor, 2);
-            this.tbEscritor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbEscritor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEscritor.Location = new System.Drawing.Point(183, 52);
-            this.tbEscritor.Name = "tbEscritor";
-            this.tbEscritor.Size = new System.Drawing.Size(346, 28);
-            this.tbEscritor.TabIndex = 8;
-            // 
-            // tbSinopsis
-            // 
-            this.tlpDatos.SetColumnSpan(this.tbSinopsis, 2);
-            this.tbSinopsis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbSinopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSinopsis.Location = new System.Drawing.Point(183, 96);
-            this.tbSinopsis.Multiline = true;
-            this.tbSinopsis.Name = "tbSinopsis";
-            this.tlpDatos.SetRowSpan(this.tbSinopsis, 3);
-            this.tbSinopsis.Size = new System.Drawing.Size(346, 60);
-            this.tbSinopsis.TabIndex = 10;
-            // 
-            // nudId
-            // 
-            this.tlpDatos.SetColumnSpan(this.nudId, 2);
-            this.nudId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nudId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.nudId.Location = new System.Drawing.Point(183, 8);
-            this.nudId.Name = "nudId";
-            this.nudId.Size = new System.Drawing.Size(346, 28);
-            this.nudId.TabIndex = 12;
-            // 
-            // nudAnio
-            // 
-            this.tlpDatos.SetColumnSpan(this.nudAnio, 2);
-            this.nudAnio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nudAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.nudAnio.Location = new System.Drawing.Point(183, 74);
-            this.nudAnio.Name = "nudAnio";
-            this.nudAnio.Size = new System.Drawing.Size(346, 28);
-            this.nudAnio.TabIndex = 13;
             // 
             // bAnadir
             // 
             this.bAnadir.BackColor = System.Drawing.Color.Azure;
             this.bAnadir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bAnadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAnadir.Location = new System.Drawing.Point(365, 505);
+            this.bAnadir.Location = new System.Drawing.Point(362, 507);
+            this.bAnadir.Margin = new System.Windows.Forms.Padding(0);
             this.bAnadir.Name = "bAnadir";
-            this.bAnadir.Size = new System.Drawing.Size(175, 27);
+            this.bAnadir.Size = new System.Drawing.Size(181, 31);
             this.bAnadir.TabIndex = 3;
             this.bAnadir.Text = "Añadir";
             this.bAnadir.UseVisualStyleBackColor = false;
+            // 
+            // nudAnio
+            // 
+            this.tlpDatos.SetColumnSpan(this.nudAnio, 2);
+            this.nudAnio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.nudAnio.Location = new System.Drawing.Point(185, 68);
+            this.nudAnio.Name = "nudAnio";
+            this.nudAnio.Size = new System.Drawing.Size(350, 28);
+            this.nudAnio.TabIndex = 13;
+            // 
+            // tbSinopsis
+            // 
+            this.tlpDatos.SetColumnSpan(this.tbSinopsis, 2);
+            this.tbSinopsis.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbSinopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSinopsis.Location = new System.Drawing.Point(185, 98);
+            this.tbSinopsis.Multiline = true;
+            this.tbSinopsis.Name = "tbSinopsis";
+            this.tlpDatos.SetRowSpan(this.tbSinopsis, 3);
+            this.tbSinopsis.Size = new System.Drawing.Size(350, 84);
+            this.tbSinopsis.TabIndex = 10;
+            // 
+            // tbEscritor
+            // 
+            this.tlpDatos.SetColumnSpan(this.tbEscritor, 2);
+            this.tbEscritor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbEscritor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEscritor.Location = new System.Drawing.Point(185, 38);
+            this.tbEscritor.Name = "tbEscritor";
+            this.tbEscritor.Size = new System.Drawing.Size(350, 28);
+            this.tbEscritor.TabIndex = 8;
+            // 
+            // tbTitulo
+            // 
+            this.tlpDatos.SetColumnSpan(this.tbTitulo, 2);
+            this.tbTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTitulo.Location = new System.Drawing.Point(185, 8);
+            this.tbTitulo.Name = "tbTitulo";
+            this.tbTitulo.Size = new System.Drawing.Size(350, 28);
+            this.tbTitulo.TabIndex = 7;
+            // 
+            // lSinopsis
+            // 
+            this.lSinopsis.AutoSize = true;
+            this.lSinopsis.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lSinopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lSinopsis.Location = new System.Drawing.Point(8, 95);
+            this.lSinopsis.Name = "lSinopsis";
+            this.lSinopsis.Size = new System.Drawing.Size(171, 30);
+            this.lSinopsis.TabIndex = 4;
+            this.lSinopsis.Text = "Sinopsis";
+            // 
+            // lAnio
+            // 
+            this.lAnio.AutoSize = true;
+            this.lAnio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lAnio.Location = new System.Drawing.Point(8, 65);
+            this.lAnio.Name = "lAnio";
+            this.lAnio.Size = new System.Drawing.Size(171, 30);
+            this.lAnio.TabIndex = 3;
+            this.lAnio.Text = "Año de edición";
+            // 
+            // lEscritor
+            // 
+            this.lEscritor.AutoSize = true;
+            this.lEscritor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lEscritor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lEscritor.Location = new System.Drawing.Point(8, 35);
+            this.lEscritor.Name = "lEscritor";
+            this.lEscritor.Size = new System.Drawing.Size(171, 30);
+            this.lEscritor.TabIndex = 2;
+            this.lEscritor.Text = "Escritor";
+            // 
+            // lTitulo
+            // 
+            this.lTitulo.AutoSize = true;
+            this.lTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTitulo.Location = new System.Drawing.Point(8, 5);
+            this.lTitulo.Name = "lTitulo";
+            this.lTitulo.Size = new System.Drawing.Size(171, 30);
+            this.lTitulo.TabIndex = 1;
+            this.lTitulo.Text = "Título";
+            // 
+            // rbNo
+            // 
+            this.rbNo.AutoSize = true;
+            this.rbNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.rbNo.Location = new System.Drawing.Point(362, 188);
+            this.rbNo.Name = "rbNo";
+            this.rbNo.Size = new System.Drawing.Size(54, 25);
+            this.rbNo.TabIndex = 21;
+            this.rbNo.TabStop = true;
+            this.rbNo.Text = "No";
+            this.rbNo.UseVisualStyleBackColor = true;
+            // 
+            // rbSi
+            // 
+            this.rbSi.AutoSize = true;
+            this.rbSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.rbSi.Location = new System.Drawing.Point(185, 188);
+            this.rbSi.Name = "rbSi";
+            this.rbSi.Size = new System.Drawing.Size(47, 25);
+            this.rbSi.TabIndex = 20;
+            this.rbSi.TabStop = true;
+            this.rbSi.Text = "Sí";
+            this.rbSi.UseVisualStyleBackColor = true;
+            // 
+            // lDisponible
+            // 
+            this.lDisponible.AutoSize = true;
+            this.lDisponible.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lDisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lDisponible.Location = new System.Drawing.Point(8, 185);
+            this.lDisponible.Name = "lDisponible";
+            this.lDisponible.Size = new System.Drawing.Size(171, 31);
+            this.lDisponible.TabIndex = 22;
+            this.lDisponible.Text = "Diponible";
+            // 
+            // tlpDatos
+            // 
+            this.tlpDatos.BackColor = System.Drawing.Color.Azure;
+            this.tlpDatos.ColumnCount = 3;
+            this.tlpPrincipal.SetColumnSpan(this.tlpDatos, 3);
+            this.tlpDatos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
+            this.tlpDatos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tlpDatos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tlpDatos.Controls.Add(this.lDisponible, 0, 6);
+            this.tlpDatos.Controls.Add(this.rbSi, 1, 6);
+            this.tlpDatos.Controls.Add(this.rbNo, 2, 6);
+            this.tlpDatos.Controls.Add(this.lTitulo, 0, 0);
+            this.tlpDatos.Controls.Add(this.lEscritor, 0, 1);
+            this.tlpDatos.Controls.Add(this.lAnio, 0, 2);
+            this.tlpDatos.Controls.Add(this.lSinopsis, 0, 3);
+            this.tlpDatos.Controls.Add(this.tbTitulo, 1, 0);
+            this.tlpDatos.Controls.Add(this.tbEscritor, 1, 1);
+            this.tlpDatos.Controls.Add(this.tbSinopsis, 1, 3);
+            this.tlpDatos.Controls.Add(this.nudAnio, 1, 2);
+            this.tlpDatos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatos.Location = new System.Drawing.Point(181, 255);
+            this.tlpDatos.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpDatos.Name = "tlpDatos";
+            this.tlpDatos.Padding = new System.Windows.Forms.Padding(5);
+            this.tlpDatos.RowCount = 7;
+            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpDatos.Size = new System.Drawing.Size(543, 221);
+            this.tlpDatos.TabIndex = 2;
             // 
             // InsertarLibros
             // 
@@ -316,10 +286,9 @@
             this.tlpPrincipal.ResumeLayout(false);
             this.tlpPrincipal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLibro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAnio)).EndInit();
             this.tlpDatos.ResumeLayout(false);
             this.tlpDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAnio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,8 +298,11 @@
         private System.Windows.Forms.TableLayoutPanel tlpPrincipal;
         private System.Windows.Forms.Label lAnadir;
         private System.Windows.Forms.PictureBox pbLibro;
+        private System.Windows.Forms.Button bAnadir;
         private System.Windows.Forms.TableLayoutPanel tlpDatos;
-        private System.Windows.Forms.Label lId;
+        private System.Windows.Forms.Label lDisponible;
+        private System.Windows.Forms.RadioButton rbSi;
+        private System.Windows.Forms.RadioButton rbNo;
         private System.Windows.Forms.Label lTitulo;
         private System.Windows.Forms.Label lEscritor;
         private System.Windows.Forms.Label lAnio;
@@ -338,11 +310,6 @@
         private System.Windows.Forms.TextBox tbTitulo;
         private System.Windows.Forms.TextBox tbEscritor;
         private System.Windows.Forms.TextBox tbSinopsis;
-        private System.Windows.Forms.Button bAnadir;
-        private System.Windows.Forms.NumericUpDown nudId;
         private System.Windows.Forms.NumericUpDown nudAnio;
-        private System.Windows.Forms.Label lDisponible;
-        private System.Windows.Forms.RadioButton rbSi;
-        private System.Windows.Forms.RadioButton rbNo;
     }
 }
