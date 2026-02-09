@@ -11,31 +11,34 @@ namespace ProyectoBiblioteca.controlador
 {
     public class Controlador
     {
+        public RepositorioLibro repoLibro = new RepositorioLibro();
+        public RepositorioPrestamo repoPrestamo = new RepositorioPrestamo();
+        public RepositorioUsuario repoUsuario = new RepositorioUsuario();
+
         internal DataTable CargarLibros()
         {
-            DataTable datos = new DataTable();
-            string sql = "SELECT * FROM LIBROS";
-            SQLiteCommand cmd = new SQLiteCommand(sql);
-            datos = SQLiteHelper.GetDataTable(Properties.Settings.Default.conexion, cmd);
-            return datos;
+            return repoLibro.CargarTodo();
         }
 
         internal DataTable CargarPrestamos()
         {
-            DataTable datos = new DataTable();
-            string sql = "SELECT * FROM PRESTAMOS";
-            SQLiteCommand cmd = new SQLiteCommand(sql);
-            datos = SQLiteHelper.GetDataTable(Properties.Settings.Default.conexion, cmd);
-            return datos;
+            return repoPrestamo.CargarTodo();
         }
 
         internal DataTable CargarUsuarios()
         {
-            DataTable datos = new DataTable();
-            string sql = "SELECT * FROM USUARIOS";
-            SQLiteCommand cmd = new SQLiteCommand(sql);
-            datos = SQLiteHelper.GetDataTable(Properties.Settings.Default.conexion, cmd);
-            return datos;
+            return repoUsuario.CargarTodo();
+        }
+
+
+        public void AnadirLibro(string titulo, string escritor, int ano_edicion, string sinopsis, bool disponible)
+        {
+            if (titulo == "" || escritor == "" || sinopsis == "")
+            {
+                throw new Exception("Debes rellenar los datos correctamente");
+            }
+            Libro miLibro = new Libro(titulo, escritor, ano_edicion, sinopsis, disponible);
+            repoLibro.AnadirLibro(miLibro);
         }
     }
 }

@@ -35,49 +35,37 @@ namespace ProyectoBiblioteca.vista
 
         public string Titulo
         {
-            get => lTitulo.Text;
-            set => lTitulo.Text = value;
+            get => tbTitulo.Text;
+            set => tbTitulo.Text = value;
         }
 
         public string Escritor
         {
-            get => lEscritor.Text;
-            set => lEscritor.Text = value;
+            get => tbEscritor.Text;
+            set => tbEscritor.Text = value;
         }
 
-        public int Ano_Adicion
+        public int Ano_Edicion
         {
-            get {
-                int anio;
-                int.TryParse(lAnio.Text, out anio);
-                return anio;
-
-            }
-            set {
-                lAnio.Text = value.ToString();
-            }
+            get => (int)nudAnio.Value;
+            set => nudAnio.Value = value;
         }
 
         public string Sinopsis
         {
-            get => lSinopsis.Text;
-            set => lSinopsis.Text = value;
+            get => tbSinopsis.Text;
+            set => tbSinopsis.Text = value;
         }
 
-        public int Disponible
+        public bool Disponible
         {
             get
             {
-                if (rbSi.Checked)
-                {
-                    return 1;
-                }
-                else
-                    return 0;
+                return rbSi.Checked;
             }
             set
             {
-                if (value == 1)
+                if (value)
                 {
                     rbSi.Checked = true;
                 }
@@ -96,7 +84,8 @@ namespace ProyectoBiblioteca.vista
 
         private void bAnadir_Click(object sender, EventArgs e)
         {
-            anadirLibro?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
+            //anadirLibro?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
+            miControlador.AnadirLibro(Titulo, Escritor, Ano_Edicion, Sinopsis, Disponible);
         }
     }
 }

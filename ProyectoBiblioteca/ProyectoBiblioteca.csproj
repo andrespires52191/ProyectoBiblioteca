@@ -78,7 +78,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controlador\Controlador.cs" />
+    <Compile Include="modelo\Libro.cs" />
+    <Compile Include="modelo\Prestamo.cs" />
+    <Compile Include="modelo\RepositorioLibro.cs" />
+    <Compile Include="modelo\RepositorioPrestamo.cs" />
+    <Compile Include="modelo\RepositorioUsuario.cs" />
     <Compile Include="modelo\SQLiteHelper.cs" />
+    <Compile Include="modelo\Usuario.cs" />
     <Compile Include="vista\GestionLibros.cs">
       <SubType>Form</SubType>
     </Compile>
