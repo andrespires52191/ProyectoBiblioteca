@@ -60,13 +60,13 @@
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 7;
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.48878F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.48878F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.48878F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.06734F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.48878F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.48878F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.48878F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.3472F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.0221F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.3472F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.567F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.3472F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.02211F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.3472F));
             this.tlpPrincipal.Size = new System.Drawing.Size(907, 376);
             this.tlpPrincipal.TabIndex = 0;
             // 
@@ -76,10 +76,10 @@
             this.tlpPrincipal.SetColumnSpan(this.lAnadir, 3);
             this.lAnadir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lAnadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.lAnadir.Location = new System.Drawing.Point(181, 39);
+            this.lAnadir.Location = new System.Drawing.Point(181, 38);
             this.lAnadir.Margin = new System.Windows.Forms.Padding(0);
             this.lAnadir.Name = "lAnadir";
-            this.lAnadir.Size = new System.Drawing.Size(543, 39);
+            this.lAnadir.Size = new System.Drawing.Size(543, 41);
             this.lAnadir.TabIndex = 0;
             this.lAnadir.Text = "Añadir Préstamo";
             // 
@@ -109,7 +109,7 @@
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpDatos.Size = new System.Drawing.Size(543, 139);
+            this.tlpDatos.Size = new System.Drawing.Size(543, 137);
             this.tlpDatos.TabIndex = 2;
             // 
             // lLibro
@@ -119,7 +119,7 @@
             this.lLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.lLibro.Location = new System.Drawing.Point(8, 5);
             this.lLibro.Name = "lLibro";
-            this.lLibro.Size = new System.Drawing.Size(171, 32);
+            this.lLibro.Size = new System.Drawing.Size(171, 31);
             this.lLibro.TabIndex = 0;
             this.lLibro.Text = "Libro";
             // 
@@ -128,9 +128,9 @@
             this.lUsuario.AutoSize = true;
             this.lUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.lUsuario.Location = new System.Drawing.Point(8, 37);
+            this.lUsuario.Location = new System.Drawing.Point(8, 36);
             this.lUsuario.Name = "lUsuario";
-            this.lUsuario.Size = new System.Drawing.Size(171, 32);
+            this.lUsuario.Size = new System.Drawing.Size(171, 31);
             this.lUsuario.TabIndex = 1;
             this.lUsuario.Text = "Usuario";
             // 
@@ -139,9 +139,9 @@
             this.lFechaInicio.AutoSize = true;
             this.lFechaInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.lFechaInicio.Location = new System.Drawing.Point(8, 69);
+            this.lFechaInicio.Location = new System.Drawing.Point(8, 67);
             this.lFechaInicio.Name = "lFechaInicio";
-            this.lFechaInicio.Size = new System.Drawing.Size(171, 32);
+            this.lFechaInicio.Size = new System.Drawing.Size(171, 31);
             this.lFechaInicio.TabIndex = 2;
             this.lFechaInicio.Text = "Fecha de inicio";
             // 
@@ -150,9 +150,9 @@
             this.lFechaFin.AutoSize = true;
             this.lFechaFin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lFechaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.lFechaFin.Location = new System.Drawing.Point(8, 101);
+            this.lFechaFin.Location = new System.Drawing.Point(8, 98);
             this.lFechaFin.Name = "lFechaFin";
-            this.lFechaFin.Size = new System.Drawing.Size(171, 33);
+            this.lFechaFin.Size = new System.Drawing.Size(171, 34);
             this.lFechaFin.TabIndex = 3;
             this.lFechaFin.Text = "Fecha de fin";
             // 
@@ -173,7 +173,7 @@
             this.cbUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.cbUsuario.FormattingEnabled = true;
-            this.cbUsuario.Location = new System.Drawing.Point(185, 40);
+            this.cbUsuario.Location = new System.Drawing.Point(185, 39);
             this.cbUsuario.Name = "cbUsuario";
             this.cbUsuario.Size = new System.Drawing.Size(350, 30);
             this.cbUsuario.TabIndex = 5;
@@ -182,7 +182,7 @@
             // 
             this.dtpFechaInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.dtpFechaInicio.Location = new System.Drawing.Point(185, 72);
+            this.dtpFechaInicio.Location = new System.Drawing.Point(185, 70);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(171, 28);
             this.dtpFechaInicio.TabIndex = 6;
@@ -191,7 +191,7 @@
             // 
             this.dtpFechaFin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpFechaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.dtpFechaFin.Location = new System.Drawing.Point(185, 104);
+            this.dtpFechaFin.Location = new System.Drawing.Point(185, 101);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(171, 28);
             this.dtpFechaFin.TabIndex = 7;
@@ -201,10 +201,10 @@
             this.bAnadir.BackColor = System.Drawing.Color.Azure;
             this.bAnadir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bAnadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.bAnadir.Location = new System.Drawing.Point(362, 295);
+            this.bAnadir.Location = new System.Drawing.Point(362, 292);
             this.bAnadir.Margin = new System.Windows.Forms.Padding(0);
             this.bAnadir.Name = "bAnadir";
-            this.bAnadir.Size = new System.Drawing.Size(181, 39);
+            this.bAnadir.Size = new System.Drawing.Size(181, 41);
             this.bAnadir.TabIndex = 3;
             this.bAnadir.Text = "Añadir";
             this.bAnadir.UseVisualStyleBackColor = false;

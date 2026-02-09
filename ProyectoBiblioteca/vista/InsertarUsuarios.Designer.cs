@@ -64,15 +64,15 @@
             this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 9;
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.332721F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.332722F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.332722F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.37305F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.332722F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.29789F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.332722F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.332722F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.332722F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.744496F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.75545F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.744496F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.49809F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.744497F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.26852F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.744497F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.75545F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.744497F));
             this.tlpPrincipal.Size = new System.Drawing.Size(907, 576);
             this.tlpPrincipal.TabIndex = 0;
             // 
@@ -81,10 +81,10 @@
             this.pbUsuario.BackgroundImage = global::ProyectoBiblioteca.Properties.Resources.icono_usuario;
             this.pbUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbUsuario.Location = new System.Drawing.Point(362, 126);
+            this.pbUsuario.Location = new System.Drawing.Point(362, 137);
             this.pbUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.pbUsuario.Name = "pbUsuario";
-            this.pbUsuario.Size = new System.Drawing.Size(181, 134);
+            this.pbUsuario.Size = new System.Drawing.Size(181, 123);
             this.pbUsuario.TabIndex = 0;
             this.pbUsuario.TabStop = false;
             // 
@@ -94,10 +94,10 @@
             this.tlpPrincipal.SetColumnSpan(this.lAnadir, 3);
             this.lAnadir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lAnadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.lAnadir.Location = new System.Drawing.Point(181, 42);
+            this.lAnadir.Location = new System.Drawing.Point(181, 38);
             this.lAnadir.Margin = new System.Windows.Forms.Padding(0);
             this.lAnadir.Name = "lAnadir";
-            this.lAnadir.Size = new System.Drawing.Size(543, 42);
+            this.lAnadir.Size = new System.Drawing.Size(543, 61);
             this.lAnadir.TabIndex = 1;
             this.lAnadir.Text = "Añadir Usuario";
             // 
@@ -118,7 +118,7 @@
             this.tlpDatos.Controls.Add(this.tbSegundoApellido, 1, 2);
             this.tlpDatos.Controls.Add(this.tbTelefono, 1, 3);
             this.tlpDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDatos.Location = new System.Drawing.Point(181, 302);
+            this.tlpDatos.Location = new System.Drawing.Point(181, 298);
             this.tlpDatos.Margin = new System.Windows.Forms.Padding(0);
             this.tlpDatos.Name = "tlpDatos";
             this.tlpDatos.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
@@ -127,7 +127,7 @@
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpDatos.Size = new System.Drawing.Size(543, 145);
+            this.tlpDatos.Size = new System.Drawing.Size(543, 134);
             this.tlpDatos.TabIndex = 2;
             // 
             // lNombre
@@ -137,7 +137,7 @@
             this.lNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.lNombre.Location = new System.Drawing.Point(8, 5);
             this.lNombre.Name = "lNombre";
-            this.lNombre.Size = new System.Drawing.Size(171, 33);
+            this.lNombre.Size = new System.Drawing.Size(171, 31);
             this.lNombre.TabIndex = 0;
             this.lNombre.Text = "Nombre";
             // 
@@ -146,9 +146,9 @@
             this.lPrimerApellido.AutoSize = true;
             this.lPrimerApellido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lPrimerApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.lPrimerApellido.Location = new System.Drawing.Point(8, 38);
+            this.lPrimerApellido.Location = new System.Drawing.Point(8, 36);
             this.lPrimerApellido.Name = "lPrimerApellido";
-            this.lPrimerApellido.Size = new System.Drawing.Size(171, 33);
+            this.lPrimerApellido.Size = new System.Drawing.Size(171, 31);
             this.lPrimerApellido.TabIndex = 1;
             this.lPrimerApellido.Text = "Primer apellido";
             // 
@@ -157,9 +157,9 @@
             this.lSegundoApellido.AutoSize = true;
             this.lSegundoApellido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lSegundoApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.lSegundoApellido.Location = new System.Drawing.Point(8, 71);
+            this.lSegundoApellido.Location = new System.Drawing.Point(8, 67);
             this.lSegundoApellido.Name = "lSegundoApellido";
-            this.lSegundoApellido.Size = new System.Drawing.Size(171, 33);
+            this.lSegundoApellido.Size = new System.Drawing.Size(171, 31);
             this.lSegundoApellido.TabIndex = 2;
             this.lSegundoApellido.Text = "Segundo apellido";
             // 
@@ -168,9 +168,9 @@
             this.lTelefono.AutoSize = true;
             this.lTelefono.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.lTelefono.Location = new System.Drawing.Point(8, 104);
+            this.lTelefono.Location = new System.Drawing.Point(8, 98);
             this.lTelefono.Name = "lTelefono";
-            this.lTelefono.Size = new System.Drawing.Size(171, 36);
+            this.lTelefono.Size = new System.Drawing.Size(171, 31);
             this.lTelefono.TabIndex = 3;
             this.lTelefono.Text = "Teléfono";
             // 
@@ -189,7 +189,7 @@
             this.tlpDatos.SetColumnSpan(this.tbPrimerApellido, 2);
             this.tbPrimerApellido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbPrimerApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.tbPrimerApellido.Location = new System.Drawing.Point(185, 41);
+            this.tbPrimerApellido.Location = new System.Drawing.Point(185, 39);
             this.tbPrimerApellido.Name = "tbPrimerApellido";
             this.tbPrimerApellido.Size = new System.Drawing.Size(350, 28);
             this.tbPrimerApellido.TabIndex = 5;
@@ -199,7 +199,7 @@
             this.tlpDatos.SetColumnSpan(this.tbSegundoApellido, 2);
             this.tbSegundoApellido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbSegundoApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.tbSegundoApellido.Location = new System.Drawing.Point(185, 74);
+            this.tbSegundoApellido.Location = new System.Drawing.Point(185, 70);
             this.tbSegundoApellido.Name = "tbSegundoApellido";
             this.tbSegundoApellido.Size = new System.Drawing.Size(350, 28);
             this.tbSegundoApellido.TabIndex = 6;
@@ -209,7 +209,7 @@
             this.tlpDatos.SetColumnSpan(this.tbTelefono, 2);
             this.tbTelefono.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.tbTelefono.Location = new System.Drawing.Point(185, 107);
+            this.tbTelefono.Location = new System.Drawing.Point(185, 101);
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(350, 28);
             this.tbTelefono.TabIndex = 7;
@@ -219,10 +219,10 @@
             this.bAnadir.BackColor = System.Drawing.Color.Azure;
             this.bAnadir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bAnadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.bAnadir.Location = new System.Drawing.Point(362, 489);
+            this.bAnadir.Location = new System.Drawing.Point(362, 470);
             this.bAnadir.Margin = new System.Windows.Forms.Padding(0);
             this.bAnadir.Name = "bAnadir";
-            this.bAnadir.Size = new System.Drawing.Size(181, 42);
+            this.bAnadir.Size = new System.Drawing.Size(181, 61);
             this.bAnadir.TabIndex = 3;
             this.bAnadir.Text = "Añadir";
             this.bAnadir.UseVisualStyleBackColor = false;
