@@ -103,7 +103,7 @@
             this.tlpDatos.Location = new System.Drawing.Point(181, 117);
             this.tlpDatos.Margin = new System.Windows.Forms.Padding(0);
             this.tlpDatos.Name = "tlpDatos";
-            this.tlpDatos.Padding = new System.Windows.Forms.Padding(5);
+            this.tlpDatos.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tlpDatos.RowCount = 4;
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));

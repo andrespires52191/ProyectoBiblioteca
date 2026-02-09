@@ -53,12 +53,49 @@ namespace ProyectoBiblioteca
             InsertarFormulario(form);
         }
 
+        internal void MostrarGestionLibros()
+        {
+            var gestionLibros = GestionLibros.GetInstance();
+            gestionLibros.miControlador = miControlador;
+            InsertarFormulario(gestionLibros);
+            gestionLibros.Cargar(miControlador.CargarLibros());
+        }
+
+        internal void MostrarGestionPrestamos()
+        {
+            var gestionPrestamos = GestionPrestamos.GetInstance();
+            gestionPrestamos.miControlador = miControlador;
+            InsertarFormulario(gestionPrestamos);
+            gestionPrestamos.Cargar(miControlador.CargarPrestamos());
+        }
+
         internal void MostrarGestionUsuarios()
         {
             var gestionUsuarios = GestionUsuarios.GetInstance();
             gestionUsuarios.miControlador = miControlador;
             InsertarFormulario(gestionUsuarios);
             gestionUsuarios.Cargar(miControlador.CargarUsuarios());
+        }
+
+        internal void MostrarInsertarLibros()
+        {
+            var gestionLibros = InsertarLibros.GetInstance();
+            gestionLibros.miControlador = miControlador;
+            InsertarFormulario(gestionLibros);
+        }
+
+        internal void MostrarInsertarPrestamos()
+        {
+            var gestionPrestamos = InsertarPrestamos.GetInstance();
+            gestionPrestamos.miControlador = miControlador;
+            InsertarFormulario(gestionPrestamos);
+        }
+
+        internal void MostrarInsertarUsuarios()
+        {
+            var gestionUsuarios = InsertarUsuarios.GetInstance();
+            gestionUsuarios.miControlador = miControlador;
+            InsertarFormulario(gestionUsuarios);
         }
 
         private void bUsuarios_Click(object sender, EventArgs e)
@@ -109,14 +146,6 @@ namespace ProyectoBiblioteca
         {
             boton.ForeColor = colorContrasteBlanco;
             boton.BackColor = colorSecundarioVerde;
-        }
-
-        internal void MostrarGestionLibros()
-        {
-            var gestionLibros = new GestionLibros();
-            gestionLibros.miControlador = miControlador;
-            InsertarFormulario(gestionLibros);
-            //gestionLibros.Cargar(miControlador.CargarLibros());
         }
     }
 }

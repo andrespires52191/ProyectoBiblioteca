@@ -30,5 +30,14 @@ namespace ProyectoBiblioteca.vista
             }
             return formulario;
         }
+        private void pbVerBorrar_Click(object sender, EventArgs e)
+        {
+            Principal.GetInstance().MostrarGestionLibros();
+        }
+
+        private void pbInsertar_Click(object sender, EventArgs e)
+        {
+            Principal.GetInstance().MostrarInsertarLibros();
+        }
     }
 }

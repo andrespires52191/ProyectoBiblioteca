@@ -38,7 +38,7 @@ namespace ProyectoBiblioteca.vista
 
         private void pbInsertar_Click(object sender, EventArgs e)
         {
-            //Principal.GetInstance().MostrarGestionUsuarios();
+            Principal.GetInstance().MostrarInsertarLibros();
         }
     }
 }
