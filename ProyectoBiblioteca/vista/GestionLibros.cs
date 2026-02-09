@@ -58,11 +58,9 @@ namespace ProyectoBiblioteca.vista
             MessageBox.Show(e.Id.ToString());
         }
 
-
         private void ucFila_borrarLibro(object sender, UserControl1.ClickarBotonIdEventArgs e)
         {
             MessageBox.Show(e.Id.ToString());
         }
-
     }
 }

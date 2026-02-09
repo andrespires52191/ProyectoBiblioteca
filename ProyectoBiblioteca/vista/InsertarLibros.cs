@@ -35,40 +35,66 @@ namespace ProyectoBiblioteca.vista
 
         public string Titulo
         {
-            get => lTitulo.Text;
-            set => lTitulo.Text = value;
+            get => tbTitulo.Text;
+            set => tbTitulo.Text = value;
         }
 
         public string Escritor
         {
             // Si está vacío al obtenerlo, devuelve "Anonimo"
-            get => string.IsNullOrWhiteSpace(lEscritor.Text) ? "Anonimo" : lEscritor.Text;
-            set => lEscritor.Text = value;
+            get => string.IsNullOrWhiteSpace(tbEscritor.Text) ? "Anonimo" : tbEscritor.Text;
+            set => tbEscritor.Text = value;
         }
 
-        // Se utiliza int? (nullable) porque el año puede ser NULL
-        public int? Ano_Adicion
+        // TODO : Implementar lo de "int?"
+
+        // Se utiliza "int?" (nullable) porque el año puede ser NULL
+        /*
+        public int Ano_Edicion
         {
             get {
-                if (string.IsNullOrWhiteSpace(lAnio.Text)) return null;
-                if (int.TryParse(lAnio.Text, out int anio)) return anio;
+                if (string.IsNullOrWhiteSpace(nudAnio.Text)) return null;
+                if (int.TryParse(nudAnio.Text, out int anio)) return anio;
                 return null;
             }
             set => lAnio.Text = value?.ToString() ?? "";
         }
+        */
+
+        public int Ano_Edicion
+        {
+            get => (int)nudAnio.Value;
+            set => nudAnio.Value = value;
+        }
 
         public string Sinopsis
         {
-            get => lSinopsis.Text;
-            set => lSinopsis.Text = value;
+            get => tbSinopsis.Text;
+            set => tbSinopsis.Text = value;
         }
 
+        /*
         public int Disponible
         {
             get => rbSi.Checked ? 1 : 0;
             set
             {
                 if (value == 1)
+                {
+                    rbSi.Checked = true;
+                }
+                else
+                    rbNo.Checked = true;
+            }
+        }
+        */
+
+        public bool Disponible
+        {
+            get => rbSi.Checked;
+            set
+            {
+                if (value)
                 {
                     rbSi.Checked = true;
                 }
@@ -145,7 +171,8 @@ namespace ProyectoBiblioteca.vista
             // TODO : Tendrá que validar los datos y luego ya que pase/cree el ID y mande los datos
             if (validarDatos())
             {
-                anadirLibro?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
+                //anadirLibro?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
+                miControlador.AnadirLibro(Titulo, Escritor, Ano_Edicion, Sinopsis, Disponible);
             }
         }
     }
