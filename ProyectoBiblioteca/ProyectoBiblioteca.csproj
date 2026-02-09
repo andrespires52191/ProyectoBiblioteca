@@ -78,7 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controlador\Controlador.cs" />
-    <Compile Include="modelo\Libro.cs" />
     <Compile Include="modelo\SQLiteHelper.cs" />
     <Compile Include="vista\GestionLibros.cs">
       <SubType>Form</SubType>
