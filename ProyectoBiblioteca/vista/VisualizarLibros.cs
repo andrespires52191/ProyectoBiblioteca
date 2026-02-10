@@ -24,7 +24,7 @@ namespace ProyectoBiblioteca.vista
 
         public static VisualizarLibros GetInstance()
         {
-            if (formulario == null)
+            if (formulario == null || formulario.IsDisposed)
             {
                 formulario = new VisualizarLibros();
             }

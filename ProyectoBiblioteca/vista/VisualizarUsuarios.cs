@@ -24,7 +24,7 @@ namespace ProyectoBiblioteca
 
         public static VisualizarUsuarios GetInstance()
         {
-            if (formulario == null)
+            if (formulario == null || formulario.IsDisposed)
             {
                 formulario = new VisualizarUsuarios();
             }

@@ -24,7 +24,7 @@ namespace ProyectoBiblioteca.vista
         public static GestionUsuarios formulario;
         internal static GestionUsuarios GetInstance()
         {
-            if (formulario == null)
+            if (formulario == null || formulario.IsDisposed)
             {
                 formulario = new GestionUsuarios();
             }

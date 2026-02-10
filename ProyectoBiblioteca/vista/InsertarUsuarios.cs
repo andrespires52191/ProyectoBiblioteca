@@ -23,7 +23,7 @@ namespace ProyectoBiblioteca.vista
         public static InsertarUsuarios formulario;
         public static InsertarUsuarios GetInstance()
         {
-            if (formulario == null)
+            if (formulario == null || formulario.IsDisposed)
             {
                 formulario = new InsertarUsuarios();
             }

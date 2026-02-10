@@ -23,7 +23,7 @@ namespace ProyectoBiblioteca.vista
         public static InsertarPrestamos formulario;
         public static InsertarPrestamos GetInstance()
         {
-            if (formulario == null)
+            if (formulario == null || formulario.IsDisposed)
             {
                 formulario = new InsertarPrestamos();
             }

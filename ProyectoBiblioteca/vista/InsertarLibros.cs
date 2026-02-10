@@ -18,12 +18,15 @@ namespace ProyectoBiblioteca.vista
         public InsertarLibros()
         {
             InitializeComponent();
+
+            // Establecer el estado de disponibilidad "Sí" por defecto
+            rbSi.Checked = true;
         }
 
         public static InsertarLibros formulario;
         public static InsertarLibros GetInstance()
         {
-            if (formulario == null)
+            if (formulario == null || formulario.IsDisposed)
             {
                 formulario = new InsertarLibros();
             }
@@ -35,14 +38,14 @@ namespace ProyectoBiblioteca.vista
 
         public string Titulo
         {
-            get => tbTitulo.Text;
+            get => tbTitulo.Text.Trim();
             set => tbTitulo.Text = value;
         }
 
         public string Escritor
         {
             // Si está vacío al obtenerlo, devuelve "Anonimo"
-            get => string.IsNullOrWhiteSpace(tbEscritor.Text) ? "Anonimo" : tbEscritor.Text;
+            get => string.IsNullOrWhiteSpace(tbEscritor.Text.Trim()) ? "Anonimo" : tbEscritor.Text.Trim();
             set => tbEscritor.Text = value;
         }
 
@@ -57,7 +60,7 @@ namespace ProyectoBiblioteca.vista
                 if (int.TryParse(nudAnio.Text, out int anio)) return anio;
                 return null;
             }
-            set => lAnio.Text = value?.ToString() ?? "";
+            set => nudAnio.Text = value?.ToString() ?? "";
         }
         */
 
@@ -69,7 +72,7 @@ namespace ProyectoBiblioteca.vista
 
         public string Sinopsis
         {
-            get => tbSinopsis.Text;
+            get => tbSinopsis.Text.Trim();
             set => tbSinopsis.Text = value;
         }
 
