@@ -13,6 +13,12 @@ namespace ProyectoBiblioteca.vista
 {
     public partial class InsertarLibros : Form
     {
+        // TODO : Parte de responsividad
+        /*
+        bool mostrado = false;
+        const float FONTSIZE = 10f;
+        */
+
         public Controlador miControlador { get; set; }
 
         public InsertarLibros()
@@ -21,6 +27,12 @@ namespace ProyectoBiblioteca.vista
 
             // Establecer el estado de disponibilidad "Sí" por defecto
             rbSi.Checked = true;
+
+            // TODO : Parte de responsividad
+            /*
+            mostrado = true;
+            limpiar();
+            */
         }
 
         public static InsertarLibros formulario;
@@ -32,6 +44,18 @@ namespace ProyectoBiblioteca.vista
             }
             return formulario;
         }
+
+        // TODO : Parte de responsividad
+        /*
+        public void limpiar()
+        {
+            tbTitulo.Text = "";
+            tbEscritor.Text = "";
+            nudAnio.Value = 0;
+            tbSinopsis.Text = "";
+            rbSi.Checked = true;
+        }
+        */
 
         private int id;
         public int Id { get => id; set => id = value; }
@@ -177,6 +201,22 @@ namespace ProyectoBiblioteca.vista
                 //anadirLibro?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
                 miControlador.AnadirLibro(Titulo, Escritor, Ano_Edicion, Sinopsis, Disponible);
             }
+        }
+
+        private void InsertarLibros_Resize(object sender, EventArgs e)
+        {
+            // TODO : Parte de responsividad
+            /*
+            if (mostrado)
+            {
+                double proporcionAlto = (double)this.Height / this.MinimumSize.Height;
+                //double proporcionAncho = (double)this.Width / this.MinimumSize.Width;
+                foreach (Control control in tlpPrincipal.Controls)
+                {
+                    control.Font = new Font(control.Font.FontFamily, (float)(FONTSIZE * proporcionAlto));
+                }
+            }
+            */
         }
     }
 }

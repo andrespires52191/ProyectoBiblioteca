@@ -295,8 +295,10 @@
             this.Controls.Add(this.tlpPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(907, 576);
             this.Name = "InsertarLibros";
             this.Text = "InsertarLibros";
+            this.Resize += new System.EventHandler(this.InsertarLibros_Resize);
             this.tlpPrincipal.ResumeLayout(false);
             this.tlpPrincipal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLibro)).EndInit();
