@@ -33,6 +33,8 @@ namespace ProyectoBiblioteca.vista
             mostrado = true;
             limpiar();
             */
+
+            // TODO : Probar a hacer que salga esta ventana con más alto y ancho inicial (y luego aplicar a las demás)
         }
 
         public static InsertarLibros formulario;
@@ -140,40 +142,44 @@ namespace ProyectoBiblioteca.vista
 
         private bool validarDatos()
         {
-            // TODO : Tengo que probarlo todo y luego mejorarlo
-
-            /*
-             // 1. Validar Título (Not Null y texto)
+            // 1. Validar Título (Not Null y texto)
             if (string.IsNullOrWhiteSpace(Titulo))
             {
                 MessageBox.Show("El título es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
+            // TODO : Llamada al modelo
             // 2. Validar Título Único (Llamada al controlador/modelo)
-            // Asumiendo que tu controlador tiene un método para verificar esto
+            /*
             if (miControlador != null && miControlador.ExisteTitulo(Titulo))
             {
                 MessageBox.Show("Este título ya existe en la biblioteca.", "Error de duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+            */
 
+            // TODO : Configurar el NumericUpDown para que se pueda escribir más que el nº 100
             // 3. Validar Año (Si se ha escrito algo)
+            /*
             if (!string.IsNullOrWhiteSpace(lAnio.Text))
             {
                 int anioActual = DateTime.Now.Year;
+
                 if (!int.TryParse(lAnio.Text, out int anioValido))
                 {
                     MessageBox.Show("El año debe ser un número entero.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
-                // Siglo IX (801) hasta Año Actual
-                if (anioValido < 801 || anioValido > anioActual)
+
+                // Desde 1700 hasta Año Actual
+                if (anioValido < 1700 || anioValido > anioActual)
                 {
-                    MessageBox.Show($"El año debe estar entre el 801 y el {anioActual}.", "Rango inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show($"El año debe estar entre el 1700 y el {anioActual}.", "Rango inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
+            */
 
             // 4. Validar Sinopsis (Máximo 1000 caracteres)
             if (Sinopsis.Length > 1000)
@@ -188,7 +194,7 @@ namespace ProyectoBiblioteca.vista
                 MessageBox.Show("Debe seleccionar si el libro está disponible o no.", "Error de selección", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-             */
+            
 
             return true;
         }
