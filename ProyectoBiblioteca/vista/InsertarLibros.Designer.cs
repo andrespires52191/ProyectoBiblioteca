@@ -66,6 +66,7 @@
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tlpPrincipal.MinimumSize = new System.Drawing.Size(680, 468);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 9;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.870116F));
@@ -128,7 +129,7 @@
             this.tlpDatos.Location = new System.Drawing.Point(136, 210);
             this.tlpDatos.Margin = new System.Windows.Forms.Padding(0);
             this.tlpDatos.Name = "tlpDatos";
-            this.tlpDatos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tlpDatos.Padding = new System.Windows.Forms.Padding(2);
             this.tlpDatos.RowCount = 7;
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
