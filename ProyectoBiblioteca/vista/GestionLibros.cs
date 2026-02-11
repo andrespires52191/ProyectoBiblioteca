@@ -1,5 +1,6 @@
 ﻿using FilaLibros;
 using ProyectoBiblioteca.controlador;
+using ProyectoBiblioteca.modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,7 +61,16 @@ namespace ProyectoBiblioteca.vista
 
         private void ucFila_borrarLibro(object sender, UserControl1.ClickarBotonIdEventArgs e)
         {
-            MessageBox.Show(e.Id.ToString());
+            try
+            {
+                miControlador.EliminarLibro(e.Id);
+                Cargar(miControlador.CargarLibros());
+                MessageBox.Show("Libro borrado corretamente.");                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

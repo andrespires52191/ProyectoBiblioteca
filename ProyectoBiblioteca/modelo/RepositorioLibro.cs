@@ -32,5 +32,21 @@ namespace ProyectoBiblioteca.modelo
 
             SQLiteHelper.Ejecuta(Properties.Settings.Default.conexion, cmd);
         }
+
+        public void EliminarLibro(int id)
+        {
+            string sql = $"DELETE FROM LIBROS WHERE ID={id}";
+            SQLiteCommand cmd = new SQLiteCommand(sql);
+            SQLiteHelper.Ejecuta(Properties.Settings.Default.conexion, cmd);
+        }
+
+        public DataTable BuscarPorID(int id)
+        {
+            DataTable datos = new DataTable();
+            string sql = $"SELECT * FROM LIBROS WHERE ID={id}";
+            SQLiteCommand cmd = new SQLiteCommand(sql);
+            datos = SQLiteHelper.GetDataTable(Properties.Settings.Default.conexion, cmd);
+            return datos;
+        }
     }
 }

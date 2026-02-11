@@ -37,10 +37,14 @@ namespace ProyectoBiblioteca.vista
             int nuevaFila = 0;
             foreach (DataRow row in datos.Rows)
             {
+
+                DataTable usuario = miControlador.BuscarUsuario((int)row.Field<long>("id_usuario"));
+                DataTable libro = miControlador.BuscarLibro((int)row.Field<long>("id_libro"));
+                
                 UserControl1 ucFila = new UserControl1();
                 ucFila.Id = (int)row.Field<long>("id");
-                ucFila.Usuario = row.Field<long>("id_usuario").ToString();
-                ucFila.Libro = row.Field<long>("id_libro").ToString();
+                ucFila.Usuario = usuario.Rows[0].Field<string>("nombre");
+                ucFila.Libro = libro.Rows[0].Field<string>("titulo");
                 ucFila.FechaIni = row.Field<string>("fecha_inicio");
                 ucFila.FechaFin = row.Field<string>("fecha_fin");
                 ucFila.verPrestamo += ucFila_verPrestamo;

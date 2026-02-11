@@ -18,5 +18,21 @@ namespace ProyectoBiblioteca.modelo
             datos = SQLiteHelper.GetDataTable(Properties.Settings.Default.conexion, cmd);
             return datos;
         }
+
+        public void EliminarUsuario(int id)
+        {
+            string sql = $"DELETE FROM USUARIOS WHERE ID={id}";
+            SQLiteCommand cmd = new SQLiteCommand(sql);
+            SQLiteHelper.Ejecuta(Properties.Settings.Default.conexion, cmd);
+        }
+
+        public DataTable BuscarPorID(int id)
+        {
+            DataTable datos = new DataTable();
+            string sql = $"SELECT * FROM USUARIOS WHERE ID={id}";
+            SQLiteCommand cmd = new SQLiteCommand(sql);
+            datos = SQLiteHelper.GetDataTable(Properties.Settings.Default.conexion, cmd);
+            return datos;
+        }
     }
 }

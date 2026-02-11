@@ -15,21 +15,15 @@ namespace ProyectoBiblioteca.controlador
         public RepositorioPrestamo repoPrestamo = new RepositorioPrestamo();
         public RepositorioUsuario repoUsuario = new RepositorioUsuario();
 
+
+        //
+        // Libros
+        //
+
         internal DataTable CargarLibros()
         {
             return repoLibro.CargarTodo();
         }
-
-        internal DataTable CargarPrestamos()
-        {
-            return repoPrestamo.CargarTodo();
-        }
-
-        internal DataTable CargarUsuarios()
-        {
-            return repoUsuario.CargarTodo();
-        }
-
 
         public void AnadirLibro(string titulo, string escritor, int ano_edicion, string sinopsis, bool disponible)
         {
@@ -39,6 +33,47 @@ namespace ProyectoBiblioteca.controlador
             }
             Libro miLibro = new Libro(titulo, escritor, ano_edicion, sinopsis, disponible);
             repoLibro.AnadirLibro(miLibro);
+        }
+        public DataTable BuscarLibro(int id)
+        {
+            return repoLibro.BuscarPorID(id);
+        }
+        public void EliminarLibro(int id)
+        {
+            repoLibro.EliminarLibro(id);
+        }
+
+        //
+        // Prestamos
+        //
+
+        internal DataTable CargarPrestamos()
+        {
+            return repoPrestamo.CargarTodo();
+        }
+        public DataTable BuscarPrestamo(int id)
+        {
+            return repoPrestamo.BuscarPorID(id);
+        }
+        public void EliminarPrestamo(int id)
+        {
+            repoPrestamo.EliminarPrestamo(id);
+        }
+
+        //
+        // Usuarios
+        //
+        internal DataTable CargarUsuarios()
+        {
+            return repoUsuario.CargarTodo();
+        }
+        public DataTable BuscarUsuario(int id)
+        {
+            return repoUsuario.BuscarPorID(id);
+        }
+        public void EliminarUsuario(int id)
+        {
+            repoUsuario.EliminarUsuario(id);
         }
     }
 }
