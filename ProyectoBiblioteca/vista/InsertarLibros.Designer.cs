@@ -66,7 +66,6 @@
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tlpPrincipal.MinimumSize = new System.Drawing.Size(680, 468);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 9;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.870116F));
@@ -297,6 +296,7 @@
             this.Controls.Add(this.tlpPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.MinimumSize = new System.Drawing.Size(680, 468);
             this.Name = "InsertarLibros";
             this.Text = "InsertarLibros";
             this.Resize += new System.EventHandler(this.InsertarLibros_Resize);
