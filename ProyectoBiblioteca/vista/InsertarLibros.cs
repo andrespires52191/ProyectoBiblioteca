@@ -47,8 +47,6 @@ namespace ProyectoBiblioteca.vista
             return formulario;
         }
 
-        // TODO : Parte de responsividad
-        /*
         public void limpiar()
         {
             tbTitulo.Text = "";
@@ -57,7 +55,6 @@ namespace ProyectoBiblioteca.vista
             tbSinopsis.Text = "";
             rbSi.Checked = true;
         }
-        */
 
         private int id;
         public int Id { get => id; set => id = value; }
@@ -101,22 +98,6 @@ namespace ProyectoBiblioteca.vista
             get => tbSinopsis.Text.Trim();
             set => tbSinopsis.Text = value;
         }
-
-        /*
-        public int Disponible
-        {
-            get => rbSi.Checked ? 1 : 0;
-            set
-            {
-                if (value == 1)
-                {
-                    rbSi.Checked = true;
-                }
-                else
-                    rbNo.Checked = true;
-            }
-        }
-        */
 
         public bool Disponible
         {
@@ -201,11 +182,19 @@ namespace ProyectoBiblioteca.vista
 
         private void bAnadir_Click(object sender, EventArgs e)
         {
-            // TODO : Tendrá que validar los datos y luego ya que pase/cree el ID y mande los datos
-            if (validarDatos())
+            // TODO: Los errores de validación se generan como excepciones en el controlador
+            // y el mensaje de la excepción lo mostramos al usuario.
+            // haria falta mover y adaptar validarDatos() dentro del controlador.
+            try
             {
                 //anadirLibro?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
                 miControlador.AnadirLibro(Titulo, Escritor, Ano_Edicion, Sinopsis, Disponible);
+                MessageBox.Show("Libro añadido corretamente.");
+                limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
