@@ -11,11 +11,13 @@ namespace ProyectoBiblioteca.modelo
         public int id { get; set; }
         public string titulo { get; set; }
         public string escritor { get; set; }
-        public int ano_edicion { get; set; }
+
+        // Poner "int?" (nullable) porque en la base de datos puede ser NULL
+        public int? ano_edicion { get; set; }
         public string sinopsis { get; set; }
         public bool disponible { get; set; }
 
-        public Libro(string titulo, string escritor, int ano_edicion, string sinopsis, bool disponible)
+        public Libro(string titulo, string escritor, int? ano_edicion, string sinopsis, bool disponible)
         {
             this.titulo = titulo;
             this.escritor = escritor;

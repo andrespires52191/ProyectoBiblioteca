@@ -71,7 +71,6 @@ namespace ProyectoBiblioteca.vista
 
         private void bAnadir_Click(object sender, EventArgs e)
         {
-            // TODO : Tendrá que validar los datos y luego ya que pase/cree el ID y mande los datos
             anadirUsuario?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
         }
     }

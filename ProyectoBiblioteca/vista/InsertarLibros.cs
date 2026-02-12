@@ -25,6 +25,9 @@ namespace ProyectoBiblioteca.vista
         {
             InitializeComponent();
 
+            // Configurar el NumericUpDown del año para que admita valores superiores a 100 (hasta el año actual)
+            nudAnio.Maximum = DateTime.Now.Year;
+
             // Establecer el estado de disponibilidad "Sí" por defecto
             rbSi.Checked = true;
 
@@ -72,25 +75,10 @@ namespace ProyectoBiblioteca.vista
             set => tbEscritor.Text = value;
         }
 
-        // TODO : Implementar lo de "int?"
-
-        // Se utiliza "int?" (nullable) porque el año puede ser NULL
-        /*
-        public int Ano_Edicion
+        public int? Ano_Edicion
         {
-            get {
-                if (string.IsNullOrWhiteSpace(nudAnio.Text)) return null;
-                if (int.TryParse(nudAnio.Text, out int anio)) return anio;
-                return null;
-            }
-            set => nudAnio.Text = value?.ToString() ?? "";
-        }
-        */
-
-        public int Ano_Edicion
-        {
-            get => (int)nudAnio.Value;
-            set => nudAnio.Value = value;
+            get => nudAnio.Value == 0 ? (int?)null : (int?)nudAnio.Value;
+            set => nudAnio.Value = value ?? 0;
         }
 
         public string Sinopsis
@@ -121,80 +109,22 @@ namespace ProyectoBiblioteca.vista
             public ClickarBotonIdEventArgs(int id) => Id = id;
         }
 
-        private bool validarDatos()
-        {
-            // 1. Validar Título (Not Null y texto)
-            if (string.IsNullOrWhiteSpace(Titulo))
-            {
-                MessageBox.Show("El título es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            // TODO : Llamada al modelo
-            // 2. Validar Título Único (Llamada al controlador/modelo)
-            /*
-            if (miControlador != null && miControlador.ExisteTitulo(Titulo))
-            {
-                MessageBox.Show("Este título ya existe en la biblioteca.", "Error de duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            */
-
-            // TODO : Configurar el NumericUpDown para que se pueda escribir más que el nº 100
-            // 3. Validar Año (Si se ha escrito algo)
-            /*
-            if (!string.IsNullOrWhiteSpace(lAnio.Text))
-            {
-                int anioActual = DateTime.Now.Year;
-
-                if (!int.TryParse(lAnio.Text, out int anioValido))
-                {
-                    MessageBox.Show("El año debe ser un número entero.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
-
-                // Desde 1700 hasta Año Actual
-                if (anioValido < 1700 || anioValido > anioActual)
-                {
-                    MessageBox.Show($"El año debe estar entre el 1700 y el {anioActual}.", "Rango inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
-            }
-            */
-
-            // 4. Validar Sinopsis (Máximo 1000 caracteres)
-            if (Sinopsis.Length > 1000)
-            {
-                MessageBox.Show("La sinopsis no puede superar los 1000 caracteres.", "Texto demasiado largo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            // 5. Validar Disponible (Not null - Uno de los dos debe estar marcado)
-            if (!rbSi.Checked && !rbNo.Checked)
-            {
-                MessageBox.Show("Debe seleccionar si el libro está disponible o no.", "Error de selección", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            
-
-            return true;
-        }
-
         private void bAnadir_Click(object sender, EventArgs e)
         {
-            // TODO: Los errores de validación se generan como excepciones en el controlador
-            // y el mensaje de la excepción lo mostramos al usuario.
-            // haria falta mover y adaptar validarDatos() dentro del controlador.
             try
             {
-                //anadirLibro?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
-                miControlador.AnadirLibro(Titulo, Escritor, Ano_Edicion, Sinopsis, Disponible);
-                MessageBox.Show("Libro añadido corretamente.");
+                // Obtener año nullable
+                int? anio = nudAnio.Value == 0 ? (int?)null : (int?)nudAnio.Value;
+
+                // Toda la validación la hace el controlador dentro de AnadirLibro
+                miControlador.AnadirLibro(Titulo, Escritor, anio, Sinopsis, Disponible);
+                MessageBox.Show("Libro añadido correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpiar();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                // Mostrar error personalizado
+                MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

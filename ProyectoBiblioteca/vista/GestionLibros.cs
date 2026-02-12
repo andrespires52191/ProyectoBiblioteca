@@ -43,7 +43,11 @@ namespace ProyectoBiblioteca.vista
                 ucFila.Id = (int)row.Field<long>("id");
                 ucFila.Titulo = row.Field<string>("titulo");
                 ucFila.Escritor = row.Field<string>("escritor");
-                ucFila.Anyo = row.Field<long>("ano_edicion").ToString();
+
+                // Utilizar "long?" (nullable) porque 'ano_edicion' puede venir como NULL en la BD
+                ucFila.Anyo = row.Field<long?>("ano_edicion")?.ToString() ?? "";
+                //ucFila.Anyo = row.Field<long>("ano_edicion").ToString();
+
                 ucFila.verLibro += ucFila_verLibro;
                 ucFila.borrarLibro += ucFila_borrarLibro;
                 ucFila.Dock = DockStyle.Fill;
