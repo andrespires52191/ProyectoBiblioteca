@@ -26,7 +26,7 @@ namespace FilaLibros
         public bool Disponible
         {
             get => lDisponible.Text == "Sí";
-            set => lDisponible.Text = (value) ? "No" : "Sí";
+            set => lDisponible.Text = (value) ? "Sí" : "No";
         }
         public event EventHandler<ClickarBotonIdEventArgs> verLibro;
         public event EventHandler<ClickarBotonIdEventArgs> borrarLibro;

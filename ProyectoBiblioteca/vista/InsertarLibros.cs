@@ -89,7 +89,7 @@ namespace ProyectoBiblioteca.vista
 
         public bool Disponible
         {
-            get => rbSi.Checked;
+            get => rbSi.Checked && !rbNo.Checked;
             set
             {
                 if (value)
