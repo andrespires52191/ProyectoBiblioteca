@@ -51,6 +51,10 @@ namespace ProyectoBiblioteca.controlador
         {
             return repoPrestamo.CargarTodo();
         }
+        public void AnadirPrestamo(Prestamo prestamo)
+        {
+            repoPrestamo.AnadirPrestamo(prestamo);
+        }
         public DataTable BuscarPrestamo(int id)
         {
             return repoPrestamo.BuscarPorID(id);
@@ -66,6 +70,10 @@ namespace ProyectoBiblioteca.controlador
         internal DataTable CargarUsuarios()
         {
             return repoUsuario.CargarTodo();
+        }
+        public void AnadirUsuario(Usuario usuario)
+        {
+            repoUsuario.AnadirUsuario(usuario);
         }
         public DataTable BuscarUsuario(int id)
         {

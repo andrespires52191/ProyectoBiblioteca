@@ -1,4 +1,5 @@
 ﻿using ProyectoBiblioteca.controlador;
+using ProyectoBiblioteca.modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,13 +38,13 @@ namespace ProyectoBiblioteca.vista
         // Obtiene el SelectedValue (el ID) aunque el usuario vea el Título
         public int IdLibro
         {
-            get => cbLibro.SelectedValue != null ? (int)cbLibro.SelectedValue : 0;
+            get => cbLibro.SelectedValue != null ? Convert.ToInt32(cbLibro.SelectedValue) : 0;
             set => cbLibro.SelectedValue = value;
         }
 
         public int IdUsuario
         {
-            get => cbUsuario.SelectedValue != null ? (int)cbUsuario.SelectedValue : 0;
+            get => cbUsuario.SelectedValue != null ? Convert.ToInt32(cbUsuario.SelectedValue) : 0;
             set => cbUsuario.SelectedValue = value;
         }
 
@@ -69,8 +70,33 @@ namespace ProyectoBiblioteca.vista
 
         private void bAnadir_Click(object sender, EventArgs e)
         {
-            // TODO : Tendrá que validar los datos y luego ya que pase/cree el ID y mande los datos
-            anadirPrestamo?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
+            try
+            {
+                // TODO : El controlador tendrá que validar los datos
+                Prestamo prestamo = new Prestamo(IdLibro, IdUsuario, FechaInicio.ToString("yyyy-MM-dd"), FechaFin.ToString("yyyy-MM-dd"));
+                miControlador.AnadirPrestamo(prestamo);
+                MessageBox.Show("Prestamo añadido correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        internal void CargarLibros(DataTable dataTable)
+        {
+            cbLibro.DataSource = dataTable;
+            cbLibro.DisplayMember = "titulo";
+            cbLibro.ValueMember = "id";
+            cbLibro.SelectedIndex = 0;
+        }
+
+        internal void CargarUsuarios(DataTable dataTable)
+        {
+            cbUsuario.DataSource = dataTable;
+            cbUsuario.DisplayMember = "nombre";
+            cbUsuario.ValueMember = "id";
+            cbUsuario.SelectedIndex = 0;
         }
     }
 }
