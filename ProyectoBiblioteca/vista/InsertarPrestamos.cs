@@ -73,14 +73,22 @@ namespace ProyectoBiblioteca.vista
             try
             {
                 // TODO : El controlador tendrá que validar los datos
-                Prestamo prestamo = new Prestamo(IdLibro, IdUsuario, FechaInicio.ToString("yyyy-MM-dd"), FechaFin.ToString("yyyy-MM-dd"));
-                miControlador.AnadirPrestamo(prestamo);
+                miControlador.AnadirPrestamo(IdUsuario, IdLibro, FechaInicio, FechaFin);
                 MessageBox.Show("Prestamo añadido correctamente.");
+                limpiar();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void limpiar()
+        {
+            IdLibro = 0;
+            IdUsuario = 0;
+            FechaInicio = DateTime.Now;
+            FechaFin = DateTime.Now;
         }
 
         internal void CargarLibros(DataTable dataTable)

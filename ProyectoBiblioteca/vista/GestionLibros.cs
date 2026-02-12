@@ -44,6 +44,7 @@ namespace ProyectoBiblioteca.vista
                 ucFila.Titulo = row.Field<string>("titulo");
                 ucFila.Escritor = row.Field<string>("escritor");
                 ucFila.Anyo = row.Field<long>("ano_edicion").ToString();
+                ucFila.Disponible = row.Field<long>("disponible") == 1;
                 ucFila.verLibro += ucFila_verLibro;
                 ucFila.borrarLibro += ucFila_borrarLibro;
                 ucFila.Dock = DockStyle.Fill;

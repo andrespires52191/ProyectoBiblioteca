@@ -1,4 +1,5 @@
 using ProyectoBiblioteca.controlador;
+using ProyectoBiblioteca.modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,30 +36,30 @@ namespace ProyectoBiblioteca.vista
 
         public string Nombre
         {
-            get => lNombre.Text;
-            set => lNombre.Text = value;
+            get => tbNombre.Text;
+            set => tbNombre.Text = value;
         }
 
         public string Apellido1
         {
-            get => lPrimerApellido.Text;
-            set => lPrimerApellido.Text = value;
+            get => tbPrimerApellido.Text;
+            set => tbPrimerApellido.Text = value;
         }
 
         public string Apellido2
         {
-            get => lSegundoApellido.Text;
-            set => lSegundoApellido.Text = value;
+            get => tbSegundoApellido.Text;
+            set => tbSegundoApellido.Text = value;
         }
 
         public int Telefono
         {
             get
             {
-                int.TryParse(lTelefono.Text, out int resultado);
+                int.TryParse(tbTelefono.Text, out int resultado);
                 return resultado;
             }
-            set => lTelefono.Text = value.ToString();
+            set => tbTelefono.Text = value.ToString();
         }
 
         public event EventHandler<ClickarBotonIdEventArgs> anadirUsuario;
@@ -71,8 +72,25 @@ namespace ProyectoBiblioteca.vista
 
         private void bAnadir_Click(object sender, EventArgs e)
         {
-            // TODO : Tendrá que validar los datos y luego ya que pase/cree el ID y mande los datos
-            anadirUsuario?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
+            try
+            {
+                // TODO : El controlador tendrá que validar los datos
+                miControlador.AnadirUsuario(Nombre, Apellido1, Apellido2, Telefono);
+                MessageBox.Show("Usuario añadido correctamente.");
+                limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void limpiar()
+        {
+            Nombre = "";
+            Apellido1 = "";
+            Apellido2 = "";
+            Telefono = 0;
         }
     }
 }

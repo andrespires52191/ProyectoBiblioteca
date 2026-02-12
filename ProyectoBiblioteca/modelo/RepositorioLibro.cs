@@ -28,7 +28,7 @@ namespace ProyectoBiblioteca.modelo
             cmd.Parameters.Add("@escritor", DbType.String).Value = libro.escritor;
             cmd.Parameters.Add("@ano_edicion", DbType.Int32).Value = libro.ano_edicion;
             cmd.Parameters.Add("@sinopsis", DbType.String).Value = libro.sinopsis;
-            cmd.Parameters.Add("@disponible", DbType.Int32).Value = libro.disponible ? 1 : 0;
+            cmd.Parameters.Add("@disponible", DbType.Int32).Value = libro.disponible;
 
             SQLiteHelper.Ejecuta(Properties.Settings.Default.conexion, cmd);
         }

@@ -24,7 +24,6 @@ namespace ProyectoBiblioteca.controlador
         {
             return repoLibro.CargarTodo();
         }
-
         public void AnadirLibro(string titulo, string escritor, int ano_edicion, string sinopsis, bool disponible)
         {
             if (titulo == "" || escritor == "" || sinopsis == "")
@@ -51,9 +50,13 @@ namespace ProyectoBiblioteca.controlador
         {
             return repoPrestamo.CargarTodo();
         }
-        public void AnadirPrestamo(Prestamo prestamo)
+        public void AnadirPrestamo(int id_usuario, int id_libro, DateTime fecha_prestamo, DateTime fecha_devolucion)
         {
-            repoPrestamo.AnadirPrestamo(prestamo);
+            if (id_usuario == 0 || id_libro == 0)
+            {
+                throw new Exception("Debes rellenar los datos correctamente");
+            }
+            repoPrestamo.AnadirPrestamo(new Prestamo(id_usuario, id_libro, fecha_prestamo.ToString("yyyy-MM-dd"), fecha_devolucion.ToString("yyyy-MM-dd")));
         }
         public DataTable BuscarPrestamo(int id)
         {
@@ -71,9 +74,13 @@ namespace ProyectoBiblioteca.controlador
         {
             return repoUsuario.CargarTodo();
         }
-        public void AnadirUsuario(Usuario usuario)
+        public void AnadirUsuario(string nombre, string apellido_1, string apellido_2, int telefono)
         {
-            repoUsuario.AnadirUsuario(usuario);
+            if (nombre == "" || apellido_1 == "" || apellido_2 == "" || telefono == 0)
+            {
+                throw new Exception("Debes rellenar los datos correctamente");
+            }
+            repoUsuario.AnadirUsuario(new Usuario(nombre, apellido_1, apellido_2, telefono));
         }
         public DataTable BuscarUsuario(int id)
         {
