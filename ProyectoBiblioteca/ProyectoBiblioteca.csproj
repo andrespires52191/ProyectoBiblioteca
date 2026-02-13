@@ -165,6 +165,7 @@
     <Compile Include="vista\VisualizarUsuarios.Designer.cs">
       <DependentUpon>VisualizarUsuarios.cs</DependentUpon>
     </Compile>
+    <None Include="Resources\boton-cancelar.png" />
     <None Include="Resources\boton-guardar.png" />
     <None Include="Resources\boton-borrar.png" />
     <None Include="Resources\icono_libro.png" />

@@ -60,12 +60,6 @@ namespace ProyectoBiblioteca.vista
             }
         }
 
-        /*
-         TODO : Me falta hacer que el panel de modificar se quede centrado
-                y con mejor tamaño, con lo gris solo en la ventana,
-                y añadir un botón (PictureBox) para poder salir.
-         */
-
         private void ucFila_verLibro(object sender, UserControl1.ClickarBotonIdEventArgs e)
         {
             try
@@ -75,8 +69,20 @@ namespace ProyectoBiblioteca.vista
                 {
                     // Ajustar propiedades
                     frmFondo.StartPosition = FormStartPosition.Manual;
-                    frmFondo.Location = this.Location;
-                    frmFondo.Size = this.Size;
+                    frmFondo.WindowState = FormWindowState.Normal;
+
+                    // Obtener la esquina superior izquierda de la ventana actual en la pantalla
+                    Point puntoEnPantalla = this.PointToScreen(Point.Empty);
+
+                    // Calcular offset (diferencia) que hay entre el borde de la ventana y el área cliente
+                    int offsetIzquierda = puntoEnPantalla.X - this.Left;
+                    int offsetArriba = puntoEnPantalla.Y - this.Top;
+
+                    // Ajustar la posición y el tamaño del fondo gris justo sobre esta ventana
+                    frmFondo.Location = new Point(puntoEnPantalla.X, puntoEnPantalla.Y);
+                    frmFondo.Size = this.ClientSize;
+
+                    frmFondo.Owner = this;
                     frmFondo.Show();
 
                     // Crear y mostrar la tarjeta de detalle/modificación
@@ -90,6 +96,12 @@ namespace ProyectoBiblioteca.vista
 
                         // La sombra es la dueña
                         frmModificar.Owner = frmFondo;
+
+                        // Aumentar el ancho de la ventana
+                        frmModificar.Width += 100;
+
+                        // Centrar la ventana de modificar respecto al fondo gris
+                        frmModificar.StartPosition = FormStartPosition.CenterParent;
 
                         // ShowDialog bloquea la ejecución aquí, hasta que el usuario cierre "ModificarLibros"
                         frmModificar.ShowDialog();
