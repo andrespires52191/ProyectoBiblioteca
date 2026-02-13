@@ -60,9 +60,52 @@ namespace ProyectoBiblioteca.vista
             }
         }
 
+        /*
+         TODO : Me falta hacer que el panel de modificar se quede centrado
+                y con mejor tamaño, con lo gris solo en la ventana,
+                y añadir un botón (PictureBox) para poder salir.
+         */
+
         private void ucFila_verLibro(object sender, UserControl1.ClickarBotonIdEventArgs e)
         {
-            MessageBox.Show(e.Id.ToString());
+            try
+            {
+                // Crear el fondo gris
+                using (Fondo frmFondo = new Fondo())
+                {
+                    // Ajustar propiedades
+                    frmFondo.StartPosition = FormStartPosition.Manual;
+                    frmFondo.Location = this.Location;
+                    frmFondo.Size = this.Size;
+                    frmFondo.Show();
+
+                    // Crear y mostrar la tarjeta de detalle/modificación
+                    using (ModificarLibros frmModificar = new ModificarLibros())
+                    {
+                        // Pasar el controlador
+                        frmModificar.miControlador = this.miControlador;
+
+                        // Pasar el ID que viene en el evento
+                        frmModificar.IdLibro = e.Id;
+
+                        // La sombra es la dueña
+                        frmModificar.Owner = frmFondo;
+
+                        // ShowDialog bloquea la ejecución aquí, hasta que el usuario cierre "ModificarLibros"
+                        frmModificar.ShowDialog();
+                    }
+
+                    // Una vez cerrada la ventana de modificar, hay que cerrar el fondo
+                    frmFondo.Close();
+                }
+
+                // Recargar la lista después de cerrar la edición para ver los cambios
+                Cargar(miControlador.CargarLibros());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ucFila_borrarLibro(object sender, UserControl1.ClickarBotonIdEventArgs e)
@@ -71,11 +114,11 @@ namespace ProyectoBiblioteca.vista
             {
                 miControlador.EliminarLibro(e.Id);
                 Cargar(miControlador.CargarLibros());
-                MessageBox.Show("Libro borrado corretamente.");                
+                MessageBox.Show("Libro borrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

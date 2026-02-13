@@ -39,6 +39,7 @@ namespace FilaLibros
 
         private void pbVer_Click(object sender, EventArgs e)
         {
+            // Solo avisar al padre (GestionLibros) que se quiere ver este ID (para poder mostrar ModificarLibros)
             verLibro?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
         }
 

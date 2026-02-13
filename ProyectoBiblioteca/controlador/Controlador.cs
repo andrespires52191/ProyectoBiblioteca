@@ -24,13 +24,13 @@ namespace ProyectoBiblioteca.controlador
             return repoLibro.CargarTodo();
         }
 
-        public bool ExisteTitulo(string titulo)
+        public bool ExisteTitulo(string titulo, int? idExcluir = null)
         {
-            return repoLibro.ExisteTitulo(titulo);
+            return repoLibro.ExisteTitulo(titulo, idExcluir);
         }
 
         // Método de validación que lanza excepciones con mensajes claros
-        public void ValidarDatosLibro(string titulo, string escritor, int? ano_edicion, string sinopsis, bool disponible)
+        public void ValidarDatosLibro(string titulo, string escritor, int? ano_edicion, string sinopsis, bool disponible, int? idLibro = null)
         {
             // 1. Validar Título (NOT NULL)
             if (string.IsNullOrWhiteSpace(titulo))
@@ -39,7 +39,8 @@ namespace ProyectoBiblioteca.controlador
             }
 
             // 2. Validar Título UNIQUE (comprobar en BD)
-            if (ExisteTitulo(titulo))
+            // Pasar el idLibro para que no de error si el título es el mismo del libro que se está editando
+            if (ExisteTitulo(titulo, idLibro))
             {
                 throw new Exception("Este título ya existe en la biblioteca.");
             }
@@ -86,9 +87,11 @@ namespace ProyectoBiblioteca.controlador
             repoLibro.EliminarLibro(id);
         }
 
-        public void ModificarLibro(int id, string titulo, string escritor, int ano_edicion, string sinopsis, bool disponible)
+        public void ModificarLibro(int id, string titulo, string escritor, int? ano_edicion, string sinopsis, bool disponible)
         {
-            repoLibro.ModificarLibro(id, titulo, escritor, ano_edicion, sinopsis, disponible);
+            ValidarDatosLibro(titulo, escritor, ano_edicion, sinopsis, disponible, id);
+            string escritorFinal = string.IsNullOrWhiteSpace(escritor) ? "Anonimo" : escritor;
+            repoLibro.ModificarLibro(id, titulo, escritorFinal, ano_edicion, sinopsis, disponible);
         }
 
         //

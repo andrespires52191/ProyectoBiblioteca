@@ -19,19 +19,20 @@ namespace ProyectoBiblioteca.modelo
             return datos;
         }
 
-        public bool ExisteTitulo(string titulo)
+        public bool ExisteTitulo(string titulo, int? idExcluir = null)
         {
             string sql = "SELECT COUNT(*) FROM LIBROS WHERE Titulo = @titulo";
+            
+            // Si se ha llegado desde la ventana de ModificarTitulo, se ignora el libro actual
+            if (idExcluir.HasValue) sql += " AND ID != @id";
+
             SQLiteCommand cmd = new SQLiteCommand(sql);
             cmd.Parameters.Add("@titulo", DbType.String).Value = titulo;
+            if (idExcluir.HasValue) cmd.Parameters.Add("@id", DbType.Int32).Value = idExcluir.Value;
+
             DataTable datos = SQLiteHelper.GetDataTable(Properties.Settings.Default.conexion, cmd);
 
-            if (datos.Rows.Count > 0)
-            {
-                int count = Convert.ToInt32(datos.Rows[0][0]);
-                return count > 0;
-            }
-            return false;
+            return (datos.Rows.Count > 0 && Convert.ToInt32(datos.Rows[0][0]) > 0);
         }
 
         public void AnadirLibro(Libro libro)
@@ -64,9 +65,19 @@ namespace ProyectoBiblioteca.modelo
             SQLiteHelper.Ejecuta(Properties.Settings.Default.conexion, cmd);
         }
 
-        public void ModificarLibro(int id, string titulo, string escritor, int ano_edicion, string sinopsis, bool disponible)
+        public void ModificarLibro(int id, string titulo, string escritor, int? ano_edicion, string sinopsis, bool disponible)
         {
-            // TODO
+            string sql = "UPDATE LIBROS SET titulo=@titulo, escritor=@escritor, ano_edicion=@ano_edicion, sinopsis=@sinopsis, disponible=@disponible WHERE ID=@id";
+            SQLiteCommand cmd = new SQLiteCommand(sql);
+
+            cmd.Parameters.Add("@id", DbType.Int32).Value = id;
+            cmd.Parameters.Add("@titulo", DbType.String).Value = titulo;
+            cmd.Parameters.Add("@escritor", DbType.String).Value = escritor;
+            cmd.Parameters.Add("@ano_edicion", DbType.Int32).Value = ano_edicion.HasValue ? (object)ano_edicion.Value : DBNull.Value;
+            cmd.Parameters.Add("@sinopsis", DbType.String).Value = (object)sinopsis ?? DBNull.Value;
+            cmd.Parameters.Add("@disponible", DbType.Int32).Value = disponible ? 1 : 0;
+
+            SQLiteHelper.Ejecuta(Properties.Settings.Default.conexion, cmd);
         }
     }
 }
