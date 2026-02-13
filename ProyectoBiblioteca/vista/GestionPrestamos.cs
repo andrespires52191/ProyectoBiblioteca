@@ -1,5 +1,6 @@
 ﻿using FilaPrestamos;
 using ProyectoBiblioteca.controlador;
+using ProyectoBiblioteca.modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,16 +36,32 @@ namespace ProyectoBiblioteca.vista
         {
             tlpDatosInterior.Controls.Clear();
             int nuevaFila = 0;
+            bool errores = false;
             foreach (DataRow row in datos.Rows)
             {
+                String nombre_usuario = "(no disponible)";
+                try
+                {
+                    DataRow usuario = miControlador.BuscarUsuario((int)row.Field<long>("id_usuario")).Rows[0];
+                    nombre_usuario = usuario.Field<string>("nombre") + " " +
+                        usuario.Field<string>("apellido_1") + " " +
+                        usuario.Field<string>("apellido_2");
+                }
+                catch { }
 
-                DataTable usuario = miControlador.BuscarUsuario((int)row.Field<long>("id_usuario"));
-                DataTable libro = miControlador.BuscarLibro((int)row.Field<long>("id_libro"));
-                
+                String titulo_libro = "(no disponible)";
+                try
+                {
+                    DataRow libro = miControlador.BuscarLibro((int)row.Field<long>("id_libro")).Rows[0];
+                    titulo_libro = libro.Field<string>("titulo");
+
+                }
+                catch { }
+
                 UserControl1 ucFila = new UserControl1();
                 ucFila.Id = (int)row.Field<long>("id");
-                ucFila.Usuario = usuario.Rows[0].Field<string>("nombre");
-                ucFila.Libro = libro.Rows[0].Field<string>("titulo");
+                ucFila.Usuario = nombre_usuario;
+                ucFila.Libro = titulo_libro;
                 ucFila.FechaIni = row.Field<string>("fecha_inicio");
                 ucFila.FechaFin = row.Field<string>("fecha_fin");
                 ucFila.verPrestamo += ucFila_verPrestamo;

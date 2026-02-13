@@ -19,6 +19,19 @@ namespace ProyectoBiblioteca.modelo
             return datos;
         }
 
+        public void AnadirUsuario(Usuario libro)
+        {
+            string sql = "INSERT INTO USUARIOS (nombre, apellido_1, apellido_2, telefono) VALUES (@nombre, @apellido_1, @apellido_2, @telefono)";
+            SQLiteCommand cmd = new SQLiteCommand(sql);
+
+            cmd.Parameters.Add("@nombre", DbType.String).Value = libro.nombre;
+            cmd.Parameters.Add("@apellido_1", DbType.String).Value = libro.apellido_1;
+            cmd.Parameters.Add("@apellido_2", DbType.String).Value = libro.apellido_2;
+            cmd.Parameters.Add("@telefono", DbType.Int32).Value = libro.telefono;
+
+            SQLiteHelper.Ejecuta(Properties.Settings.Default.conexion, cmd);
+        }
+
         public void EliminarUsuario(int id)
         {
             string sql = $"DELETE FROM USUARIOS WHERE ID={id}";

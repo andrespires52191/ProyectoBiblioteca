@@ -46,7 +46,6 @@ namespace ProyectoBiblioteca.vista
 
                 // Utilizar "long?" (nullable) porque 'ano_edicion' puede venir como NULL en la base de datos
                 ucFila.Anyo = row.Field<long?>("ano_edicion")?.ToString() ?? "";
-                //ucFila.Anyo = row.Field<long>("ano_edicion").ToString();
 
                 // Convertir el 1 o 0 de la base de datos a booleano
                 ucFila.Disponible = Convert.ToBoolean(row["disponible"]);

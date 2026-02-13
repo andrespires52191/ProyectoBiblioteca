@@ -66,7 +66,7 @@ namespace ProyectoBiblioteca.modelo
 
         public void ModificarLibro(int id, string titulo, string escritor, int ano_edicion, string sinopsis, bool disponible)
         {
-            
+            // TODO
         }
     }
 }
