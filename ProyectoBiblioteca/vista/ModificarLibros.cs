@@ -47,7 +47,7 @@ namespace ProyectoBiblioteca.vista
 
         private void pbEliminar_Click(object sender, EventArgs e)
         {
-            // TODO
+            // TODO : Hacer lo de eliminar desde aquí también (y traspasarlo a EliminarFila)
         }
 
         private void pbCancelar_Click(object sender, EventArgs e)

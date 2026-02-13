@@ -74,12 +74,12 @@ namespace ProyectoBiblioteca.vista
             {
                 // TODO : El controlador tendrá que validar los datos
                 miControlador.AnadirPrestamo(IdUsuario, IdLibro, FechaInicio, FechaFin);
-                MessageBox.Show("Prestamo añadido correctamente.");
+                MessageBox.Show("Préstamo añadido correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpiar();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

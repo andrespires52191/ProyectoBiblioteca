@@ -76,12 +76,12 @@ namespace ProyectoBiblioteca.vista
             {
                 // TODO : El controlador tendrá que validar los datos
                 miControlador.AnadirUsuario(Nombre, Apellido1, Apellido2, Telefono);
-                MessageBox.Show("Usuario añadido correctamente.");
+                MessageBox.Show("Usuario añadido correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpiar();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
