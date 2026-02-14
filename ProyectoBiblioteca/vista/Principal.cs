@@ -139,7 +139,7 @@ namespace ProyectoBiblioteca
             var form = VisualizarPrestamos.GetInstance();
             form.miControlador = miControlador;
             InsertarFormulario(form);
-            lTitulo.Text = "Prestamos";
+            lTitulo.Text = "Préstamos";
         }
 
         private void pintarBotonClaro(Button boton)
