@@ -108,6 +108,15 @@ namespace ProyectoBiblioteca.controlador
             return repoUsuario.CargarTodo();
         }
 
+        public void ValidarDatosUsuario(string nombre, string apellido1, int telefono)
+        {
+            if (string.IsNullOrWhiteSpace(nombre)) throw new Exception("El nombre es obligatorio.");
+            if (string.IsNullOrWhiteSpace(apellido1)) throw new Exception("El primer apellido es obligatorio.");
+
+            // Validación simple de teléfono (9 dígitos)
+            if (telefono.ToString().Length != 9) throw new Exception("El teléfono debe tener 9 dígitos.");
+        }
+
         public void AnadirUsuario(string nombre, string apellido_1, string apellido_2, int telefono)
         {
             if (nombre == "" || apellido_1 == "" || apellido_2 == "" || telefono == 0)
@@ -125,6 +134,12 @@ namespace ProyectoBiblioteca.controlador
         public void EliminarUsuario(int id)
         {
             repoUsuario.EliminarUsuario(id);
+        }
+
+        public void ModificarUsuario(int id, string nombre, string apellido1, string apellido2, int telefono)
+        {
+            ValidarDatosUsuario(nombre, apellido1, telefono);
+            repoUsuario.ModificarUsuario(id, nombre, apellido1, apellido2, telefono);
         }
 
         //

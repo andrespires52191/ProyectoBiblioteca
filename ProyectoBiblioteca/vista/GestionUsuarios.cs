@@ -60,7 +60,37 @@ namespace ProyectoBiblioteca.vista
 
         private void ucFila_verUsuario(object sender, UserControl1.ClickarBotonIdEventArgs e)
         {
-            MessageBox.Show(e.Id.ToString());
+            try
+            {
+                using (Fondo frmFondo = new Fondo())
+                {
+                    frmFondo.StartPosition = FormStartPosition.Manual;
+                    Point puntoEnPantalla = this.PointToScreen(Point.Empty);
+                    frmFondo.Location = new Point(puntoEnPantalla.X, puntoEnPantalla.Y);
+                    frmFondo.Size = this.ClientSize;
+                    frmFondo.Owner = this;
+                    frmFondo.Show();
+
+                    using (ModificarUsuarios frmModificar = new ModificarUsuarios())
+                    {
+                        frmModificar.miControlador = this.miControlador;
+                        frmModificar.IdUsuario = e.Id;
+                        frmModificar.Owner = frmFondo;
+                        frmModificar.StartPosition = FormStartPosition.CenterParent;
+
+                        frmModificar.ShowDialog();
+                    }
+
+                    frmFondo.Close();
+                }
+
+                // Recargar lista
+                Cargar(miControlador.CargarUsuarios());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
