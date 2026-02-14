@@ -94,6 +94,11 @@ namespace ProyectoBiblioteca.controlador
             repoLibro.ModificarLibro(id, titulo, escritorFinal, ano_edicion, sinopsis, disponible);
         }
 
+        public void ModificarDisponibilidadLibro(int id, bool disponible)
+        {
+            repoLibro.ModificarDisponibilidad(id, disponible);
+        }
+
         //
         // Usuarios
         //
@@ -137,7 +142,26 @@ namespace ProyectoBiblioteca.controlador
             {
                 throw new Exception("Debes rellenar los datos correctamente");
             }
+
             repoPrestamo.AnadirPrestamo(new Prestamo(id_usuario, id_libro, fecha_prestamo.ToString("yyyy-MM-dd"), fecha_devolucion.ToString("yyyy-MM-dd")));
+            
+            ModificarDisponibilidadLibro(id_libro, false);
+        }
+
+        internal void DevolverPrestamo(int id_prestamo)
+        {
+            if (id_prestamo == 0) {
+                throw new Exception("Debes rellenar los datos correctamente");
+            }
+
+            DataRow prestamo = repoPrestamo.BuscarPorID(id_prestamo).Rows[0];
+            int id_libro = (int)prestamo.Field<long>("id_libro");
+            if (id_libro == 0)
+            {
+                throw new Exception("Datos de libro incorrectos.");
+            }
+
+            ModificarDisponibilidadLibro(id_libro, true);
         }
 
         public DataTable BuscarPrestamo(int id)

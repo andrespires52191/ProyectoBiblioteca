@@ -79,5 +79,16 @@ namespace ProyectoBiblioteca.modelo
 
             SQLiteHelper.Ejecuta(Properties.Settings.Default.conexion, cmd);
         }
+
+        public void ModificarDisponibilidad(int id, bool disponible)
+        {
+            string sql = "UPDATE LIBROS SET disponible=@disponible WHERE ID=@id";
+            SQLiteCommand cmd = new SQLiteCommand(sql);
+
+            cmd.Parameters.Add("@id", DbType.Int32).Value = id;
+            cmd.Parameters.Add("@disponible", DbType.Int32).Value = disponible ? 1 : 0;
+
+            SQLiteHelper.Ejecuta(Properties.Settings.Default.conexion, cmd);
+        }
     }
 }
