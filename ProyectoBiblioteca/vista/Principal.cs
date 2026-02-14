@@ -51,6 +51,7 @@ namespace ProyectoBiblioteca
             var form = VisualizarInicio.GetInstance();
             form.miControlador = miControlador;
             InsertarFormulario(form);
+            lTitulo.Text = "Biblioteca";
         }
 
         internal void MostrarGestionLibros()
@@ -109,6 +110,7 @@ namespace ProyectoBiblioteca
             var form = VisualizarUsuarios.GetInstance();
             form.miControlador = miControlador;
             InsertarFormulario(form);
+            lTitulo.Text = "Usuarios";
         }
 
         private void pbLogo_Click(object sender, EventArgs e)
@@ -125,6 +127,7 @@ namespace ProyectoBiblioteca
             var form = VisualizarLibros.GetInstance();
             form.miControlador = miControlador;
             InsertarFormulario(form);
+            lTitulo.Text = "Libros";
         }
 
         private void bPrestamos_Click(object sender, EventArgs e)
@@ -136,6 +139,7 @@ namespace ProyectoBiblioteca
             var form = VisualizarPrestamos.GetInstance();
             form.miControlador = miControlador;
             InsertarFormulario(form);
+            lTitulo.Text = "Prestamos";
         }
 
         private void pintarBotonClaro(Button boton)
