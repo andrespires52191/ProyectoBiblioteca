@@ -49,9 +49,7 @@ namespace ProyectoBiblioteca.vista
 
         private void pbEliminar_Click(object sender, EventArgs e)
         {
-            // TODO
-            /*
-             try
+            try
             {
                 // Usar el mismo Owner que tiene ModificarUsuarios (que es el Fondo gris)
                 using (EliminarFila frmConfirmar = new EliminarFila())
@@ -63,9 +61,9 @@ namespace ProyectoBiblioteca.vista
                     if (frmConfirmar.ShowDialog(this.Owner) == DialogResult.OK)
                     {
                         miControlador.EliminarUsuario(this.IdUsuario);
-                        
+
                         // Cerrar la ventana de edición porque el usuario ya no existe
-                        this.Close(); 
+                        this.Close();
                     }
                 }
             }
@@ -73,7 +71,6 @@ namespace ProyectoBiblioteca.vista
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-             */
         }
 
         private void pbCancelar_Click(object sender, EventArgs e)

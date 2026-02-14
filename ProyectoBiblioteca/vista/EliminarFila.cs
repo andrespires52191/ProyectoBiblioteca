@@ -26,11 +26,13 @@ namespace ProyectoBiblioteca.vista
 
         private void bBorrar_Click(object sender, EventArgs e)
         {
-            // TODO : Que se borre oficialmente (pillar código de las otras ventanas para eliminar de la BD)
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void bCancelar_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
