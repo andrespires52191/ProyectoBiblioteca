@@ -52,6 +52,7 @@ namespace ProyectoBiblioteca.vista
 
         public void limpiar()
         {
+            Id = -1;
             tbTitulo.Text = "";
             tbEscritor.Text = "";
             nudAnio.Value = 0;

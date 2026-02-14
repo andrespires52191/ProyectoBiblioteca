@@ -87,6 +87,7 @@ namespace ProyectoBiblioteca.vista
 
         private void limpiar()
         {
+            Id = -1;
             Nombre = "";
             Apellido1 = "";
             Apellido2 = "";

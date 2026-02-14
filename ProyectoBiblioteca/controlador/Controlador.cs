@@ -153,7 +153,7 @@ namespace ProyectoBiblioteca.controlador
 
         public void AnadirPrestamo(int id_usuario, int id_libro, DateTime fecha_prestamo, DateTime fecha_devolucion)
         {
-            if (id_usuario == 0 || id_libro == 0)
+            if (id_usuario < 0 || id_libro < 0)
             {
                 throw new Exception("Debes rellenar los datos correctamente");
             }
@@ -165,13 +165,13 @@ namespace ProyectoBiblioteca.controlador
 
         internal void DevolverPrestamo(int id_prestamo)
         {
-            if (id_prestamo == 0) {
+            if (id_prestamo < 0) {
                 throw new Exception("Debes rellenar los datos correctamente");
             }
 
             DataRow prestamo = repoPrestamo.BuscarPorID(id_prestamo).Rows[0];
             int id_libro = (int)prestamo.Field<long>("id_libro");
-            if (id_libro == 0)
+            if (id_libro < 0)
             {
                 throw new Exception("Datos de libro incorrectos.");
             }
