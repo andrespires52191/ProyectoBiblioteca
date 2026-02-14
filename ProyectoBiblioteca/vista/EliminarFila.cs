@@ -16,5 +16,20 @@ namespace ProyectoBiblioteca.vista
         {
             InitializeComponent();
         }
+
+        private void bBorrar_Click(object sender, EventArgs e)
+        {
+            // TODO : Que se borre oficialmente
+        }
+
+        private void bCancelar_Click(object sender, EventArgs e)
+        {
+            // TODO : Que se cierre esta ventana
+        }
+
+        private void EliminarFila_Load(object sender, EventArgs e)
+        {
+            // TODO : Que escriba el texto correspondiente a la ventana (si es para Libro, Usuario o Préstamo)
+        }
     }
 }
