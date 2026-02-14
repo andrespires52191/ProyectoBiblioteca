@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpDatosExterior = new System.Windows.Forms.TableLayoutPanel();
             this.tlpTitulos = new System.Windows.Forms.TableLayoutPanel();
             this.lTitulo = new System.Windows.Forms.Label();
             this.lEscritor = new System.Windows.Forms.Label();
@@ -37,59 +37,61 @@
             this.lAcciones = new System.Windows.Forms.Label();
             this.tlpDatosInterior = new System.Windows.Forms.TableLayoutPanel();
             this.lCabecera = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpDatosExterior.SuspendLayout();
             this.tlpTitulos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tlpDatosExterior
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.tlpTitulos, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tlpDatosInterior, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lCabecera, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(40, 38);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1520, 789);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tlpDatosExterior.ColumnCount = 1;
+            this.tlpDatosExterior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDatosExterior.Controls.Add(this.tlpTitulos, 0, 1);
+            this.tlpDatosExterior.Controls.Add(this.tlpDatosInterior, 0, 2);
+            this.tlpDatosExterior.Controls.Add(this.lCabecera, 0, 0);
+            this.tlpDatosExterior.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosExterior.Location = new System.Drawing.Point(20, 20);
+            this.tlpDatosExterior.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpDatosExterior.Name = "tlpDatosExterior";
+            this.tlpDatosExterior.RowCount = 4;
+            this.tlpDatosExterior.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpDatosExterior.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpDatosExterior.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpDatosExterior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDatosExterior.Size = new System.Drawing.Size(760, 410);
+            this.tlpDatosExterior.TabIndex = 0;
             // 
             // tlpTitulos
             // 
             this.tlpTitulos.AutoSize = true;
+            this.tlpTitulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tlpTitulos.ColumnCount = 5;
             this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
             this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
             this.tlpTitulos.Controls.Add(this.lTitulo, 0, 0);
             this.tlpTitulos.Controls.Add(this.lEscritor, 1, 0);
             this.tlpTitulos.Controls.Add(this.lAnyo, 2, 0);
             this.tlpTitulos.Controls.Add(this.lDisponible, 3, 0);
             this.tlpTitulos.Controls.Add(this.lAcciones, 4, 0);
             this.tlpTitulos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpTitulos.Location = new System.Drawing.Point(0, 63);
+            this.tlpTitulos.Location = new System.Drawing.Point(0, 51);
             this.tlpTitulos.Margin = new System.Windows.Forms.Padding(0);
             this.tlpTitulos.Name = "tlpTitulos";
             this.tlpTitulos.RowCount = 1;
-            this.tlpTitulos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tlpTitulos.Size = new System.Drawing.Size(1520, 80);
+            this.tlpTitulos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tlpTitulos.Size = new System.Drawing.Size(760, 42);
             this.tlpTitulos.TabIndex = 0;
             // 
             // lTitulo
             // 
             this.lTitulo.AutoSize = true;
             this.lTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lTitulo.Location = new System.Drawing.Point(6, 0);
-            this.lTitulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lTitulo.Location = new System.Drawing.Point(3, 0);
             this.lTitulo.Name = "lTitulo";
-            this.lTitulo.Size = new System.Drawing.Size(601, 80);
+            this.lTitulo.Size = new System.Drawing.Size(299, 42);
             this.lTitulo.TabIndex = 0;
             this.lTitulo.Text = "Título";
             this.lTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -98,10 +100,10 @@
             // 
             this.lEscritor.AutoSize = true;
             this.lEscritor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lEscritor.Location = new System.Drawing.Point(619, 0);
-            this.lEscritor.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lEscritor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lEscritor.Location = new System.Drawing.Point(308, 0);
             this.lEscritor.Name = "lEscritor";
-            this.lEscritor.Size = new System.Drawing.Size(294, 80);
+            this.lEscritor.Size = new System.Drawing.Size(147, 42);
             this.lEscritor.TabIndex = 1;
             this.lEscritor.Text = "Escritor";
             this.lEscritor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -110,10 +112,10 @@
             // 
             this.lAnyo.AutoSize = true;
             this.lAnyo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lAnyo.Location = new System.Drawing.Point(925, 0);
-            this.lAnyo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lAnyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lAnyo.Location = new System.Drawing.Point(461, 0);
             this.lAnyo.Name = "lAnyo";
-            this.lAnyo.Size = new System.Drawing.Size(188, 80);
+            this.lAnyo.Size = new System.Drawing.Size(94, 42);
             this.lAnyo.TabIndex = 2;
             this.lAnyo.Text = "Año";
             this.lAnyo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,10 +124,10 @@
             // 
             this.lDisponible.AutoSize = true;
             this.lDisponible.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lDisponible.Location = new System.Drawing.Point(1125, 0);
-            this.lDisponible.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lDisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lDisponible.Location = new System.Drawing.Point(561, 0);
             this.lDisponible.Name = "lDisponible";
-            this.lDisponible.Size = new System.Drawing.Size(188, 80);
+            this.lDisponible.Size = new System.Drawing.Size(94, 42);
             this.lDisponible.TabIndex = 3;
             this.lDisponible.Text = "Disponible";
             this.lDisponible.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -134,10 +136,10 @@
             // 
             this.lAcciones.AutoSize = true;
             this.lAcciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lAcciones.Location = new System.Drawing.Point(1325, 0);
-            this.lAcciones.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lAcciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lAcciones.Location = new System.Drawing.Point(661, 0);
             this.lAcciones.Name = "lAcciones";
-            this.lAcciones.Size = new System.Drawing.Size(189, 80);
+            this.lAcciones.Size = new System.Drawing.Size(96, 42);
             this.lAcciones.TabIndex = 4;
             this.lAcciones.Text = "Acciones";
             this.lAcciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -145,15 +147,17 @@
             // tlpDatosInterior
             // 
             this.tlpDatosInterior.AutoSize = true;
+            this.tlpDatosInterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tlpDatosInterior.ColumnCount = 1;
             this.tlpDatosInterior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpDatosInterior.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDatosInterior.Location = new System.Drawing.Point(0, 143);
+            this.tlpDatosInterior.Location = new System.Drawing.Point(0, 93);
             this.tlpDatosInterior.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpDatosInterior.MinimumSize = new System.Drawing.Size(20, 20);
             this.tlpDatosInterior.Name = "tlpDatosInterior";
             this.tlpDatosInterior.RowCount = 1;
             this.tlpDatosInterior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpDatosInterior.Size = new System.Drawing.Size(1520, 646);
+            this.tlpDatosInterior.Size = new System.Drawing.Size(760, 20);
             this.tlpDatosInterior.TabIndex = 1;
             // 
             // lCabecera
@@ -164,23 +168,23 @@
             this.lCabecera.Location = new System.Drawing.Point(0, 0);
             this.lCabecera.Margin = new System.Windows.Forms.Padding(0);
             this.lCabecera.Name = "lCabecera";
-            this.lCabecera.Size = new System.Drawing.Size(1520, 63);
+            this.lCabecera.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
+            this.lCabecera.Size = new System.Drawing.Size(760, 51);
             this.lCabecera.TabIndex = 2;
             this.lCabecera.Text = "Gestión de Libros";
             // 
             // GestionLibros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 865);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tlpDatosExterior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "GestionLibros";
-            this.Padding = new System.Windows.Forms.Padding(40, 38, 40, 38);
+            this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "GestionLibros";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tlpDatosExterior.ResumeLayout(false);
+            this.tlpDatosExterior.PerformLayout();
             this.tlpTitulos.ResumeLayout(false);
             this.tlpTitulos.PerformLayout();
             this.ResumeLayout(false);
@@ -189,7 +193,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosExterior;
         private System.Windows.Forms.TableLayoutPanel tlpTitulos;
         private System.Windows.Forms.TableLayoutPanel tlpDatosInterior;
         private System.Windows.Forms.Label lCabecera;

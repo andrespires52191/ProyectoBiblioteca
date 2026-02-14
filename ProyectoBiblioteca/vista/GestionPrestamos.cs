@@ -36,7 +36,6 @@ namespace ProyectoBiblioteca.vista
         {
             tlpDatosInterior.Controls.Clear();
             int nuevaFila = 0;
-            bool errores = false;
             foreach (DataRow row in datos.Rows)
             {
                 String nombre_usuario = "(no disponible)";
@@ -81,7 +80,15 @@ namespace ProyectoBiblioteca.vista
 
         private void ucFila_devolverPrestamo(object sender, UserControl1.ClickarBotonIdEventArgs e)
         {
-            MessageBox.Show(e.Id.ToString());
+            try
+            {
+                miControlador.DevolverPrestamo(e.Id);
+                MessageBox.Show("Prestamo devuelto correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
