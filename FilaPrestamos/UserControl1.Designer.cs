@@ -43,11 +43,11 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.Controls.Add(this.lFechaFin, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.lFechaIni, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lUsuario, 0, 0);
@@ -55,21 +55,19 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 4, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 49);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(600, 40);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lFechaFin
             // 
             this.lFechaFin.AutoSize = true;
             this.lFechaFin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lFechaFin.Location = new System.Drawing.Point(600, 0);
-            this.lFechaFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lFechaFin.Location = new System.Drawing.Point(403, 0);
             this.lFechaFin.Name = "lFechaFin";
-            this.lFechaFin.Size = new System.Drawing.Size(125, 49);
+            this.lFechaFin.Size = new System.Drawing.Size(94, 40);
             this.lFechaFin.TabIndex = 3;
             this.lFechaFin.Text = "Fecha Fin";
             this.lFechaFin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -78,10 +76,9 @@
             // 
             this.lFechaIni.AutoSize = true;
             this.lFechaIni.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lFechaIni.Location = new System.Drawing.Point(467, 0);
-            this.lFechaIni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lFechaIni.Location = new System.Drawing.Point(303, 0);
             this.lFechaIni.Name = "lFechaIni";
-            this.lFechaIni.Size = new System.Drawing.Size(125, 49);
+            this.lFechaIni.Size = new System.Drawing.Size(94, 40);
             this.lFechaIni.TabIndex = 2;
             this.lFechaIni.Text = "Fecha Inicio";
             this.lFechaIni.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,10 +87,9 @@
             // 
             this.lUsuario.AutoSize = true;
             this.lUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lUsuario.Location = new System.Drawing.Point(4, 0);
-            this.lUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lUsuario.Location = new System.Drawing.Point(3, 0);
             this.lUsuario.Name = "lUsuario";
-            this.lUsuario.Size = new System.Drawing.Size(177, 49);
+            this.lUsuario.Size = new System.Drawing.Size(114, 40);
             this.lUsuario.TabIndex = 0;
             this.lUsuario.Text = "Usuario";
             this.lUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,10 +98,9 @@
             // 
             this.lLibro.AutoSize = true;
             this.lLibro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lLibro.Location = new System.Drawing.Point(189, 0);
-            this.lLibro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lLibro.Location = new System.Drawing.Point(123, 0);
             this.lLibro.Name = "lLibro";
-            this.lLibro.Size = new System.Drawing.Size(270, 49);
+            this.lLibro.Size = new System.Drawing.Size(174, 40);
             this.lLibro.TabIndex = 1;
             this.lLibro.Text = "Libro";
             this.lLibro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -114,36 +109,37 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel2.Controls.Add(this.pbDevolver, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(729, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(500, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(71, 49);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(100, 40);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // pbDevolver
             // 
-            this.pbDevolver.BackgroundImage = global::FilaPrestamos.Properties.Resources.flecha_devolver;
+            this.pbDevolver.BackgroundImage = global::FilaPrestamos.Properties.Resources.boton_devolver;
             this.pbDevolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbDevolver.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbDevolver.Location = new System.Drawing.Point(0, 0);
             this.pbDevolver.Margin = new System.Windows.Forms.Padding(0);
             this.pbDevolver.Name = "pbDevolver";
-            this.pbDevolver.Size = new System.Drawing.Size(67, 49);
+            this.pbDevolver.Size = new System.Drawing.Size(100, 40);
             this.pbDevolver.TabIndex = 1;
             this.pbDevolver.TabStop = false;
             this.pbDevolver.Click += new System.EventHandler(this.pbDevolver_Click);
             // 
             // UserControl1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(800, 49);
+            this.Size = new System.Drawing.Size(600, 40);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

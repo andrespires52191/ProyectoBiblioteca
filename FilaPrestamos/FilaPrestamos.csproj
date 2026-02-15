@@ -71,5 +71,8 @@
   <ItemGroup>
     <None Include="Resources\flecha-devolver.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-devolver.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

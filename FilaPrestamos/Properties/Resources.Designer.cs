@@ -63,6 +63,16 @@ namespace FilaPrestamos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boton_devolver {
+            get {
+                object obj = ResourceManager.GetObject("boton-devolver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boton_ver {
             get {
                 object obj = ResourceManager.GetObject("boton-ver", resourceCulture);

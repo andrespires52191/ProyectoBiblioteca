@@ -80,12 +80,11 @@
             this.tlpTitulos.AutoSize = true;
             this.tlpTitulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tlpTitulos.ColumnCount = 5;
-            this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
-            this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tlpTitulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
             this.tlpTitulos.Controls.Add(this.lUsuario, 0, 0);
             this.tlpTitulos.Controls.Add(this.lLibro, 1, 0);
             this.tlpTitulos.Controls.Add(this.lFechaIni, 2, 0);
@@ -107,7 +106,7 @@
             this.lUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.lUsuario.Location = new System.Drawing.Point(3, 0);
             this.lUsuario.Name = "lUsuario";
-            this.lUsuario.Size = new System.Drawing.Size(138, 42);
+            this.lUsuario.Size = new System.Drawing.Size(174, 42);
             this.lUsuario.TabIndex = 1;
             this.lUsuario.Text = "Usuario";
             this.lUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -117,9 +116,9 @@
             this.lLibro.AutoSize = true;
             this.lLibro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lLibro.Location = new System.Drawing.Point(147, 0);
+            this.lLibro.Location = new System.Drawing.Point(183, 0);
             this.lLibro.Name = "lLibro";
-            this.lLibro.Size = new System.Drawing.Size(210, 42);
+            this.lLibro.Size = new System.Drawing.Size(174, 42);
             this.lLibro.TabIndex = 2;
             this.lLibro.Text = "Libro";
             this.lLibro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,7 +183,7 @@
             this.ClientSize = new System.Drawing.Size(702, 418);
             this.Controls.Add(this.tlpDatosExterior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GestionPrestamos";
             this.Padding = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.Text = "GestionPrestamos";
