@@ -13,11 +13,6 @@ namespace ProyectoBiblioteca.vista
 {
     public partial class InsertarLibros : Form
     {
-        // TODO : Parte de responsividad
-        /*
-        bool mostrado = false;
-        const float FONTSIZE = 10f;
-        */
 
         public Controlador miControlador { get; set; }
 
@@ -30,13 +25,6 @@ namespace ProyectoBiblioteca.vista
 
             // Establecer el estado de disponibilidad "Sí" por defecto
             rbSi.Checked = true;
-
-            // TODO : Parte de responsividad
-            /*
-            mostrado = true;
-            */
-
-            // TODO : Probar a hacer que salga esta ventana con más alto y ancho inicial (y luego aplicar a las demás)
         }
 
         public static InsertarLibros formulario;
@@ -130,18 +118,7 @@ namespace ProyectoBiblioteca.vista
 
         private void InsertarLibros_Resize(object sender, EventArgs e)
         {
-            // TODO : Parte de responsividad
-            /*
-            if (mostrado)
-            {
-                double proporcionAlto = (double)this.Height / this.MinimumSize.Height;
-                //double proporcionAncho = (double)this.Width / this.MinimumSize.Width;
-                foreach (Control control in tlpPrincipal.Controls)
-                {
-                    control.Font = new Font(control.Font.FontFamily, (float)(FONTSIZE * proporcionAlto));
-                }
-            }
-            */
+
         }
     }
 }
