@@ -61,7 +61,7 @@
             // 
             // pbVerBorrar
             // 
-            this.pbVerBorrar.BackgroundImage = global::ProyectoBiblioteca.Properties.Resources.boton_visualizar_borrar;
+            this.pbVerBorrar.BackgroundImage = global::ProyectoBiblioteca.Properties.Resources.boton_visualizar_devolver;
             this.pbVerBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbVerBorrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbVerBorrar.Location = new System.Drawing.Point(505, 236);

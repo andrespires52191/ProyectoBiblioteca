@@ -271,6 +271,7 @@
   <ItemGroup>
     <Content Include="imagenes\boton_insertar.png" />
     <Content Include="imagenes\boton_visualizar_borrar.png" />
+    <None Include="imagenes\boton_visualizar_devolver.png" />
     <Content Include="imagenes\feria-libro.png" />
     <None Include="imagenes\feria-miniatura-1.jpg" />
     <None Include="imagenes\feria-miniatura-2.jpg" />
