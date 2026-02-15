@@ -63,7 +63,6 @@ namespace ProyectoBiblioteca.vista
                 ucFila.Libro = titulo_libro;
                 ucFila.FechaIni = row.Field<string>("fecha_inicio");
                 ucFila.FechaFin = row.Field<string>("fecha_fin");
-                ucFila.verPrestamo += ucFila_verPrestamo;
                 ucFila.devolverPrestamo += ucFila_devolverPrestamo;
                 ucFila.Dock = DockStyle.Fill;
                 tlpDatosInterior.RowCount = tlpDatosInterior.RowCount + 1;
@@ -71,11 +70,6 @@ namespace ProyectoBiblioteca.vista
                 tlpDatosInterior.Controls.Add(ucFila, 0, nuevaFila);
                 nuevaFila++;
             }
-        }
-
-        private void ucFila_verPrestamo(object sender, UserControl1.ClickarBotonIdEventArgs e)
-        {
-            MessageBox.Show(e.Id.ToString());
         }
 
         private void ucFila_devolverPrestamo(object sender, UserControl1.ClickarBotonIdEventArgs e)

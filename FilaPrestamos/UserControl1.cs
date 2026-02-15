@@ -25,18 +25,12 @@ namespace FilaPrestamos
         public string FechaIni { get => lFechaIni.Text; set => lFechaIni.Text = value; }
         public string FechaFin { get => lFechaFin.Text; set => lFechaFin.Text = value; }
 
-        public event EventHandler<ClickarBotonIdEventArgs> verPrestamo;
         public event EventHandler<ClickarBotonIdEventArgs> devolverPrestamo;
 
         public class ClickarBotonIdEventArgs : EventArgs
         {
             public int Id { get; }
             public ClickarBotonIdEventArgs(int id) => Id = id;
-        }
-
-        private void pbVer_Click(object sender, EventArgs e)
-        {
-            verPrestamo?.Invoke(this, new ClickarBotonIdEventArgs((int)id));
         }
 
         private void pbDevolver_Click(object sender, EventArgs e)
