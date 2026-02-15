@@ -71,7 +71,7 @@ namespace ProyectoBiblioteca.vista
             try
             {
                 miControlador.AnadirUsuario(Nombre, Apellido1, Apellido2, Telefono);
-                MessageBox.Show("Usuario añadido correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Usuario aÃ±adido correctamente.", "Ã‰xito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpiar();
             }
             catch (Exception ex)

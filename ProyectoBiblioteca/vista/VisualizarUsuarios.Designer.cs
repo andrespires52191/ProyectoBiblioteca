@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.pbVerBorrar = new System.Windows.Forms.PictureBox();
             this.pbInsertar = new System.Windows.Forms.PictureBox();
@@ -104,7 +103,6 @@
         }
 
         #endregion
-        private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.TableLayoutPanel tlpPrincipal;
         private System.Windows.Forms.PictureBox pbVerBorrar;
         private System.Windows.Forms.PictureBox pbInsertar;
