@@ -34,7 +34,6 @@ namespace ProyectoBiblioteca.vista
             // TODO : Parte de responsividad
             /*
             mostrado = true;
-            limpiar();
             */
 
             // TODO : Probar a hacer que salga esta ventana con más alto y ancho inicial (y luego aplicar a las demás)
@@ -121,6 +120,7 @@ namespace ProyectoBiblioteca.vista
 
         public void limpiar()
         {
+            Id = -1;
             Titulo = "";
             Escritor = "";
             Ano_Edicion = 0;

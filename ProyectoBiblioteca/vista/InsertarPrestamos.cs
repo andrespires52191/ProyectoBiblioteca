@@ -85,8 +85,8 @@ namespace ProyectoBiblioteca.vista
 
         private void limpiar()
         {
-            IdLibro = 0;
-            IdUsuario = 0;
+            IdLibro = -1;
+            IdUsuario = -1;
             FechaInicio = DateTime.Now;
             FechaFin = DateTime.Now;
         }
