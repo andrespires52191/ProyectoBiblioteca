@@ -113,6 +113,16 @@ namespace ProyectoBiblioteca.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boton_visualizar_devolver {
+            get {
+                object obj = ResourceManager.GetObject("boton_visualizar_devolver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap feria_libro {
             get {
                 object obj = ResourceManager.GetObject("feria-libro", resourceCulture);
