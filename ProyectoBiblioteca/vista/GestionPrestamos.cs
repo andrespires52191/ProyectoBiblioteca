@@ -102,6 +102,11 @@ namespace ProyectoBiblioteca.vista
                             miControlador.DevolverPrestamo(e.Id);
                             Cargar(miControlador.CargarPrestamos());
                             MessageBox.Show("Préstamo devuelto correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Refrescar combos de InsertarPrestamos
+                            InsertarPrestamos inst = InsertarPrestamos.GetInstance();
+                            if (inst != null && !inst.IsDisposed)
+                                inst.RefrescarDatos();
                         }
                     }
                     frmFondo.Close();

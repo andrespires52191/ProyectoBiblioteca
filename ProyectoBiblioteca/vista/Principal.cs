@@ -89,6 +89,8 @@ namespace ProyectoBiblioteca
         {
             var gestionPrestamos = InsertarPrestamos.GetInstance();
             gestionPrestamos.miControlador = miControlador;
+            // Cargar siempre los datos actualizados
+            gestionPrestamos.RefrescarDatos();
             InsertarFormulario(gestionPrestamos);
         }
 
