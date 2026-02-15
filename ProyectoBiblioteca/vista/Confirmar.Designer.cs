@@ -1,6 +1,6 @@
 ﻿namespace ProyectoBiblioteca.vista
 {
-    partial class EliminarFila
+    partial class Confirmar
     {
         /// <summary>
         /// Required designer variable.
@@ -112,7 +112,7 @@
             this.lDetalle.TabIndex = 3;
             this.lDetalle.Text = "Si eliminas este X su información será trasladada a la papelera.";
             // 
-            // EliminarFila
+            // Confirmar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -120,9 +120,9 @@
             this.ClientSize = new System.Drawing.Size(658, 246);
             this.Controls.Add(this.tlpPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "EliminarFila";
-            this.Text = "EliminarFila";
-            this.Load += new System.EventHandler(this.EliminarFila_Load);
+            this.Name = "Confirmar";
+            this.Text = "Confirmar";
+            this.Load += new System.EventHandler(this.Confirmar_Load);
             this.tlpPrincipal.ResumeLayout(false);
             this.tlpPrincipal.PerformLayout();
             this.ResumeLayout(false);

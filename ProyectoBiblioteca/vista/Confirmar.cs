@@ -11,15 +11,16 @@ using System.Windows.Forms;
 namespace ProyectoBiblioteca.vista
 {
     /*
-     * Esta clase cargará una ventana de confirmación de la eliminación de una
-     * fila de datos (un objeto), y se reutilizará en Libro, Usuario y Préstamo.
+     * Esta clase cargará una ventana de confirmación, o bien de de la eliminación
+     * de un objeto Libro o Usuario, o bien de la devolución en un Préstamo.
+     * Se reutilizará para Libro, Usuario y Préstamo.
      */
-    public partial class EliminarFila : Form
+    public partial class Confirmar : Form
     {
         // Propiedad para saber qué se está borrando
         public string TipoEntidad { get; set; }
 
-        public EliminarFila()
+        public Confirmar()
         {
             InitializeComponent();
         }
@@ -36,7 +37,7 @@ namespace ProyectoBiblioteca.vista
             this.Close();
         }
 
-        private void EliminarFila_Load(object sender, EventArgs e)
+        private void Confirmar_Load(object sender, EventArgs e)
         {
             // Configurar los textos dinámicamente (dependiendo del tipo de entidad a borrar)
             lPregunta.Text = $"¿Estás seguro de que quieres eliminar este {TipoEntidad}?";

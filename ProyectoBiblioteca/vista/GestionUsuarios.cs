@@ -95,7 +95,7 @@ namespace ProyectoBiblioteca.vista
 
         private void ucFila_borrarUsuario(object sender, UserControl1.ClickarBotonIdEventArgs e)
         {
-            // TODO : EliminarFila
+            // TODO : Ventana Confirmar
             try
             {
                 miControlador.EliminarUsuario(e.Id);

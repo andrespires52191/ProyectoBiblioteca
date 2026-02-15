@@ -44,12 +44,12 @@ namespace ProyectoBiblioteca.vista
 
         private void pbEliminar_Click(object sender, EventArgs e)
         {
-            // TODO : Hacer lo de eliminar
+            // TODO : Hacer lo de eliminar (ventana Confirmar)
             /*
             try
             {
                 // Usar el mismo Owner que tiene ModificarUsuarios (que es el Fondo gris)
-                using (EliminarFila frmConfirmar = new EliminarFila())
+                using (Confirmar frmConfirmar = new Confirmar())
                 {
                     frmConfirmar.TipoEntidad = "Usuario"; // Indicar que es un usuario
                     frmConfirmar.StartPosition = FormStartPosition.CenterParent;
