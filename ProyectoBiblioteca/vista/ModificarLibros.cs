@@ -47,7 +47,32 @@ namespace ProyectoBiblioteca.vista
 
         private void pbEliminar_Click(object sender, EventArgs e)
         {
-            // TODO : Hacer lo de eliminar desde aquí también (y traspasarlo a ventana Confirmar)
+            try
+            {
+                // Usar el Owner actual (que es el fondo gris de GestionLibros)
+                using (Confirmar frmConfirmar = new Confirmar())
+                {
+                    frmConfirmar.TextoPregunta = "¿Estás seguro de que quieres eliminar este libro?";
+                    frmConfirmar.TextoDetalle = "Si eliminas este libro su información será trasladada a la papelera.";
+
+                    // Aumentar el ancho de la ventana
+                    frmConfirmar.Width += 100;
+
+                    frmConfirmar.StartPosition = FormStartPosition.CenterParent;
+
+                    // Mostrar la ventana sobre el fondo gris que ya existe
+                    if (frmConfirmar.ShowDialog(this.Owner) == DialogResult.OK)
+                    {
+                        miControlador.EliminarLibro(this.IdLibro);
+                        MessageBox.Show("Libro borrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void pbCancelar_Click(object sender, EventArgs e)

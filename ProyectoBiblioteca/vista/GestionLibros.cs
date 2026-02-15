@@ -125,9 +125,37 @@ namespace ProyectoBiblioteca.vista
         {
             try
             {
-                miControlador.EliminarLibro(e.Id);
-                Cargar(miControlador.CargarLibros());
-                MessageBox.Show("Libro borrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using (Fondo frmFondo = new Fondo())
+                {
+                    frmFondo.StartPosition = FormStartPosition.Manual;
+                    Point puntoEnPantalla = this.PointToScreen(Point.Empty);
+                    frmFondo.Location = new Point(puntoEnPantalla.X, puntoEnPantalla.Y);
+                    frmFondo.Size = this.ClientSize;
+                    frmFondo.Owner = this;
+                    frmFondo.Show();
+
+                    using (Confirmar frmConfirmar = new Confirmar())
+                    {
+                        // Pasar los textos específicos para Libros
+                        frmConfirmar.TextoPregunta = "¿Estás seguro de que quieres eliminar este libro?";
+                        frmConfirmar.TextoDetalle = "Si eliminas este libro su información será trasladada a la papelera.";
+
+                        frmConfirmar.Owner = frmFondo;
+
+                        // Aumentar el ancho de la ventana
+                        frmConfirmar.Width += 100;
+
+                        frmConfirmar.StartPosition = FormStartPosition.CenterParent;
+
+                        if (frmConfirmar.ShowDialog() == DialogResult.OK)
+                        {
+                            miControlador.EliminarLibro(e.Id);
+                            Cargar(miControlador.CargarLibros());
+                            MessageBox.Show("Libro borrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    frmFondo.Close();
+                }
             }
             catch (Exception ex)
             {

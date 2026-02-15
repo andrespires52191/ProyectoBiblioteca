@@ -108,7 +108,7 @@ namespace ProyectoBiblioteca.controlador
             return repoUsuario.CargarTodo();
         }
 
-        public void ValidarDatosUsuario(string nombre, string apellido1, string apellido2, string telefonoRaw)
+        public void ValidarDatosUsuario(string nombre, string apellido1, string telefono)
         {
             if (string.IsNullOrWhiteSpace(nombre))
                 throw new Exception("El nombre es obligatorio.");
@@ -116,24 +116,24 @@ namespace ProyectoBiblioteca.controlador
             if (string.IsNullOrWhiteSpace(apellido1))
                 throw new Exception("El primer apellido es obligatorio.");
 
-            if (string.IsNullOrWhiteSpace(telefonoRaw))
+            if (string.IsNullOrWhiteSpace(telefono))
                 throw new Exception("El teléfono es obligatorio.");
 
-            if (!int.TryParse(telefonoRaw, out int telNumerico))
+            if (!int.TryParse(telefono, out int numTelefono))
                 throw new Exception("El teléfono debe contener solo números.");
 
-            if (telNumerico <= 0 || telefonoRaw.Length != 9)
+            if (numTelefono <= 0 || telefono.Length != 9)
                 throw new Exception("El teléfono debe ser un número válido de 9 dígitos.");
         }
 
-        public void AnadirUsuario(string nombre, string apellido_1, string apellido_2, string telefonoRaw)
+        public void AnadirUsuario(string nombre, string apellido_1, string apellido_2, string telefono)
         {
-            ValidarDatosUsuario(nombre, apellido_1, apellido_2, telefonoRaw);
+            ValidarDatosUsuario(nombre, apellido_1, telefono);
 
-            int tel = int.Parse(telefonoRaw);
+            int numTelefono = int.Parse(telefono);
             string ap2Final = string.IsNullOrWhiteSpace(apellido_2) ? null : apellido_2;
             
-            Usuario nuevoUsuario = new Usuario(nombre, apellido_1, ap2Final, tel);
+            Usuario nuevoUsuario = new Usuario(nombre, apellido_1, ap2Final, numTelefono);
             repoUsuario.AnadirUsuario(nuevoUsuario);
         }
 
@@ -147,12 +147,12 @@ namespace ProyectoBiblioteca.controlador
             repoUsuario.EliminarUsuario(id);
         }
 
-        public void ModificarUsuario(int id, string nombre, string apellido1, string apellido2, string telefonoRaw)
+        public void ModificarUsuario(int id, string nombre, string apellido1, string apellido2, string telefono)
         {
-            ValidarDatosUsuario(nombre, apellido1, apellido2, telefonoRaw);
+            ValidarDatosUsuario(nombre, apellido1, telefono);
 
-            int tel = int.Parse(telefonoRaw);
-            repoUsuario.ModificarUsuario(id, nombre, apellido1, apellido2, tel);
+            int numTelefono = int.Parse(telefono);
+            repoUsuario.ModificarUsuario(id, nombre, apellido1, apellido2, numTelefono);
         }
 
         //

@@ -95,12 +95,39 @@ namespace ProyectoBiblioteca.vista
 
         private void ucFila_borrarUsuario(object sender, UserControl1.ClickarBotonIdEventArgs e)
         {
-            // TODO : Ventana Confirmar
             try
             {
-                miControlador.EliminarUsuario(e.Id);
-                Cargar(miControlador.CargarUsuarios());
-                MessageBox.Show("Usuario borrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using (Fondo frmFondo = new Fondo())
+                {
+                    frmFondo.StartPosition = FormStartPosition.Manual;
+                    Point puntoEnPantalla = this.PointToScreen(Point.Empty);
+                    frmFondo.Location = new Point(puntoEnPantalla.X, puntoEnPantalla.Y);
+                    frmFondo.Size = this.ClientSize;
+                    frmFondo.Owner = this;
+                    frmFondo.Show();
+
+                    using (Confirmar frmConfirmar = new Confirmar())
+                    {
+                        // Pasar los textos específicos para Usuarios
+                        frmConfirmar.TextoPregunta = "¿Estás seguro de que quieres eliminar este usuario?";
+                        frmConfirmar.TextoDetalle = "Si eliminas este usuario su información será trasladada a la papelera.";
+
+                        frmConfirmar.Owner = frmFondo;
+
+                        // Aumentar el ancho de la ventana
+                        frmConfirmar.Width += 100;
+
+                        frmConfirmar.StartPosition = FormStartPosition.CenterParent;
+
+                        if (frmConfirmar.ShowDialog() == DialogResult.OK)
+                        {
+                            miControlador.EliminarUsuario(e.Id);
+                            Cargar(miControlador.CargarUsuarios());
+                            MessageBox.Show("Usuario borrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    frmFondo.Close();
+                }
             }
             catch (Exception ex)
             {

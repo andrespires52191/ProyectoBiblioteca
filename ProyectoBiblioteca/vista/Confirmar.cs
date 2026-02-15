@@ -17,15 +17,16 @@ namespace ProyectoBiblioteca.vista
      */
     public partial class Confirmar : Form
     {
-        // Propiedad para saber qué se está borrando
-        public string TipoEntidad { get; set; }
+        // Propiedades para personalizar los mensajes
+        public string TextoPregunta { get; set; }
+        public string TextoDetalle { get; set; }
 
         public Confirmar()
         {
             InitializeComponent();
         }
 
-        private void bBorrar_Click(object sender, EventArgs e)
+        private void bConfirmar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
             this.Close();
@@ -39,9 +40,24 @@ namespace ProyectoBiblioteca.vista
 
         private void Confirmar_Load(object sender, EventArgs e)
         {
-            // Configurar los textos dinámicamente (dependiendo del tipo de entidad a borrar)
-            lPregunta.Text = $"¿Estás seguro de que quieres eliminar este {TipoEntidad}?";
-            lDetalle.Text = $"Si eliminas este {TipoEntidad} su información será trasladada a la papelera.";
+            // Configurar los textos dinámicamente
+            lPregunta.Text = TextoPregunta ?? "¿Estás seguro?";
+            lDetalle.Text = TextoDetalle ?? "Esta acción no se puede deshacer.";
+        }
+
+        // Función para poner un borde al formulario y que haya contraste entre este y el de modificar
+        private void Confirmar_Paint(object sender, PaintEventArgs e)
+        {
+            // Crear el borde
+            Color colorBorde = Color.Black;
+            int grosor = 2;
+
+            // Dibujar el rectángulo
+            using (Pen pen = new Pen(colorBorde, grosor))
+            {
+                // Ajustar el área para que no se corte el borde
+                e.Graphics.DrawRectangle(pen, 0, 0, this.Width - 1, this.Height - 1);
+            }
         }
     }
 }

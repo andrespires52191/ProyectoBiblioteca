@@ -44,22 +44,24 @@ namespace ProyectoBiblioteca.vista
 
         private void pbEliminar_Click(object sender, EventArgs e)
         {
-            // TODO : Hacer lo de eliminar (ventana Confirmar)
-            /*
             try
             {
-                // Usar el mismo Owner que tiene ModificarUsuarios (que es el Fondo gris)
+                // Usar el Owner actual (que es el fondo gris de GestionLibros)
                 using (Confirmar frmConfirmar = new Confirmar())
                 {
-                    frmConfirmar.TipoEntidad = "Usuario"; // Indicar que es un usuario
+                    frmConfirmar.TextoPregunta = "¿Estás seguro de que quieres eliminar este usuario?";
+                    frmConfirmar.TextoDetalle = "Si eliminas este usuario su información será trasladada a la papelera.";
+
+                    // Aumentar el ancho de la ventana
+                    frmConfirmar.Width += 100;
+
                     frmConfirmar.StartPosition = FormStartPosition.CenterParent;
 
-                    // Mostrar la ventana de confirmación
+                    // Mostrar la ventana sobre el fondo gris que ya existe
                     if (frmConfirmar.ShowDialog(this.Owner) == DialogResult.OK)
                     {
                         miControlador.EliminarUsuario(this.IdUsuario);
-
-                        // Cerrar la ventana de edición porque el usuario ya no existe
+                        MessageBox.Show("Usuario borrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                 }
@@ -68,7 +70,6 @@ namespace ProyectoBiblioteca.vista
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            */
         }
 
         private void pbCancelar_Click(object sender, EventArgs e)
