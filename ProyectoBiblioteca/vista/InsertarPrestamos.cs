@@ -38,13 +38,13 @@ namespace ProyectoBiblioteca.vista
         // Obtiene el SelectedValue (el ID) aunque el usuario vea el Título
         public int IdLibro
         {
-            get => cbLibro.SelectedValue != null ? Convert.ToInt32(cbLibro.SelectedValue) : 0;
+            get => cbLibro.SelectedValue == null ? -1 : Convert.ToInt32(cbLibro.SelectedValue);
             set => cbLibro.SelectedValue = value;
         }
 
         public int IdUsuario
         {
-            get => cbUsuario.SelectedValue != null ? Convert.ToInt32(cbUsuario.SelectedValue) : 0;
+            get => cbUsuario.SelectedValue == null ? -1 : Convert.ToInt32(cbUsuario.SelectedValue);
             set => cbUsuario.SelectedValue = value;
         }
 
@@ -72,10 +72,15 @@ namespace ProyectoBiblioteca.vista
         {
             try
             {
-                // TODO : El controlador tendrá que validar los datos
+                if (IdLibro < 0)
+                    throw new Exception("No hay libros disponibles para prestar.");
+                if (IdUsuario < 0)
+                    throw new Exception("No hay usuarios disponibles.");
+
                 miControlador.AnadirPrestamo(IdUsuario, IdLibro, FechaInicio, FechaFin);
                 MessageBox.Show("Préstamo añadido correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limpiar();
+
+                RefrescarDatos();
             }
             catch (Exception ex)
             {
@@ -83,28 +88,42 @@ namespace ProyectoBiblioteca.vista
             }
         }
 
-        private void limpiar()
-        {
-            IdLibro = -1;
-            IdUsuario = -1;
-            FechaInicio = DateTime.Now;
-            FechaFin = DateTime.Now;
-        }
-
+        // Configurar el ComboBox de libros
+        // DisplayMember: Lo que el usuario ve
+        // ValueMember: Lo que el programa guarda
         internal void CargarLibros(DataTable dataTable)
         {
-            cbLibro.DataSource = dataTable;
+            cbLibro.DataSource = null;
             cbLibro.DisplayMember = "titulo";
             cbLibro.ValueMember = "id";
-            cbLibro.SelectedIndex = 0;
+            cbLibro.DataSource = dataTable;
         }
 
         internal void CargarUsuarios(DataTable dataTable)
         {
-            cbUsuario.DataSource = dataTable;
+            cbUsuario.DataSource = null;
             cbUsuario.DisplayMember = "nombre";
             cbUsuario.ValueMember = "id";
-            cbUsuario.SelectedIndex = 0;
+            cbUsuario.DataSource = dataTable;
+        }
+
+        public void RefrescarDatos()
+        {
+            if (miControlador == null) return;
+
+            CargarLibros(miControlador.CargarLibrosDisponibles());
+            CargarUsuarios(miControlador.CargarUsuarios());
+
+            cbLibro.SelectedIndex = cbLibro.Items.Count > 0 ? 0 : -1;
+            cbUsuario.SelectedIndex = cbUsuario.Items.Count > 0 ? 0 : -1;
+
+            FechaInicio = DateTime.Now;
+            FechaFin = DateTime.Now;
+        }
+
+        private void InsertarPrestamos_Load(object sender, EventArgs e)
+        {
+            RefrescarDatos();
         }
     }
 }

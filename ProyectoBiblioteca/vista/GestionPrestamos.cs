@@ -38,31 +38,30 @@ namespace ProyectoBiblioteca.vista
             int nuevaFila = 0;
             foreach (DataRow row in datos.Rows)
             {
+                int idUsuario = Convert.ToInt32(row["id_usuario"]);
+                int idLibro = Convert.ToInt32(row["id_libro"]);
                 String nombre_usuario = "(no disponible)";
-                try
-                {
-                    DataRow usuario = miControlador.BuscarUsuario((int)row.Field<long>("id_usuario")).Rows[0];
-                    nombre_usuario = usuario.Field<string>("nombre") + " " +
-                        usuario.Field<string>("apellido_1") + " " +
-                        usuario.Field<string>("apellido_2");
-                }
-                catch { }
 
-                String titulo_libro = "(no disponible)";
-                try
+                DataTable dtUs = miControlador.BuscarUsuario(idUsuario);
+                if (dtUs.Rows.Count > 0)
                 {
-                    DataRow libro = miControlador.BuscarLibro((int)row.Field<long>("id_libro")).Rows[0];
-                    titulo_libro = libro.Field<string>("titulo");
-
+                    DataRow r = dtUs.Rows[0];
+                    nombre_usuario = $"{r["nombre"]} {r["apellido_1"]} {r["apellido_2"]}";
                 }
-                catch { }
+
+                string titulo_libro = "Libro no encontrado";
+                DataTable dtLib = miControlador.BuscarLibro(idLibro);
+                if (dtLib.Rows.Count > 0)
+                {
+                    titulo_libro = dtLib.Rows[0]["titulo"].ToString();
+                }
 
                 UserControl1 ucFila = new UserControl1();
-                ucFila.Id = (int)row.Field<long>("id");
+                ucFila.Id = Convert.ToInt32(row["id"]);
                 ucFila.Usuario = nombre_usuario;
                 ucFila.Libro = titulo_libro;
-                ucFila.FechaIni = row.Field<string>("fecha_inicio");
-                ucFila.FechaFin = row.Field<string>("fecha_fin");
+                ucFila.FechaIni = row["fecha_inicio"].ToString();
+                ucFila.FechaFin = row["fecha_fin"].ToString();
                 ucFila.devolverPrestamo += ucFila_devolverPrestamo;
                 ucFila.Dock = DockStyle.Fill;
                 tlpDatosInterior.RowCount = tlpDatosInterior.RowCount + 1;
@@ -76,8 +75,37 @@ namespace ProyectoBiblioteca.vista
         {
             try
             {
-                miControlador.DevolverPrestamo(e.Id);
-                MessageBox.Show("Prestamo devuelto correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using (Fondo frmFondo = new Fondo())
+                {
+                    frmFondo.StartPosition = FormStartPosition.Manual;
+                    Point puntoEnPantalla = this.PointToScreen(Point.Empty);
+                    frmFondo.Location = new Point(puntoEnPantalla.X, puntoEnPantalla.Y);
+                    frmFondo.Size = this.ClientSize;
+                    frmFondo.Owner = this;
+                    frmFondo.Show();
+
+                    using (Confirmar frmConfirmar = new Confirmar())
+                    {
+                        // Textos personalizados para Préstamos
+                        frmConfirmar.TextoPregunta = "¿Quieres realizar esta devolución?";
+                        frmConfirmar.TextoDetalle = "Si devuelves este préstamo el libro pasará a estar disponible.";
+
+                        frmConfirmar.Owner = frmFondo;
+
+                        // Aumentar el ancho de la ventana
+                        frmConfirmar.Width += 50;
+
+                        frmConfirmar.StartPosition = FormStartPosition.CenterParent;
+
+                        if (frmConfirmar.ShowDialog() == DialogResult.OK)
+                        {
+                            miControlador.DevolverPrestamo(e.Id);
+                            Cargar(miControlador.CargarPrestamos());
+                            MessageBox.Show("Préstamo devuelto correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    frmFondo.Close();
+                }
             }
             catch (Exception ex)
             {

@@ -24,6 +24,11 @@ namespace ProyectoBiblioteca.controlador
             return repoLibro.CargarTodo();
         }
 
+        public DataTable CargarLibrosDisponibles()
+        {
+            return repoLibro.CargarDisponibles();
+        }
+
         public bool ExisteTitulo(string titulo, int? idExcluir = null)
         {
             return repoLibro.ExisteTitulo(titulo, idExcluir);
@@ -168,7 +173,12 @@ namespace ProyectoBiblioteca.controlador
         {
             if (id_usuario < 0 || id_libro < 0)
             {
-                throw new Exception("Debes rellenar los datos correctamente");
+                throw new Exception("Debes rellenar los datos correctamente.");
+            }
+
+            if (fecha_devolucion < fecha_prestamo)
+            {
+                throw new Exception("La fecha de devolución no puede ser anterior a la de préstamo.");
             }
 
             repoPrestamo.AnadirPrestamo(new Prestamo(id_usuario, id_libro, fecha_prestamo.ToString("yyyy-MM-dd"), fecha_devolucion.ToString("yyyy-MM-dd")));
@@ -178,18 +188,18 @@ namespace ProyectoBiblioteca.controlador
 
         internal void DevolverPrestamo(int id_prestamo)
         {
-            if (id_prestamo < 0) {
-                throw new Exception("Debes rellenar los datos correctamente");
-            }
-
-            DataRow prestamo = repoPrestamo.BuscarPorID(id_prestamo).Rows[0];
-            int id_libro = (int)prestamo.Field<long>("id_libro");
-            if (id_libro < 0)
+            // Buscar el préstamo para saber qué libro hay que liberar
+            DataTable dt = repoPrestamo.BuscarPorID(id_prestamo);
+            if (dt.Rows.Count > 0)
             {
-                throw new Exception("Datos de libro incorrectos.");
-            }
+                int id_libro = Convert.ToInt32(dt.Rows[0]["id_libro"]);
 
-            ModificarDisponibilidadLibro(id_libro, true);
+                // Eliminar el registro del préstamo
+                repoPrestamo.EliminarPrestamo(id_prestamo);
+
+                // Cambiar el estado del libro a disponible (True)
+                ModificarDisponibilidadLibro(id_libro, true);
+            }
         }
 
         public DataTable BuscarPrestamo(int id)

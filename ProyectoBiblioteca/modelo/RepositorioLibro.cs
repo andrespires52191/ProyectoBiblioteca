@@ -19,6 +19,15 @@ namespace ProyectoBiblioteca.modelo
             return datos;
         }
 
+        public DataTable CargarDisponibles()
+        {
+            DataTable datos = new DataTable();
+            string sql = "SELECT * FROM LIBROS WHERE disponible = 1";
+            SQLiteCommand cmd = new SQLiteCommand(sql);
+            datos = SQLiteHelper.GetDataTable(Properties.Settings.Default.conexion, cmd);
+            return datos;
+        }
+
         public bool ExisteTitulo(string titulo, int? idExcluir = null)
         {
             string sql = "SELECT COUNT(*) FROM LIBROS WHERE Titulo = @titulo";

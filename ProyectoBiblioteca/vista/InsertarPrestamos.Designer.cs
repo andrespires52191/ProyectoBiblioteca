@@ -104,7 +104,7 @@
             this.tlpDatos.Location = new System.Drawing.Point(181, 119);
             this.tlpDatos.Margin = new System.Windows.Forms.Padding(0);
             this.tlpDatos.Name = "tlpDatos";
-            this.tlpDatos.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tlpDatos.Padding = new System.Windows.Forms.Padding(5);
             this.tlpDatos.RowCount = 4;
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -227,6 +227,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "InsertarPrestamos";
             this.Text = "InsertarPrestamos";
+            this.Load += new System.EventHandler(this.InsertarPrestamos_Load);
             this.tlpPrincipal.ResumeLayout(false);
             this.tlpPrincipal.PerformLayout();
             this.tlpDatos.ResumeLayout(false);
