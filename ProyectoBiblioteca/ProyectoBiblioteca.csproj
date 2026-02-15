@@ -85,11 +85,11 @@
     <Compile Include="modelo\RepositorioUsuario.cs" />
     <Compile Include="modelo\SQLiteHelper.cs" />
     <Compile Include="modelo\Usuario.cs" />
-    <Compile Include="vista\EliminarFila.cs">
+    <Compile Include="vista\Confirmar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vista\EliminarFila.Designer.cs">
-      <DependentUpon>EliminarFila.cs</DependentUpon>
+    <Compile Include="vista\Confirmar.Designer.cs">
+      <DependentUpon>Confirmar.cs</DependentUpon>
     </Compile>
     <Compile Include="vista\Fondo.cs">
       <SubType>Form</SubType>
@@ -182,8 +182,8 @@
     <None Include="Resources\boton-borrar.png" />
     <None Include="Resources\icono_libro.png" />
     <None Include="Resources\icono_usuario.png" />
-    <EmbeddedResource Include="vista\EliminarFila.resx">
-      <DependentUpon>EliminarFila.cs</DependentUpon>
+    <EmbeddedResource Include="vista\Confirmar.resx">
+      <DependentUpon>Confirmar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Fondo.resx">
       <DependentUpon>Fondo.cs</DependentUpon>
