@@ -19,15 +19,16 @@ namespace ProyectoBiblioteca.modelo
             return datos;
         }
 
-        public void AnadirUsuario(Usuario libro)
+        public void AnadirUsuario(Usuario usuario)
         {
             string sql = "INSERT INTO USUARIOS (nombre, apellido_1, apellido_2, telefono) VALUES (@nombre, @apellido_1, @apellido_2, @telefono)";
             SQLiteCommand cmd = new SQLiteCommand(sql);
 
-            cmd.Parameters.Add("@nombre", DbType.String).Value = libro.nombre;
-            cmd.Parameters.Add("@apellido_1", DbType.String).Value = libro.apellido_1;
-            cmd.Parameters.Add("@apellido_2", DbType.String).Value = libro.apellido_2;
-            cmd.Parameters.Add("@telefono", DbType.Int32).Value = libro.telefono;
+            cmd.Parameters.Add("@nombre", DbType.String).Value = usuario.nombre;
+            cmd.Parameters.Add("@apellido_1", DbType.String).Value = usuario.apellido_1;
+            // Gestión de nulos para Apellido_2
+            cmd.Parameters.Add("@apellido_2", DbType.String).Value = (object)usuario.apellido_2 ?? DBNull.Value;
+            cmd.Parameters.Add("@telefono", DbType.Int32).Value = usuario.telefono;
 
             SQLiteHelper.Ejecuta(Properties.Settings.Default.conexion, cmd);
         }

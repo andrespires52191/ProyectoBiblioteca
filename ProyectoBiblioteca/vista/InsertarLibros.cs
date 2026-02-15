@@ -50,15 +50,6 @@ namespace ProyectoBiblioteca.vista
             return formulario;
         }
 
-        public void limpiar()
-        {
-            tbTitulo.Text = "";
-            tbEscritor.Text = "";
-            nudAnio.Value = 0;
-            tbSinopsis.Text = "";
-            rbSi.Checked = true;
-        }
-
         private int id;
         public int Id { get => id; set => id = value; }
 
@@ -126,6 +117,15 @@ namespace ProyectoBiblioteca.vista
                 // Mostrar error personalizado
                 MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        public void limpiar()
+        {
+            Titulo = "";
+            Escritor = "";
+            Ano_Edicion = 0;
+            Sinopsis = "";
+            rbSi.Checked = true;
         }
 
         private void InsertarLibros_Resize(object sender, EventArgs e)

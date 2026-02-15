@@ -34,15 +34,20 @@ namespace ProyectoBiblioteca.vista
         public void Cargar(DataTable datos)
         {
             tlpDatosInterior.Controls.Clear();
-
             int nuevaFila = 0;
 
             foreach (DataRow row in datos.Rows)
             {
                 UserControl1 ucFila = new UserControl1();
-                ucFila.Id = (int)row.Field<long>("id");
-                ucFila.NombreCompleto = $"{row.Field<string>("nombre")} {row.Field<string>("apellido_1")} {row.Field<string>("apellido_2")}";
-                ucFila.Telefono= row.Field<Decimal>("telefono").ToString();
+                ucFila.Id = Convert.ToInt32(row["id"]);
+
+                string nombre = row["nombre"].ToString();
+                string ap1 = row["apellido_1"].ToString();
+                string ap2 = row["apellido_2"] != DBNull.Value ? row["apellido_2"].ToString() : "";
+                
+                ucFila.NombreCompleto = $"{nombre} {ap1} {ap2}".Trim().Replace("  ", " ");
+
+                ucFila.Telefono = row["telefono"].ToString();
                 ucFila.verUsuario += ucFila_verUsuario;
                 ucFila.borrarUsuario += ucFila_borrarUsuario;
                 ucFila.Dock = DockStyle.Fill;
@@ -51,11 +56,6 @@ namespace ProyectoBiblioteca.vista
                 tlpDatosInterior.Controls.Add(ucFila, 0, nuevaFila);
                 nuevaFila++;
             }        
-        }
-
-        private void ucFila_borrarUsuario(object sender, UserControl1.ClickarBotonIdEventArgs e)
-        {
-            MessageBox.Show(e.Id.ToString());
         }
 
         private void ucFila_verUsuario(object sender, UserControl1.ClickarBotonIdEventArgs e)
@@ -86,6 +86,21 @@ namespace ProyectoBiblioteca.vista
 
                 // Recargar lista
                 Cargar(miControlador.CargarUsuarios());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ucFila_borrarUsuario(object sender, UserControl1.ClickarBotonIdEventArgs e)
+        {
+            // TODO : EliminarFila
+            try
+            {
+                miControlador.EliminarUsuario(e.Id);
+                Cargar(miControlador.CargarUsuarios());
+                MessageBox.Show("Usuario borrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

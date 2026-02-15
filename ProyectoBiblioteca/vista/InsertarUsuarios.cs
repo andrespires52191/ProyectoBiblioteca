@@ -36,30 +36,26 @@ namespace ProyectoBiblioteca.vista
 
         public string Nombre
         {
-            get => tbNombre.Text;
+            get => tbNombre.Text.Trim();
             set => tbNombre.Text = value;
         }
 
         public string Apellido1
         {
-            get => tbPrimerApellido.Text;
+            get => tbPrimerApellido.Text.Trim();
             set => tbPrimerApellido.Text = value;
         }
 
         public string Apellido2
         {
-            get => tbSegundoApellido.Text;
+            get => tbSegundoApellido.Text.Trim();
             set => tbSegundoApellido.Text = value;
         }
 
-        public int Telefono
+        public string Telefono
         {
-            get
-            {
-                int.TryParse(tbTelefono.Text, out int resultado);
-                return resultado;
-            }
-            set => tbTelefono.Text = value.ToString();
+            get => tbTelefono.Text.Trim();
+            set => tbTelefono.Text = value;
         }
 
         public event EventHandler<ClickarBotonIdEventArgs> anadirUsuario;
@@ -74,7 +70,6 @@ namespace ProyectoBiblioteca.vista
         {
             try
             {
-                // TODO : El controlador tendrá que validar los datos
                 miControlador.AnadirUsuario(Nombre, Apellido1, Apellido2, Telefono);
                 MessageBox.Show("Usuario añadido correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpiar();
@@ -90,7 +85,7 @@ namespace ProyectoBiblioteca.vista
             Nombre = "";
             Apellido1 = "";
             Apellido2 = "";
-            Telefono = 0;
+            Telefono = "";
         }
     }
 }

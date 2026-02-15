@@ -30,12 +30,7 @@ namespace ProyectoBiblioteca.vista
                 string nombre = tbNombre.Text;
                 string ap1 = tbApellido1.Text;
                 string ap2 = tbApellido2.Text;
-
-                int tel;
-                if (!int.TryParse(tbTelefono.Text, out tel))
-                {
-                    throw new Exception("El teléfono debe ser un número entero válido.");
-                }
+                string tel = tbTelefono.Text;
 
                 miControlador.ModificarUsuario(IdUsuario, nombre, ap1, ap2, tel);
                 MessageBox.Show("Usuario actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);

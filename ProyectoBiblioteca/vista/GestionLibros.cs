@@ -37,6 +37,7 @@ namespace ProyectoBiblioteca.vista
         {
             tlpDatosInterior.Controls.Clear();
             int nuevaFila = 0;
+
             foreach (DataRow row in datos.Rows)
             {
                 UserControl1 ucFila = new UserControl1();
